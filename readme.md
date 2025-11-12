@@ -1,6 +1,5 @@
-# Notes 0001
-
-folder to test the setup of a note-taking repo used as github pages with mkdocs.
+# Notes
+Personal site with my notes.
 
 ## installation
 Create a python virtual environment

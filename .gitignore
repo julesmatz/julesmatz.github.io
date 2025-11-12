@@ -2,5 +2,5 @@
 venv
 
 # mkdocs
-site/
+/site/
 .build
