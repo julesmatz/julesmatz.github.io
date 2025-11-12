@@ -8,23 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/">
+        <link rel="canonical" href="https://julesmatz.github.io/Estimation/Kalman/">
       
       
+        <link rel="prev" href="../Bayesian_inference_gaussian/">
       
-        <link rel="next" href="Algebra/matrix_inversion/">
+      
+        <link rel="next" href="../../Geometry2D/circle_circle_intersection/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>notes</title>
+        <title>Kalman filter - notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -43,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#kalman-filter" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Kalman filter
             
           </span>
         </div>
@@ -176,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -191,32 +193,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -227,44 +207,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -314,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Algebra/matrix_inversion/" class="md-nav__link">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -382,7 +324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Modelling/modelling/" class="md-nav__link">
+      <a href="../../Modelling/modelling/" class="md-nav__link">
         
   
   
@@ -405,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Modelling/PCE/" class="md-nav__link">
+      <a href="../../Modelling/PCE/" class="md-nav__link">
         
   
   
@@ -432,18 +374,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -459,7 +403,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Estimation
@@ -473,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/gaussian/" class="md-nav__link">
+      <a href="../gaussian/" class="md-nav__link">
         
   
   
@@ -496,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Bayesian_inference/" class="md-nav__link">
+      <a href="../Bayesian_inference/" class="md-nav__link">
         
   
   
@@ -519,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
+      <a href="../Bayesian_inference_gaussian/" class="md-nav__link">
         
   
   
@@ -539,10 +483,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Estimation/Kalman/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kalman filter
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -553,6 +519,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -648,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Geometry2D/circle_circle_intersection/" class="md-nav__link">
+      <a href="../../Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -724,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/website/" class="md-nav__link">
+      <a href="../../Tools/website/" class="md-nav__link">
         
   
   
@@ -747,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/markdown/" class="md-nav__link">
+      <a href="../../Tools/markdown/" class="md-nav__link">
         
   
   
@@ -808,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2/" class="md-nav__link">
+      <a href="../../Tools/ros2/" class="md-nav__link">
         
   
   
@@ -831,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2_cpp/" class="md-nav__link">
+      <a href="../../Tools/ros2_cpp/" class="md-nav__link">
         
   
   
@@ -854,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2_python/" class="md-nav__link">
+      <a href="../../Tools/ros2_python/" class="md-nav__link">
         
   
   
@@ -885,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/python/" class="md-nav__link">
+      <a href="../../Tools/python/" class="md-nav__link">
         
   
   
@@ -908,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/julia/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
@@ -958,18 +962,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#model" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#equations" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Equations
     </span>
   </a>
   
@@ -991,21 +995,82 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="kalman-filter">Kalman filter</h1>
+<h2 id="model">Model</h2>
+<p>Stochastic linear state-space model,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+x_{k+1} &amp;= A_d x_k + B_d u_k + Q\\
+z_k &amp;= H x_k + R
+\end{aligned}
+\]</div>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>filtered state is <span class="arithmatex">\(\color{blue}{x_k\sim\mathcal{N}(m_k,P_k)}\)</span></li>
+<li>predicted state is <span class="arithmatex">\(\color{green}{x_k\sim\mathcal{N}(m_{k},P_{k})}\)</span></li>
+<li>output is <span class="arithmatex">\(z_k\sim\mathcal{N}(y_k,R)\)</span></li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<div class="language-text highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<details>
+<summary>Euler discretization for \(A_d\), \(B_d\)</summary>
+Using Euler approximation,
+$$
+\begin{aligned}
+\frac{\Delta x(t)}{\Delta t} &\approx Ax(t) + Bu(t) \\
+\frac{x_{k+1}-x_k}{\Delta t} &= Ax_k + Bu_k\\
+x_{k+1} &= \underbrace{x_k + \Delta t A x_k}_{A_d=(I+\Delta t A)} + \underbrace{\Delta t B}_{B_d} u_k
+\end{aligned}
+$$
+</details>
+
+<h2 id="equations">Equations</h2>
+<p><span class="arithmatex">\(A_d\)</span>, <span class="arithmatex">\(B_d\)</span>, <span class="arithmatex">\(H\)</span>, <span class="arithmatex">\(Q\)</span>, <span class="arithmatex">\(R\)</span> can be time-varying.</p>
+<details open>
+<summary>Prediction</summary>
+     $$
+     \begin{aligned}
+     \color{green}{m_{k+1}} &= A_d \color{blue}{m_k} + B_du_k \\
+     \color{green}{P_{k+1}} &= A_d \color{blue}{P_k} A_d^\top + Q
+     \end{aligned}
+     $$
+</details>
+
+<details open>
+<summary>Update</summary>
+     $$
+     \begin{aligned}
+     S_k &= H \color{green}{P_k} H^\top + R \\
+     K_k &= \color{green}{P_k} H^\top S_k^{-1} \\
+     \color{blue}{m_k} &= \color{green}{m_k} + K_k (y_k - H \color{green}{m_k}) \\
+     \color{blue}{P_k} &= (I - K_k H) \color{green}{P_k} 
+     \end{aligned}
+     $$
+</details>
+
+<details>
+$$
+\begin{aligned}
+&\color{blue}{p(x|y)} = \frac{p(y|x)\color{green}{p(x)}}{p(y)} \\
+&\propto \exp\left(-\frac{1}{2}(y-Hx)^\top R^{-1}(y-Hx)\right) \exp\left(-\frac{1}{2}(x-\color{green}{m})^\top \color{green}{P}^{-1}(x-\color{green}{m})\right) \\
+&= \exp\left(-\frac{1}{2}\left( y^\top R^{-1}y-2x^\top H^\top R^{-1}y + x^\top H^\top R^{-1}Hx + x^\top \color{green}{P}^{-1}x-2x^\top \color{green}{P}^{-1}\color{green}{m} + \color{green}{m}^\top \color{green}{P}^{-1}\color{green}{m} \right)\right) \\
+&= \exp\left(-\frac{1}{2}\left( x^\top(\underbrace{\color{green}{P}^{-1} + H^\top R^{-1}H}_{\color{blue}{P}^{-1}})x - 2x^\top (\underbrace{\color{green}{P}^{-1}\color{green}{m}+H^\top R^{-1}y}_{\color{blue}{P}^{-1}\color{blue}{m}}) + \ldots \right)\right)
+\end{aligned}
+$$
+hence
+$$
+\begin{aligned}
+\color{blue}{P} &= (\color{green}{P}^{-1}+H^\top R^{-1}H)^{-1} \\
+&= P-\underbrace{\color{green}{P}H^\top (\underbrace{H\color{green}{P}H^\top+R}_{S})^{-1}}_{K = \color{green}{P}H^\top S^{-1}}H\color{green}{P}
+\end{aligned}
+$$
+where the second line is obtained from the Woodbury identity, and
+$$
+\begin{aligned}
+\color{blue}{m} &= \color{blue}{P} (\color{green}{P}^{-1}\color{green}{m} + H^\top R^{-1}y) \\
+&= \left(\color{green}{P}-\color{green}{P}H^\top (H\color{green}{P}H^\top+R)^{-1}H\color{green}{P}\right) \left(\color{green}{P}^{-1}\color{green}{m} + H^\top R^{-1}y\right) \\
+&= \left(\color{green}{P}-KH\color{green}{P}\right) \left(\color{green}{P}^{-1}\color{green}{m} + H^\top R^{-1}y\right) \\
+&= \color{green}{m}
+\end{aligned}
+$$
+</details>
 
 
 
@@ -1054,10 +1119,10 @@ docs/
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

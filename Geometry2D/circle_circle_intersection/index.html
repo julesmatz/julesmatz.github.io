@@ -8,23 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/">
+        <link rel="canonical" href="https://julesmatz.github.io/Geometry2D/circle_circle_intersection/">
       
       
+        <link rel="prev" href="../../Estimation/Kalman/">
       
-        <link rel="next" href="Algebra/matrix_inversion/">
+      
+        <link rel="next" href="../../Tools/website/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>notes</title>
+        <title>Geometry2D circle-circle intersection - notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -43,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#circle-circle-intersection" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Geometry2D circle-circle intersection
             
           </span>
         </div>
@@ -176,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -191,32 +193,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -227,44 +207,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -314,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Algebra/matrix_inversion/" class="md-nav__link">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -382,7 +324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Modelling/modelling/" class="md-nav__link">
+      <a href="../../Modelling/modelling/" class="md-nav__link">
         
   
   
@@ -405,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Modelling/PCE/" class="md-nav__link">
+      <a href="../../Modelling/PCE/" class="md-nav__link">
         
   
   
@@ -473,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/gaussian/" class="md-nav__link">
+      <a href="../../Estimation/gaussian/" class="md-nav__link">
         
   
   
@@ -496,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Bayesian_inference/" class="md-nav__link">
+      <a href="../../Estimation/Bayesian_inference/" class="md-nav__link">
         
   
   
@@ -519,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
+      <a href="../../Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
         
   
   
@@ -542,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Kalman/" class="md-nav__link">
+      <a href="../../Estimation/Kalman/" class="md-nav__link">
         
   
   
@@ -569,18 +511,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -596,7 +540,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Geometry
@@ -607,18 +551,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -634,7 +580,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Geometry2D
@@ -645,10 +591,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Geometry2D/circle_circle_intersection/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Geometry2D circle-circle intersection
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -659,6 +627,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Derivation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Derivation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-to-an-easier-frame-for-solving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to an easier frame for solving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equation-of-circles-in-new-coordinate-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation of circles in new coordinate frame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-existence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for existence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -724,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/website/" class="md-nav__link">
+      <a href="../../Tools/website/" class="md-nav__link">
         
   
   
@@ -747,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/markdown/" class="md-nav__link">
+      <a href="../../Tools/markdown/" class="md-nav__link">
         
   
   
@@ -808,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2/" class="md-nav__link">
+      <a href="../../Tools/ros2/" class="md-nav__link">
         
   
   
@@ -831,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2_cpp/" class="md-nav__link">
+      <a href="../../Tools/ros2_cpp/" class="md-nav__link">
         
   
   
@@ -854,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2_python/" class="md-nav__link">
+      <a href="../../Tools/ros2_python/" class="md-nav__link">
         
   
   
@@ -885,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/python/" class="md-nav__link">
+      <a href="../../Tools/python/" class="md-nav__link">
         
   
   
@@ -908,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/julia/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
@@ -958,20 +997,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#solution" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Solution
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#derivation" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Derivation
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Derivation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-to-an-easier-frame-for-solving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to an easier frame for solving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equation-of-circles-in-new-coordinate-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation of circles in new coordinate frame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-existence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for existence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -991,21 +1063,102 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<div class="language-text highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<h1 id="circle-circle-intersection">Circle-circle intersection</h1>
+<p>Obtained from <a href="https://math.stackexchange.com/questions/256100/how-can-i-find-the-points-at-which-two-circles-intersect">math.stackexchange.com/questions/256100/</a>.</p>
+<h2 id="solution">Solution</h2>
+<p>Intersection points of a circle of radius <span class="arithmatex">\(r_1\)</span> centered on <span class="arithmatex">\((x_1,y_1)\)</span> with another circle of radius <span class="arithmatex">\(r_2\)</span> centered on <span class="arithmatex">\((x_2,y_2)\)</span>.</p>
+<p>The two intersection points are</p>
+<div class="arithmatex">\[
+P_i = \begin{pmatrix}
+\frac{x_1+x_2}{2}\\
+\frac{y_1+y_2}{2}
+\end{pmatrix}
++\frac{r_1^2-r_2^2}{2R} \begin{pmatrix}
+\frac{x_1+x_2}{R}\\
+\frac{y_1+y_2}{R}
+\end{pmatrix}
+\pm \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}} \begin{pmatrix}
+\frac{y_2+y_1}{R}\\
+\frac{x_1+x_1}{R}
+\end{pmatrix}
+\]</div>
+<h2 id="derivation">Derivation</h2>
+<h3 id="get-to-an-easier-frame-for-solving">Get to an easier frame for solving</h3>
+<p>Compute the middle point</p>
+<div class="arithmatex">\[C_m = \begin{pmatrix}
+\frac{x_1+x_2}{2}\\
+\frac{y_1+y_2}{2}
+\end{pmatrix}\]</div>
+<p>and the distance between the two centers
+$$ R = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} $$
+Now consider the coordinate frame with origin at <span class="arithmatex">\(C_m\)</span> and unit axes <span class="arithmatex">\(\vec{a} = \begin{pmatrix}
+\frac{x_1+x_2}{R}\\
+\frac{y_1+y_2}{R}
+\end{pmatrix}\)</span>
+and
+<span class="arithmatex">\(\vec{b} = \begin{pmatrix}
+\frac{y_2+y_1}{R}\\
+\frac{x_1+x_1}{R}
+\end{pmatrix}\)</span></p>
+<p><img alt="two-circles-intersection" src="../img/geometry2D_circle_circle_intersection.png" /></p>
+<h3 id="equation-of-circles-in-new-coordinate-frame">Equation of circles in new coordinate frame</h3>
+<p>Usual equation of a circle is <span class="arithmatex">\((x-x_1)^2 + (y-y_1)^2 = r_1^2\)</span>, which is obtain from the Pythagorean theorem with <span class="arithmatex">\(r_1\)</span> the hypothenuse and <span class="arithmatex">\((x-x_1)\)</span> and <span class="arithmatex">\((y-y_1)\)</span> its projection on <span class="arithmatex">\(\vec{x}\)</span> and <span class="arithmatex">\(\vec{y}\)</span> axes.</p>
+<p>Now in our case, the circles are centered along the dashed line so their centers have no <span class="arithmatex">\(\vec{b}\)</span> component. Equations are
+<span class="arithmatex">\(<span class="arithmatex">\((a+R/2)^2 + b^2 = r_1^2\\
+(a-R/2)^2 + b^2 = r_2^2\)</span>\)</span>
+Equating the two circles equation, the intersection points are obtained in the <span class="arithmatex">\((\vec{a},\vec{b})\)</span> frame,</p>
+<div class="arithmatex">\[ a =\frac{r_1^2-r_2^2}{2R}\\
+b = \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}}\]</div>
+<p>The two intersection points are thus</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P_i &amp;= C_m + a \vec{a} \pm b \vec{b}\\
+P_i &amp;=\begin{pmatrix}
+\frac{x_1+x_2}{2}\\
+\frac{y_1+y_2}{2}
+\end{pmatrix}
++a \begin{pmatrix}
+\frac{x_1+x_2}{R}\\
+\frac{y_1+y_2}{R}
+\end{pmatrix}
+\pm b \begin{pmatrix}
+\frac{y_2+y_1}{R}\\
+\frac{x_1+x_1}{R}
+\end{pmatrix}\\
+P_i &amp;= \begin{pmatrix}
+\frac{x_1+x_2}{2}\\
+\frac{y_1+y_2}{2}
+\end{pmatrix}
++\frac{r_1^2-r_2^2}{2R} \begin{pmatrix}
+\frac{x_1+x_2}{R}\\
+\frac{y_1+y_2}{R}
+\end{pmatrix}
+\pm \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}} \begin{pmatrix}
+\frac{y_2+y_1}{R}\\
+\frac{x_1+x_1}{R}
+\end{pmatrix}
+\end{aligned}
+\]</div>
+<h3 id="check-for-existence">Check for existence</h3>
+<p>The intersection only exists if <span class="arithmatex">\(R&lt;r_1 + r_2\)</span> and <span class="arithmatex">\(R&gt;|r_2-r_1|\)</span> (with <span class="arithmatex">\(|\cdot |\)</span> the notation for absolute value).</p>
+<details>
+First, \(a\) is obstained by subtracting the second to the first equation,
+
+$$(a+R/2)^2 - (a-R/2)^2 = r_1^2 - r_2^2\\
+a^2 + a R + (R/2)^2 - \left(a^2 - aR + (R/2)^2\right) = r_1^2-r_2^2\\
+a =\frac{r_1^2-r_2^2}{2R}$$
+
+Then \(b\) is obtained by adding the first and second equations,
+
+$$
+\begin{aligned}
+2b^2 &= r_1^2+r_2^2 - (a+R/2)^2 - (a-R/2)^2\\
+2b^2 &= r_1^2+r_2^2 -\left(\frac{r_1^2-r_2^2}{2R}\right)^2-\frac{r_1^2-r_2^2}{2} - R^2/4\\
+&\quad - \left(\frac{r_1^2-r_2^2}{2R}\right)^2+\frac{r_1^2-r_2^2}{2} - R^2/4\\
+2b^2 &= r_1^2+r_2^2 -2\left(\frac{r_1^2-r_2^2}{2R}\right)^2 - 2R^2/4\\
+b &= \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}}
+\end{aligned}
+$$
 
 
 
@@ -1054,10 +1207,10 @@ docs/
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

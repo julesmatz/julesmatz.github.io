@@ -8,23 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/">
+        <link rel="canonical" href="https://julesmatz.github.io/Modelling/modelling/">
       
       
+        <link rel="prev" href="../../Algebra/matrix_inversion/">
       
-        <link rel="next" href="Algebra/matrix_inversion/">
+      
+        <link rel="next" href="../PCE/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>notes</title>
+        <title>Modelling approaches - notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -43,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#models" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Modelling approaches
             
           </span>
         </div>
@@ -176,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -191,32 +193,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -227,44 +207,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -314,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Algebra/matrix_inversion/" class="md-nav__link">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -341,18 +283,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -368,7 +312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Modelling
@@ -379,10 +323,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Modelling/modelling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -393,6 +346,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -405,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Modelling/PCE/" class="md-nav__link">
+      <a href="../PCE/" class="md-nav__link">
         
   
   
@@ -473,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/gaussian/" class="md-nav__link">
+      <a href="../../Estimation/gaussian/" class="md-nav__link">
         
   
   
@@ -496,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Bayesian_inference/" class="md-nav__link">
+      <a href="../../Estimation/Bayesian_inference/" class="md-nav__link">
         
   
   
@@ -519,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
+      <a href="../../Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
         
   
   
@@ -542,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Kalman/" class="md-nav__link">
+      <a href="../../Estimation/Kalman/" class="md-nav__link">
         
   
   
@@ -648,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Geometry2D/circle_circle_intersection/" class="md-nav__link">
+      <a href="../../Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -724,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/website/" class="md-nav__link">
+      <a href="../../Tools/website/" class="md-nav__link">
         
   
   
@@ -747,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/markdown/" class="md-nav__link">
+      <a href="../../Tools/markdown/" class="md-nav__link">
         
   
   
@@ -808,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2/" class="md-nav__link">
+      <a href="../../Tools/ros2/" class="md-nav__link">
         
   
   
@@ -831,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2_cpp/" class="md-nav__link">
+      <a href="../../Tools/ros2_cpp/" class="md-nav__link">
         
   
   
@@ -854,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2_python/" class="md-nav__link">
+      <a href="../../Tools/ros2_python/" class="md-nav__link">
         
   
   
@@ -885,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/python/" class="md-nav__link">
+      <a href="../../Tools/python/" class="md-nav__link">
         
   
   
@@ -908,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/julia/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
@@ -951,32 +905,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -991,21 +919,46 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="models">Models</h1>
+<p>A <strong>mathematical model</strong> uses equations to describes what can and cannot happen in a real system. It aims at representing how <em>manifest</em> variables are linked (e.g. inputs-outputs). However, it is often necessary to introduce <em>latent</em> variables (e.g. states, auxiliary variables) to build the model. These <em>latent</em> variables are unobserable, or indirectly observable through the <em>manifest</em> variables <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.  </p>
+<hr />
+<p>A model is a <strong>structure</strong> (how equations are arranged) and a set of <strong>parameters</strong>. It can be describes by some of its attributes:</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li><strong>Static / Dynamic</strong><ul>
+<li>A <strong>static</strong> model's output only depends on inputs through algebraic equations</li>
+<li>A <strong>dynamic</strong> model's output depends on time through ODE, involving a history of states or inputs. It can be <strong>time-invariant</strong> or not.</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<div class="language-text highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+</li>
+<li><strong>Deterministic / Stochastic</strong><ul>
+<li><strong>Determistic</strong> models: same input always produces the same output.</li>
+<li><strong>Stochastic</strong> models can consider uncertainties through:<ul>
+<li>Random variables (uncertain but time-invariant, e.g. material property, measurement noise).</li>
+<li>Stochastic processes for random evolution (e.g. market price, turbulences).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Black / white / gray-box</strong><ul>
+<li><strong>Black-box</strong> models are data-driven models obtained from input-output measurements (e.g. neural networks, Gaussian processes,  polynomial regression). Issues are extrapolation outside region of learning data, and overfitting.</li>
+<li><strong>White-box</strong> models are obtained from first principles (e.g. physics). Limitations are very large system (many components and interactions, possibly emerging behaviors), and highly complex ones (chaotic behavior, complex physical PDE equations). May be difficult to parameterize very large models, and may require heavy computations.</li>
+<li><strong>Grey-box</strong> models are in-between (e.g. MOR, semi-empirical, hybrid), so as to be:<ul>
+<li><strong>Consistent with physics</strong></li>
+<li><strong>In accordance with data</strong></li>
+<li><strong>Easy to parameterize</strong></li>
+<li><strong>Cheap to evaluate</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Willems, J. C., &amp; Polderman, J. W. (1997). Introduction to mathematical systems theory: a behavioral approach (Vol. 26). Springer Science &amp; Business Media.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1054,10 +1007,10 @@ docs/
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
