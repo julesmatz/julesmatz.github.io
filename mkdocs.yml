@@ -1,9 +1,30 @@
-site_name: engineering_notes
+site_name: notes
 site_url: https://julesmatz.github.io/
 
 nav:
   - Home: index.md
-  - Website: tools/website.md
+  - Algebra:
+    - matrix inversion: Algebra/matrix_inversion.md
+  - Modelling:
+    - Modelling approaches: Modelling/modelling.md
+    - PCE: Modelling/PCE.md
+  - Estimation:
+    - Gaussian: Estimation/gaussian.md
+    - Bayesian inference: Estimation/Bayesian_inference.md
+    - Bayesian inference for Gaussians: Estimation/Bayesian_inference_gaussian.md
+    - Kalman filter: Estimation/Kalman.md
+  - Geometry:
+    - Geometry2D:
+      - Geometry2D circle-circle intersection: Geometry2D/circle_circle_intersection.md
+  - Tools:
+    - Website: Tools/website.md
+    - Mardown: Tools/markdown.md
+    - ROS2:
+      - command-line: Tools/ros2.md
+      - C++ packages: Tools/ros2_cpp.md
+      - Python packages: Tools/ros2_python.md
+    - Python: Tools/python.md
+    - julia: Tools/julia.md
 
 theme:
   name: material
@@ -21,6 +42,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
+  - footnotes
+  - tables
+  - pymdownx.blocks.caption
 
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
