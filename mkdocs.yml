@@ -1,5 +1,5 @@
 site_name: engineering_notes
-site_url: https://https://julesmatz.github.io/
+site_url: https://julesmatz.github.io/
 
 nav:
   - Home: index.md

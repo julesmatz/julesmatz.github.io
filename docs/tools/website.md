@@ -7,7 +7,7 @@ Following [mkdocs-material](https://squidfunk.github.io/mkdocs-material/creating
 - change `mkdocs.yml` to (minimal example for content with code and equations)
 ```yaml
 site_name: engineering_notes
-site_url: https://https://julesmatz.github.io/
+site_url: https://julesmatz.github.io/
 
 nav:
   - Home: index.md
