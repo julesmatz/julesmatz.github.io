@@ -1,2 +1,6 @@
 # python virtual environment
 venv
+
+# mkdocs
+site/
+.build
