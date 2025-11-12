@@ -1,17 +1,28 @@
-# Welcome to MkDocs
+# Personal notes about engineering
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Objective
+* Find quickly often-used concepts/formulas/algorithms/code
+* Explain these concepts in my own words
+* Help me remember these concepts while building these notes
 
-## Commands
+## Guidelines
+* Efficiency
+    - Only subjects that are approachable and interesting
+    - Not chasing perfection, as long as there is improvement...
+* Storing knowledge, not information
+    - No thorough proofs but concise and intuitive explanations
+* No fancy language and correct synthax, writing to myself as simple notes
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## TODO
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+| Topic              | Details                      | Status      |
+|--------------------|------------------------------|-------------|
+| Algebra basics     | Matrix inv, inner prod,...   |  Stand-by   |
+| Kalman             | Proof                        |    Done     |
+| ROS2               |                              |    Done     |
+| Python             | basics, numPy, SciPy         | In Progress |
+| Julia              | basics, LinearAlgebra        | In Progress |
+| C++                | basics, Eigen                |  Stand-by   |
+| Interval Analysis  | summary of IAMOOC, julia ex. | Not Started |
+| Optimization       | DIRECT,...                   | Not Started |
+| Information theory |                              | Not Started |
