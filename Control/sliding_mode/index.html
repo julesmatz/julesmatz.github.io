@@ -8,23 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/">
+        <link rel="canonical" href="https://julesmatz.github.io/Control/sliding_mode/">
       
       
+        <link rel="prev" href="../../Estimation/Kalman/">
       
-        <link rel="next" href="Algebra/matrix_inversion/">
+      
+        <link rel="next" href="../../Geometry2D/circle_circle_intersection/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>notes</title>
+        <title>SMC - notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -43,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#personal-notes-about-engineering" class="md-skip">
+        <a href="#sliding-mode-control" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              SMC
             
           </span>
         </div>
@@ -176,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -191,32 +193,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -227,53 +207,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objective
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guidelines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Guidelines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#todo" class="md-nav__link">
-    <span class="md-ellipsis">
-      TODO
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -323,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Algebra/matrix_inversion/" class="md-nav__link">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -391,7 +324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Modelling/modelling/" class="md-nav__link">
+      <a href="../../Modelling/modelling/" class="md-nav__link">
         
   
   
@@ -414,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Modelling/PCE/" class="md-nav__link">
+      <a href="../../Modelling/PCE/" class="md-nav__link">
         
   
   
@@ -482,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/gaussian/" class="md-nav__link">
+      <a href="../../Estimation/gaussian/" class="md-nav__link">
         
   
   
@@ -505,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Bayesian_inference/" class="md-nav__link">
+      <a href="../../Estimation/Bayesian_inference/" class="md-nav__link">
         
   
   
@@ -528,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
+      <a href="../../Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
         
   
   
@@ -551,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Estimation/Kalman/" class="md-nav__link">
+      <a href="../../Estimation/Kalman/" class="md-nav__link">
         
   
   
@@ -578,18 +511,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -605,7 +540,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Control
@@ -616,10 +551,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Control/sliding_mode/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SMC
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -630,6 +587,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-order-sliding-mode-control-smc" class="md-nav__link">
+    <span class="md-ellipsis">
+      First-order Sliding Mode Control (SMC)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="First-order Sliding Mode Control (SMC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invariance-of-sliding-mode-so-it-stays-on-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invariance of sliding mode (so it stays on surface)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attractivness-so-it-reaches-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attractivness (so it reaches surface)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robustness-to-model-uncertainty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robustness to model uncertainty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smoothing-the-sign-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smoothing the sign function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super-twisting-algorithm-sta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Super Twisting Algorithm (STA)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -725,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Geometry2D/circle_circle_intersection/" class="md-nav__link">
+      <a href="../../Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -801,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/website/" class="md-nav__link">
+      <a href="../../Tools/website/" class="md-nav__link">
         
   
   
@@ -824,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/markdown/" class="md-nav__link">
+      <a href="../../Tools/markdown/" class="md-nav__link">
         
   
   
@@ -847,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/unix/" class="md-nav__link">
+      <a href="../../Tools/unix/" class="md-nav__link">
         
   
   
@@ -908,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2/" class="md-nav__link">
+      <a href="../../Tools/ros2/" class="md-nav__link">
         
   
   
@@ -931,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2_cpp/" class="md-nav__link">
+      <a href="../../Tools/ros2_cpp/" class="md-nav__link">
         
   
   
@@ -954,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/ros2_python/" class="md-nav__link">
+      <a href="../../Tools/ros2_python/" class="md-nav__link">
         
   
   
@@ -985,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/python/" class="md-nav__link">
+      <a href="../../Tools/python/" class="md-nav__link">
         
   
   
@@ -1008,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/python_venv/" class="md-nav__link">
+      <a href="../../Tools/python_venv/" class="md-nav__link">
         
   
   
@@ -1031,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/julia/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
@@ -1081,27 +1118,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#first-order-sliding-mode-control-smc" class="md-nav__link">
     <span class="md-ellipsis">
-      Objective
+      First-order Sliding Mode Control (SMC)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="First-order Sliding Mode Control (SMC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invariance-of-sliding-mode-so-it-stays-on-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invariance of sliding mode (so it stays on surface)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#guidelines" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#attractivness-so-it-reaches-surface" class="md-nav__link">
     <span class="md-ellipsis">
-      Guidelines
+      Attractivness (so it reaches surface)
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#robustness-to-model-uncertainty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robustness to model uncertainty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smoothing-the-sign-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smoothing the sign function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#todo" class="md-nav__link">
+  <a href="#super-twisting-algorithm-sta" class="md-nav__link">
     <span class="md-ellipsis">
-      TODO
+      Super Twisting Algorithm (STA)
     </span>
   </a>
   
@@ -1123,83 +1193,66 @@
 
 
 
-<h1 id="personal-notes-about-engineering">Personal notes about engineering</h1>
-<h2 id="objective">Objective</h2>
+<h1 id="sliding-mode-control">Sliding Mode Control</h1>
+<p>Sliding mode control forces the state to attain (reaching
+phase) and stay (sliding mode) on a hypersurface
+of the state-space. This sliding manifold is defined as
+$$
+S = \left\lbrace x\in \mathbb{R}^n | s(x,t)=0 \right\rbrace
+$$
+Typically, the constraint <span class="arithmatex">\(s(x,t)=0\)</span> is designed to ensure the systems follows a reference signal.
+\par Ressources used are \cite{khalil2002, shtessel2014, polito_ncaa, kunusch2012, Fridman2002}.</p>
+<h2 id="first-order-sliding-mode-control-smc">First-order Sliding Mode Control (SMC)</h2>
+<p>If <span class="arithmatex">\(u\)</span> appears in <span class="arithmatex">\(\dot{s}\)</span> (relative degree 1) in a linear fashion, <span class="arithmatex">\(\dot{s}=a(x,t) + b(x,t)u\)</span><br />
+and we have a nominal model of our system <span class="arithmatex">\(\dot{s} = \hat{a}(x,t) + \hat{b}(x,t) u\)</span><br />
+we can apply a first-order sliding mode control
+$$
+u = u_\text{eq} - k_1\text{sign}(s)
+$$</p>
+<h5 id="invariance-of-sliding-mode-so-it-stays-on-surface">Invariance of sliding mode (so it stays on surface)</h5>
+<p>To stay at <span class="arithmatex">\(s(x,t)=0\)</span> once it is reached, we should have <span class="arithmatex">\(\dot{s}(x,t)=0\)</span></p>
+<div class="arithmatex">\[
+\begin{aligned}
+\hat{a}(x,t) + \hat{b}(x,t) u_\text{eq} &amp;= 0\\
+u_\text{eq} &amp;= -\frac{\hat{a}(x,t)}{\hat{b}(x,t)}
+\end{aligned}
+\]</div>
+<h5 id="attractivness-so-it-reaches-surface">Attractivness (so it reaches surface)</h5>
+<p>Adding a discontinous term <span class="arithmatex">\(-k_1\text{sign}(s)\)</span> leads to the system evolution
+$$
+\dot{s} = a(x,t) + b(x,t)\left(-\frac{\hat{a}(x,t)}{\hat{b}(x,t)} - k_1\text{sign}(s)\right)
+$$
+which for a sufficiently good model (<span class="arithmatex">\(\hat{a}\approx a\)</span>, <span class="arithmatex">\(\hat{b}\approx b\)</span>) gives <span class="arithmatex">\(\dot{s}\approx-k_1\text{sign}(s)\)</span><br />
+Choosing a sufficiently high value <span class="arithmatex">\(k_1\)</span> enforces the attractiveness of the sliding surface.<br />
+Using candidate Lyapunov function <span class="arithmatex">\(V=\frac{1}{2}s^2\)</span>, the sliding surface is reached in finite time if <span class="arithmatex">\(V\)</span> decreases sufficiently fast,
+For any <span class="arithmatex">\(k&gt;0\)</span>,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\dot{V} &amp;\leq -k\sqrt{V} \\
+s\dot{s} &amp;\leq -k |s| \\
+\text{sign}(s) \dot{s} &amp;\leq -k \label{eq:SMCattractiveness}
+\end{aligned}
+\]</div>
+<p>which is satisfied for <span class="arithmatex">\(k_1&gt;k\)</span>, and a first-order discretization gives</p>
 <ul>
-<li>Find quickly often-used concepts/formulas/algorithms/code</li>
-<li>Explain these concepts in my own words</li>
-<li>Help me remember these concepts while building these notes</li>
+<li><span class="arithmatex">\(s(t+\Delta t)=s(t)-\Delta t k_1\)</span> if <span class="arithmatex">\(s&gt;0\)</span></li>
+<li><span class="arithmatex">\(s(t+\Delta t)=s(t)+\Delta t k_1\)</span> if <span class="arithmatex">\(s&lt;0\)</span></li>
 </ul>
-<h2 id="guidelines">Guidelines</h2>
-<ul>
-<li>Efficiency<ul>
-<li>Only subjects that are approachable and interesting</li>
-<li>Not chasing perfection, as long as there is improvement...</li>
-</ul>
-</li>
-<li>Storing knowledge, not information<ul>
-<li>No thorough proofs but concise and intuitive explanations</li>
-</ul>
-</li>
-<li>No fancy language and correct synthax, writing to myself as simple notes</li>
-</ul>
-<h2 id="todo">TODO</h2>
-<table>
-<thead>
-<tr>
-<th>Topic</th>
-<th>Details</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Algebra basics</td>
-<td>Matrix inv, inner prod,...</td>
-<td>Stand-by</td>
-</tr>
-<tr>
-<td>Kalman</td>
-<td>Proof</td>
-<td>Done</td>
-</tr>
-<tr>
-<td>ROS2</td>
-<td></td>
-<td>Done</td>
-</tr>
-<tr>
-<td>Python</td>
-<td>basics, numPy, SciPy</td>
-<td>In Progress</td>
-</tr>
-<tr>
-<td>Julia</td>
-<td>basics, LinearAlgebra</td>
-<td>In Progress</td>
-</tr>
-<tr>
-<td>C++</td>
-<td>basics, Eigen</td>
-<td>Stand-by</td>
-</tr>
-<tr>
-<td>Interval Analysis</td>
-<td>summary of IAMOOC, julia ex.</td>
-<td>Not Started</td>
-</tr>
-<tr>
-<td>Optimization</td>
-<td>DIRECT,...</td>
-<td>Not Started</td>
-</tr>
-<tr>
-<td>Information theory</td>
-<td></td>
-<td>Not Started</td>
-</tr>
-</tbody>
-</table>
+<p>ensuring the attractiveness of <span class="arithmatex">\(s(x,t)=0\)</span> in finite time.</p>
+<h5 id="robustness-to-model-uncertainty">Robustness to model uncertainty</h5>
+<p>Also, to be robust against model uncertainties,
+<span class="arithmatex">\( k_1 &gt; \left|a- \frac{b}{\hat{b}}\hat{a}\right|\)</span><br />
+High values of <span class="arithmatex">\(k_1\)</span> gives more robustness, at the cost of increased command activity (more energy consumption and possible chattering).</p>
+<h5 id="smoothing-the-sign-function">Smoothing the sign function</h5>
+<p>To avoid chattering, it is desirable to reduce <span class="arithmatex">\(|\dot{s}|\)</span> close to the sliding surface. It can be done by replacing <span class="arithmatex">\(\text{sign}(s)\)</span> with a sigmoid or high-slope saturation function such as 
+$$
+\text{sat}\left(\frac{s}{\epsilon}\right),\text{ with }\text{sat}(y)=\begin{cases}
+y,&amp;\text{if } |y| \leq 1 \
+\text{sign}(y),&amp;\text{if } |y| &gt; 1
+\end{cases}
+$$
+The attractiveness is eventually lost and the state only reaches a neighborhood of <span class="arithmatex">\(S\)</span>, leading to steady-state error.</p>
+<h2 id="super-twisting-algorithm-sta">Super Twisting Algorithm (STA)</h2>
 
 
 
@@ -1248,10 +1301,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

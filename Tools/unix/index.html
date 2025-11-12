@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Estimation/Kalman/">
+        <link rel="canonical" href="https://julesmatz.github.io/Tools/unix/">
       
       
-        <link rel="prev" href="../Bayesian_inference_gaussian/">
+        <link rel="prev" href="../markdown/">
       
       
-        <link rel="next" href="../../Control/sliding_mode/">
+        <link rel="next" href="../ros2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Kalman filter - notes</title>
+        <title>Unix - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kalman-filter" class="md-skip">
+        <a href="#unix-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kalman filter
+              Unix
             
           </span>
         </div>
@@ -374,20 +374,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -403,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Estimation
@@ -417,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gaussian/" class="md-nav__link">
+      <a href="../../Estimation/gaussian/" class="md-nav__link">
         
   
   
@@ -440,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bayesian_inference/" class="md-nav__link">
+      <a href="../../Estimation/Bayesian_inference/" class="md-nav__link">
         
   
   
@@ -463,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bayesian_inference_gaussian/" class="md-nav__link">
+      <a href="../../Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
         
   
   
@@ -483,32 +481,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Kalman filter
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Estimation/Kalman/" class="md-nav__link">
         
   
   
@@ -519,44 +495,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#equations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Equations
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -755,18 +693,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -782,7 +722,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -796,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/website/" class="md-nav__link">
+      <a href="../website/" class="md-nav__link">
         
   
   
@@ -819,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/markdown/" class="md-nav__link">
+      <a href="../markdown/" class="md-nav__link">
         
   
   
@@ -839,10 +779,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Tools/unix/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Unix
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -853,6 +815,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paths-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paths, directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-move-remove-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy, move, remove, search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirection-and-pipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection and pipes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcard, help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acess-and-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acess and processes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compress-compare-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compress, compare, history
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -903,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/ros2/" class="md-nav__link">
+      <a href="../ros2/" class="md-nav__link">
         
   
   
@@ -926,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/ros2_cpp/" class="md-nav__link">
+      <a href="../ros2_cpp/" class="md-nav__link">
         
   
   
@@ -949,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/ros2_python/" class="md-nav__link">
+      <a href="../ros2_python/" class="md-nav__link">
         
   
   
@@ -980,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/python/" class="md-nav__link">
+      <a href="../python/" class="md-nav__link">
         
   
   
@@ -1003,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/python_venv/" class="md-nav__link">
+      <a href="../python_venv/" class="md-nav__link">
         
   
   
@@ -1026,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/julia/" class="md-nav__link">
+      <a href="../julia/" class="md-nav__link">
         
   
   
@@ -1076,18 +1112,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
+  <a href="#paths-directories" class="md-nav__link">
     <span class="md-ellipsis">
-      Model
+      Paths, directories
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#equations" class="md-nav__link">
+  <a href="#copy-move-remove-search" class="md-nav__link">
     <span class="md-ellipsis">
-      Equations
+      Copy, move, remove, search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirection-and-pipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection and pipes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcard, help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acess-and-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acess and processes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compress-compare-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compress, compare, history
     </span>
   </a>
   
@@ -1109,82 +1181,85 @@
 
 
 
-<h1 id="kalman-filter">Kalman filter</h1>
-<h2 id="model">Model</h2>
-<p>Stochastic linear state-space model,</p>
-<div class="arithmatex">\[
-\begin{aligned}
-x_{k+1} &amp;= A_d x_k + B_d u_k + Q\\
-z_k &amp;= H x_k + R
-\end{aligned}
-\]</div>
-<ul>
-<li>filtered state is <span class="arithmatex">\(\color{blue}{x_k\sim\mathcal{N}(m_k,P_k)}\)</span></li>
-<li>predicted state is <span class="arithmatex">\(\color{green}{x_k\sim\mathcal{N}(m_{k},P_{k})}\)</span></li>
-<li>output is <span class="arithmatex">\(z_k\sim\mathcal{N}(y_k,R)\)</span></li>
-</ul>
-<details>
-<summary>Euler discretization for \(A_d\), \(B_d\)</summary>
-Using Euler approximation,
-$$
-\begin{aligned}
-\frac{\Delta x(t)}{\Delta t} &\approx Ax(t) + Bu(t) \\
-\frac{x_{k+1}-x_k}{\Delta t} &= Ax_k + Bu_k\\
-x_{k+1} &= \underbrace{x_k + \Delta t A x_k}_{A_d=(I+\Delta t A)} + \underbrace{\Delta t B}_{B_d} u_k
-\end{aligned}
-$$
-</details>
-
-<h2 id="equations">Equations</h2>
-<p><span class="arithmatex">\(A_d\)</span>, <span class="arithmatex">\(B_d\)</span>, <span class="arithmatex">\(H\)</span>, <span class="arithmatex">\(Q\)</span>, <span class="arithmatex">\(R\)</span> can be time-varying.</p>
-<details open>
-<summary>Prediction</summary>
-     $$
-     \begin{aligned}
-     \color{green}{m_{k+1}} &= A_d \color{blue}{m_k} + B_du_k \\
-     \color{green}{P_{k+1}} &= A_d \color{blue}{P_k} A_d^\top + Q
-     \end{aligned}
-     $$
-</details>
-
-<details open>
-<summary>Update</summary>
-     $$
-     \begin{aligned}
-     S_k &= H \color{green}{P_k} H^\top + R \\
-     K_k &= \color{green}{P_k} H^\top S_k^{-1} \\
-     \color{blue}{m_k} &= \color{green}{m_k} + K_k (y_k - H \color{green}{m_k}) \\
-     \color{blue}{P_k} &= (I - K_k H) \color{green}{P_k} 
-     \end{aligned}
-     $$
-</details>
-
-<details>
-$$
-\begin{aligned}
-&\color{blue}{p(x|y)} = \frac{p(y|x)\color{green}{p(x)}}{p(y)} \\
-&\propto \exp\left(-\frac{1}{2}(y-Hx)^\top R^{-1}(y-Hx)\right) \exp\left(-\frac{1}{2}(x-\color{green}{m})^\top \color{green}{P}^{-1}(x-\color{green}{m})\right) \\
-&= \exp\left(-\frac{1}{2}\left( y^\top R^{-1}y-2x^\top H^\top R^{-1}y + x^\top H^\top R^{-1}Hx + x^\top \color{green}{P}^{-1}x-2x^\top \color{green}{P}^{-1}\color{green}{m} + \color{green}{m}^\top \color{green}{P}^{-1}\color{green}{m} \right)\right) \\
-&= \exp\left(-\frac{1}{2}\left( x^\top(\underbrace{\color{green}{P}^{-1} + H^\top R^{-1}H}_{\color{blue}{P}^{-1}})x - 2x^\top (\underbrace{\color{green}{P}^{-1}\color{green}{m}+H^\top R^{-1}y}_{\color{blue}{P}^{-1}\color{blue}{m}}) + \ldots \right)\right)
-\end{aligned}
-$$
-hence
-$$
-\begin{aligned}
-\color{blue}{P} &= (\color{green}{P}^{-1}+H^\top R^{-1}H)^{-1} \\
-&= P-\underbrace{\color{green}{P}H^\top (\underbrace{H\color{green}{P}H^\top+R}_{S})^{-1}}_{K = \color{green}{P}H^\top S^{-1}}H\color{green}{P}
-\end{aligned}
-$$
-where the second line is obtained from the Woodbury identity, and
-$$
-\begin{aligned}
-\color{blue}{m} &= \color{blue}{P} (\color{green}{P}^{-1}\color{green}{m} + H^\top R^{-1}y) \\
-&= \left(\color{green}{P}-\color{green}{P}H^\top (H\color{green}{P}H^\top+R)^{-1}H\color{green}{P}\right) \left(\color{green}{P}^{-1}\color{green}{m} + H^\top R^{-1}y\right) \\
-&= \left(\color{green}{P}-KH\color{green}{P}\right) \left(\color{green}{P}^{-1}\color{green}{m} + H^\top R^{-1}y\right) \\
-&= \color{green}{m}
-\end{aligned}
-$$
-</details>
+<h1 id="unix-commands">Unix commands</h1>
+<h2 id="paths-directories">Paths, directories</h2>
+<p>Use <em>tab</em> for name completion. Current directory is
+indicated as (.), parent directory as (..) and home
+directory as (∼).
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ls<span class="w">                </span><span class="c1"># print directory content</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ls<span class="w"> </span>-a<span class="w">             </span><span class="c1"># also include hidden files</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>ls<span class="w"> </span>my/sub/folder<span class="w">  </span><span class="c1"># look into specified folder</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>mkdir<span class="w"> </span>mynewfolder<span class="w"> </span><span class="c1"># create new folder</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">cd</span><span class="w"> </span>mynewfolder<span class="w">    </span><span class="c1"># change directory</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">cd</span><span class="w">                </span><span class="c1"># go to home directory</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">pwd</span><span class="w">               </span><span class="c1"># print working director</span>
+</span></code></pre></div></p>
+<h2 id="copy-move-remove-search">Copy, move, remove, search</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp<span class="w"> </span>file1<span class="w"> </span>file2<span class="w">    </span><span class="c1"># copy file1, create file2</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mv<span class="w"> </span>file1<span class="w"> </span>file2<span class="w">    </span><span class="c1"># move file1 to file2</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>rm<span class="w"> </span>file1<span class="w">          </span><span class="c1"># remove file</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>rmdir<span class="w"> </span>folder1<span class="w">     </span><span class="c1"># remove folder</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>clear<span class="w">             </span><span class="c1"># clear terminal window</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>cat<span class="w"> </span>file1.txt<span class="w">     </span><span class="c1"># print file content</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>less<span class="w"> </span>file1.txt<span class="w">    </span><span class="c1"># display scrollable content,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Q<span class="w">                 </span><span class="c1"># quit</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>head<span class="w"> </span>file1.txt<span class="w">    </span><span class="c1"># print first 10 lines of file</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>tail<span class="w"> </span>file1.txt<span class="w">    </span><span class="c1"># print last 10 lines of file</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>grep<span class="w"> </span>word<span class="w"> </span>f1.txt<span class="w">  </span><span class="c1"># print lines containing word</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>grep<span class="w"> </span>’a<span class="w"> </span>e’<span class="w"> </span>f1.txt<span class="w"> </span><span class="c1"># search phrase</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>wc<span class="w"> </span>-w<span class="w"> </span>f1.txt<span class="w">      </span><span class="c1"># count nb of words in file</span>
+</span></code></pre></div>
+<h2 id="redirection-and-pipes">Redirection and pipes</h2>
+<p>The standard output is the terminal screen, the standard input is the keyboard, and the standard error, where processes write error messages, is also the terminal screen. It is possible to change the default behavior and redirect input or outputs.<br />
+For example, if cat is used without arguments, it listens to the keyboard. Hence by typing cat, then a few words on the keyboard, then Ctrl-D to end the input, it displays these words on the standard output, which is the terminal.<br />
+For successive operations where every operation has to pass its output to be the input of the next operation, we can use pipes |.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>f1<span class="w">      </span><span class="c1"># store keyboard inputs in file</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>cat<span class="w"> </span>»<span class="w"> </span>f2<span class="w">      </span><span class="c1"># append standard input to file</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>cat<span class="w"> </span>f1<span class="w"> </span>f2<span class="w"> </span>»<span class="w"> </span>f<span class="w"> </span><span class="c1"># join files</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>sort<span class="w"> </span>&lt;<span class="w"> </span>f<span class="w">      </span><span class="c1"># take input from file and sort it alphabetically or numerically</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>sort<span class="w"> </span>&lt;<span class="w"> </span>f<span class="w"> </span>&gt;<span class="w"> </span>fs<span class="w"> </span><span class="c1"># sort inputs from file f1 and write outputs in file fs</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>who<span class="w">           </span><span class="c1"># return users connected to PC</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>who<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w">    </span><span class="c1"># pass users to sort command</span>
+</span></code></pre></div></p>
+<h2 id="wildcard-help">Wildcard, help</h2>
+<p>The wilcard * character matches against none or more characters in a file or directory name, while the character ? matches exactly one character.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls<span class="w"> </span>*.tex<span class="w">        </span><span class="c1"># list all files with extension .tex</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>f?.txt<span class="w">          </span><span class="c1"># is a match for f1.txt, f2.txt, fs.txt</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>man<span class="w"> </span>wc<span class="w">          </span><span class="c1"># manual for command wc</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>whatis<span class="w"> </span>wc<span class="w">       </span><span class="c1"># one-line description</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>apropos<span class="w"> </span>keyword<span class="w"> </span><span class="c1"># when unsure, returns all commands with keyword in their manual page header</span>
+</span></code></pre></div></p>
+<h2 id="acess-and-processes">Acess and processes</h2>
+<p>Command list -l returns more info, such as permissions associated with files. A d at the beginning indicates a directory, otherwise a - indicates a file. Then the 9 symbols are access rights.<br />
+First 3 characters are permission for the user, then for the group, then for all other users. r is read permisson, w is write permission, w is execution permission (or right to access files for a directory).<br />
+Processes are identified by unique PID (process identifiers). Processes may be in the foreground, background or suspended. Backgrounding a long process returns the terminal prompt immediatly, and the process continues executing in the background.<br />
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>chmod<span class="w"> </span>go-rw<span class="w"> </span>f1<span class="w"> </span><span class="c1"># For group (g) and other (o), remove (-) read (r), write (w) permissons.</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>chmod<span class="w"> </span>a+rwx<span class="w"> </span>f1<span class="w"> </span><span class="c1"># For all (a), add (+) read (r), write (w), execute (x) permissons.</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">jobs</span><span class="w">           </span><span class="c1"># list current jobs</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">command</span><span class="w"> </span><span class="p">&amp;</span><span class="w">      </span><span class="c1"># run command in background</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>ˆZ<span class="w">             </span><span class="c1"># suspend the foreground job</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>ˆZ<span class="w"> </span>+<span class="w"> </span><span class="nb">bg</span><span class="w">        </span><span class="c1"># suspend and move job to background</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>ˆC<span class="w">             </span><span class="c1"># kill the foreground running job</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">kill</span><span class="w"> </span><span class="m">3</span><span class="w">         </span><span class="c1"># kill process with job number 3</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>ps<span class="w">             </span><span class="c1"># information about processes</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nb">kill</span><span class="w"> </span><span class="m">21872</span><span class="w">     </span><span class="c1"># kill process number 21872</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">21872</span><span class="w">  </span><span class="c1"># if above doesn’t work, use -9</span>
+</span></code></pre></div></p>
+<h2 id="compress-compare-history">Compress, compare, history</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>gzip<span class="w"> </span>f1.txt<span class="w">        </span><span class="c1"># compress to f1.txt.gz</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>gzip<span class="w"> </span>f1.txt.gz<span class="w">     </span><span class="c1"># extract to f1.txt</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>zcat<span class="w"> </span>f1.txt.gz<span class="w">     </span><span class="c1"># read without extracting</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>file<span class="w"> </span>*<span class="w">             </span><span class="c1"># information on file types</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>diff<span class="w"> </span>f1<span class="w"> </span>f2<span class="w">         </span><span class="c1"># differences between files, side &lt; is f1 and &gt; is f2</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>find<span class="w"> </span>.<span class="w"> </span>-size<span class="w"> </span>+1M<span class="w">   </span><span class="c1"># search files over 1Mb</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>find<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.tex&quot;</span><span class="w"> </span><span class="c1"># list tex files</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nb">history</span><span class="w">            </span><span class="c1"># list previous commands</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>!5<span class="w">                 </span><span class="c1"># execute fith command in history</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>!!<span class="w">                 </span><span class="c1"># execute last command</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>!-3<span class="w">                </span><span class="c1"># execute third most recent command</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>!grep<span class="w">              </span><span class="c1"># execute last command starting with grep</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="nb">set</span><span class="w"> </span><span class="nv">history</span><span class="o">=</span><span class="m">100</span><span class="w">    </span><span class="c1"># increase history list size</span>
+</span></code></pre></div>
 
 
 
