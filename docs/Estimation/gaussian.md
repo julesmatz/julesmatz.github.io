@@ -15,10 +15,14 @@ We write \(X\sim \mathcal{N}(\mu,\sigma^2)\), or \(X\sim \mathcal{N}(\mu,\Sigma)
 The **standard** normal distribution is \(\mathcal{N}(0,1)\).  
 The coefficent \(\frac{1}{\sqrt{2\pi\sigma^2}}\) is a normalizing factor so that \(\int p(x)dx = 1\).
 ## Mean and Variance
+
 $$
-\mu = \mathbb{E}[X] = \int_\mathbb{R}xp(x)dx\\
-\sigma = \mathbb{V}[X] = \mathbb{E}[(X-\mu)^2]
+\begin{aligned}
+\mu &= \mathbb{E}[X] = \int_\mathbb{R}xp(x)dx\\
+\sigma &= \mathbb{V}[X] = \mathbb{E}[(X-\mu)^2]
+\end{aligned}
 $$
+
 ![variance_1D_intuition](img/variance_1D_intuition.png){: style="display: block; margin: 0 auto; width: 300px"}
 
 <details open>
@@ -35,12 +39,14 @@ $$
 
 ## Linear transformation
 Consider the affine transformation \(Y=AX+b\) where \(X\sim \mathcal{N}(\mu_X, \Sigma_X)\). The obtained \(Y\) also has a normal distribution with
+
 $$
 \begin{aligned}
 \mu_Y &= A\mu_X + b \\
 \Sigma_Y &= A\Sigma_X A^\top
 \end{aligned}
 $$
+
 <details>
 <summary>Proof for \(Y=AX+b\)</summary>
 Well, this is no proof, but still useful.
@@ -72,7 +78,7 @@ Y = \mu + \Sigma^{1/2} X
 $$
 where \(\Sigma^{1/2}\) is the positive semidefinite symmetric matrix such that \(\left(\Sigma^{1/2}\right)^\top \Sigma^{1/2}=\Sigma\).  
 It may be obtained from the eigendecomposition of \(\Sigma\), in julia that is
-```
+```julia
 dist = MvNormal(μ, Σ)
 Λ,Q = eigen(Σ) # Σ = QΛQ^{-1}
 Σsqrt = Q*diagm(sqrt.(Λ))
@@ -83,7 +89,7 @@ The minimal volume which contains \(X\) with a given probability (ellipsoid for 
 
 ![Gaussian 2D plot](img/gaussian2Dplot.png){: style="display: block; margin: 0 auto; width: 400px"}
 
-It is easier to compute it for a standard normal distribution (a centered segment/circle/sphere), then transform it into an ellipsoid usingthe linear transform for going from \(\mathcal{N}(0,I)\) to \(\mathcal{N}(\mu,\Sigma)\).
+It is easier to compute it for a standard normal distribution (a centered segment/circle/sphere), then transform it into an ellipsoid using the linear transform for going from \(\mathcal{N}(0,I)\) to \(\mathcal{N}(\mu,\Sigma)\).
 
 | n        | \(1\sigma\) | \(2\sigma\) | \(3\sigma\) |
 | -------- |:-----------:|:-----------:|:-----------:|
