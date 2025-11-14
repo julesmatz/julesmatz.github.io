@@ -14,7 +14,7 @@
         <link rel="prev" href="../../Estimation/Kalman/">
       
       
-        <link rel="next" href="../../Geometry2D/circle_circle_intersection/">
+        <link rel="next" href="../../Tools/website/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>SMC - notes</title>
+        <title>Sliding Mode - notes</title>
       
     
     
@@ -40,8 +40,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inria+Serif:300,300i,400,400i,700,700i%7CUbuntu+mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inria Serif";--md-code-font:"Ubuntu mono"}</style>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SMC
+              Sliding Mode
             
           </span>
         </div>
@@ -261,12 +261,81 @@
   
   
   <span class="md-ellipsis">
-    matrix inversion
+    Matrix inversion
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Geometry (2D)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Geometry (2D)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Geometry2D/circle_circle_intersection.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Circle-circle intersection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -568,7 +637,7 @@
   
   
   <span class="md-ellipsis">
-    SMC
+    Sliding Mode
     
   </span>
   
@@ -581,7 +650,7 @@
   
   
   <span class="md-ellipsis">
-    SMC
+    Sliding Mode
     
   </span>
   
@@ -604,13 +673,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-order-sliding-mode-control-smc" class="md-nav__link">
+  <a href="#first-order-sliding-mode-control" class="md-nav__link">
     <span class="md-ellipsis">
-      First-order Sliding Mode Control (SMC)
+      First-order Sliding Mode Control
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="First-order Sliding Mode Control (SMC)">
+    <nav class="md-nav" aria-label="First-order Sliding Mode Control">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -655,11 +724,59 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#super-twisting-algorithm-sta" class="md-nav__link">
+  <a href="#super-twisting-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Super Twisting Algorithm (STA)
+      Super Twisting Algorithm
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Super Twisting Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attractiveness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attractiveness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-to-pi-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link to PI control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twising-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twising Controller
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Twising Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attractiveness_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attractiveness
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -702,7 +819,7 @@
   
   
   <span class="md-ellipsis">
-    Geometry
+    Tools
     
   </span>
   
@@ -712,120 +829,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Geometry
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Geometry2D
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_1">
-            <span class="md-nav__icon md-icon"></span>
-            Geometry2D
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Geometry2D/circle_circle_intersection/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Geometry2D circle-circle intersection
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Tools
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -906,110 +909,18 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    ROS2
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_4">
-            <span class="md-nav__icon md-icon"></span>
-            ROS2
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../Tools/ros2/" class="md-nav__link">
+      <a href="../../Tools/git/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    command-line
+    Git
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Tools/ros2_cpp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    C++ packages
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Tools/ros2_python/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Python packages
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1045,12 +956,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/python_venv/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Python venv
+    julia
     
   </span>
   
@@ -1068,12 +979,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/julia/" class="md-nav__link">
+      <a href="../../Tools/ros/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    julia
+    ROS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/ros2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tools/urdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    URDF
     
   </span>
   
@@ -1118,13 +1075,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-order-sliding-mode-control-smc" class="md-nav__link">
+  <a href="#first-order-sliding-mode-control" class="md-nav__link">
     <span class="md-ellipsis">
-      First-order Sliding Mode Control (SMC)
+      First-order Sliding Mode Control
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="First-order Sliding Mode Control (SMC)">
+    <nav class="md-nav" aria-label="First-order Sliding Mode Control">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1169,11 +1126,59 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#super-twisting-algorithm-sta" class="md-nav__link">
+  <a href="#super-twisting-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Super Twisting Algorithm (STA)
+      Super Twisting Algorithm
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Super Twisting Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attractiveness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attractiveness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-to-pi-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link to PI control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twising-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twising Controller
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Twising Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attractiveness_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attractiveness
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1196,21 +1201,24 @@
 <h1 id="sliding-mode-control">Sliding Mode Control</h1>
 <p>Sliding mode control forces the state to attain (reaching
 phase) and stay (sliding mode) on a hypersurface
-of the state-space. This sliding manifold is defined as
-$$
+of the state-space. This sliding manifold is defined as</p>
+<div class="arithmatex">\[
 S = \left\lbrace x\in \mathbb{R}^n | s(x,t)=0 \right\rbrace
-$$
-Typically, the constraint <span class="arithmatex">\(s(x,t)=0\)</span> is designed to ensure the systems follows a reference signal.
+\]</div>
+<p>Typically, the constraint <span class="arithmatex">\(s(x,t)=0\)</span> is designed to ensure the systems follows a reference signal.
 \par Ressources used are \cite{khalil2002, shtessel2014, polito_ncaa, kunusch2012, Fridman2002}.</p>
-<h2 id="first-order-sliding-mode-control-smc">First-order Sliding Mode Control (SMC)</h2>
-<p>If <span class="arithmatex">\(u\)</span> appears in <span class="arithmatex">\(\dot{s}\)</span> (relative degree 1) in a linear fashion, <span class="arithmatex">\(\dot{s}=a(x,t) + b(x,t)u\)</span><br />
-and we have a nominal model of our system <span class="arithmatex">\(\dot{s} = \hat{a}(x,t) + \hat{b}(x,t) u\)</span><br />
+<h2 id="first-order-sliding-mode-control">First-order Sliding Mode Control</h2>
+<p>If <span class="arithmatex">\(u\)</span> appears in <span class="arithmatex">\(\dot{s}\)</span> (relative degree 1) linearly,
+$$
+\dot{s}=a(x,t) + b(x,t)u
+$$
 we can apply a first-order sliding mode control
 $$
 u = u_\text{eq} - k_1\text{sign}(s)
 $$</p>
 <h5 id="invariance-of-sliding-mode-so-it-stays-on-surface">Invariance of sliding mode (so it stays on surface)</h5>
-<p>To stay at <span class="arithmatex">\(s(x,t)=0\)</span> once it is reached, we should have <span class="arithmatex">\(\dot{s}(x,t)=0\)</span></p>
+<p>To stay at <span class="arithmatex">\(s(x,t)=0\)</span> once it is reached, we should have <span class="arithmatex">\(\dot{s}(x,t)=0\)</span>.<br />
+From our nominal model of the system <span class="arithmatex">\(\dot{s} = \hat{a}(x,t) + \hat{b}(x,t) u\)</span>, we deduce</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \hat{a}(x,t) + \hat{b}(x,t) u_\text{eq} &amp;= 0\\
@@ -1222,10 +1230,9 @@ u_\text{eq} &amp;= -\frac{\hat{a}(x,t)}{\hat{b}(x,t)}
 $$
 \dot{s} = a(x,t) + b(x,t)\left(-\frac{\hat{a}(x,t)}{\hat{b}(x,t)} - k_1\text{sign}(s)\right)
 $$
-which for a sufficiently good model (<span class="arithmatex">\(\hat{a}\approx a\)</span>, <span class="arithmatex">\(\hat{b}\approx b\)</span>) gives <span class="arithmatex">\(\dot{s}\approx-k_1\text{sign}(s)\)</span><br />
-Choosing a sufficiently high value <span class="arithmatex">\(k_1\)</span> enforces the attractiveness of the sliding surface.<br />
+For a good model, the evolution is approximately <span class="arithmatex">\(\dot{s}\approx-k_1\text{sign}(s)\)</span> which (for a sufficiently large <span class="arithmatex">\(k_1\)</span>) enforces attractiveness. Let's see why.<br />
 Using candidate Lyapunov function <span class="arithmatex">\(V=\frac{1}{2}s^2\)</span>, the sliding surface is reached in finite time if <span class="arithmatex">\(V\)</span> decreases sufficiently fast,
-For any <span class="arithmatex">\(k&gt;0\)</span>,</p>
+for any <span class="arithmatex">\(k&gt;0\)</span>,</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \dot{V} &amp;\leq -k\sqrt{V} \\
@@ -1241,7 +1248,9 @@ s\dot{s} &amp;\leq -k |s| \\
 <p>ensuring the attractiveness of <span class="arithmatex">\(s(x,t)=0\)</span> in finite time.</p>
 <h5 id="robustness-to-model-uncertainty">Robustness to model uncertainty</h5>
 <p>Also, to be robust against model uncertainties,
-<span class="arithmatex">\( k_1 &gt; \left|a- \frac{b}{\hat{b}}\hat{a}\right|\)</span><br />
+$$
+k_1 &gt; \left|a- \frac{b}{\hat{b}}\hat{a}\right|
+$$
 High values of <span class="arithmatex">\(k_1\)</span> gives more robustness, at the cost of increased command activity (more energy consumption and possible chattering).</p>
 <h5 id="smoothing-the-sign-function">Smoothing the sign function</h5>
 <p>To avoid chattering, it is desirable to reduce <span class="arithmatex">\(|\dot{s}|\)</span> close to the sliding surface. It can be done by replacing <span class="arithmatex">\(\text{sign}(s)\)</span> with a sigmoid or high-slope saturation function such as 
@@ -1252,7 +1261,61 @@ y,&amp;\text{if } |y| \leq 1 \
 \end{cases}
 $$
 The attractiveness is eventually lost and the state only reaches a neighborhood of <span class="arithmatex">\(S\)</span>, leading to steady-state error.</p>
-<h2 id="super-twisting-algorithm-sta">Super Twisting Algorithm (STA)</h2>
+<p>If the system then only evolves in the linear part of the sigmoid, it amounts to a Proportional controller with <span class="arithmatex">\(K_p = k_1\)</span>.</p>
+<h2 id="super-twisting-algorithm">Super Twisting Algorithm</h2>
+<p>STA again considers sliding surface with relative degree 1. It adds an integrator part,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+u &amp;= u_\text{eq}-\lambda\sqrt{|s|}\text{sign}(s) + u_1 \\
+\dot{u}_1 &amp;= -W\text{sign}(s)
+\end{aligned}
+\]</div>
+<p>The discontinuity is now in <span class="arithmatex">\(\dot{u}\)</span> and is applied to <span class="arithmatex">\(\ddot{s}\)</span>. Derivating a second time the sliding surface,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\dot{s} &amp;= a(x,t) + b(x,t)u \\
+\ddot{s} &amp;= \underbrace{\dot{a}(x,t) + \dot{b}(x,t)u}_{\phi(x,u,t)} + \underbrace{b(x,t)}_{\gamma(x,t)}\dot{u}
+\end{aligned}
+\]</div>
+<h5 id="attractiveness">Attractiveness</h5>
+<p>Using bounds such that <span class="arithmatex">\(\ddot{s}\in \left[-\Phi,\Phi\right] + \left[\Gamma_m,\Gamma_M\right]\dot{u}\)</span>
+$$
+|\phi(x,u,t)|\leq\Phi \qquad 0&lt;\Gamma_m\leq\gamma(x,u,t)\leq\Gamma_M
+$$
+Attractivness is guaranteed (even for <span class="arithmatex">\(u_\text{eq} = 0\)</span>) for sufficiently large <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(W\)</span>,
+$$
+W &gt; \frac{\Phi}{\Gamma_m} \qquad
+\lambda^2 &gt; \frac{2}{\Gamma_m^2} \frac{(\Gamma_m W + \Phi)^2}{(\Gamma_m W - \Phi)}.
+$$</p>
+<h5 id="link-to-pi-control">Link to PI control</h5>
+<p>If sigmoids are used to dampen chattering, and the system eventually only evolves in the linear part, it almost amounts to a PI controller, with <span class="arithmatex">\(K_p = \lambda\)</span> and <span class="arithmatex">\(K_i=W\)</span>. The only difference is the <span class="arithmatex">\(\sqrt{|s|}\)</span> term.</p>
+<h2 id="twising-controller">Twising Controller</h2>
+<p>For sliding surface with relative degree 2,
+$$
+\ddot{s} = \phi(x,t) + \gamma(x,t)\dot{u}
+$$
+The Twisting controller is
+$$
+u = -\left(r_1 \text{sign}(s) + r_2 \text{sign}(\dot{s})\right)
+$$
+with <span class="arithmatex">\(r_1, r_2&gt;0\)</span>.</p>
+<h5 id="attractiveness_1">Attractiveness</h5>
+<p><span class="arithmatex">\(u\)</span> appears in the second derivative of the sliding surface,
+$$
+\ddot{s} = \phi(x,t) + \gamma(x,t)u
+$$
+Using bounds such that <span class="arithmatex">\(\ddot{s}\in \left[-\Phi,\Phi\right] + \left[\Gamma_m,\Gamma_M\right]u\)</span>
+$$
+|\phi(x,t)|\leq\Phi \qquad 0&lt;\Gamma_m\leq\gamma(x,t)\leq\Gamma_M
+$$
+<span class="arithmatex">\(s=0\)</span> and <span class="arithmatex">\(\dot{s}=0\)</span> are reached in finite time if the following equations are satisfied,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+(r_1 + r_2)K_m-C &amp;&gt; (r_1-r_2) K_M + C \\
+(r_1-r_2)K_m&gt;C
+\end{aligned}
+\]</div>
+<p>Although in practice values of <span class="arithmatex">\(r_1\)</span> and <span class="arithmatex">\(r_2\)</span> are mostly obtained from simulation experiments</p>
 
 
 

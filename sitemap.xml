@@ -2,82 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://julesmatz.github.io/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Algebra/matrix_inversion/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://julesmatz.github.io/Algebra/Geometry2D/circle_circle_intersection/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Control/sliding_mode/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Estimation/Bayesian_inference/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Estimation/Bayesian_inference_gaussian/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Estimation/Kalman/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Estimation/gaussian/</loc>
-         <lastmod>2025-11-12</lastmod>
-    </url>
-    <url>
-         <loc>https://julesmatz.github.io/Geometry2D/circle_circle_intersection/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Modelling/PCE/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Modelling/modelling/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/git/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/julia/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/markdown/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/python/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
-         <loc>https://julesmatz.github.io/Tools/python_venv/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <loc>https://julesmatz.github.io/Tools/ros/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/ros2/</loc>
-         <lastmod>2025-11-12</lastmod>
-    </url>
-    <url>
-         <loc>https://julesmatz.github.io/Tools/ros2_cpp/</loc>
-         <lastmod>2025-11-12</lastmod>
-    </url>
-    <url>
-         <loc>https://julesmatz.github.io/Tools/ros2_python/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/unix/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://julesmatz.github.io/Tools/urdf/</loc>
+         <lastmod>2025-11-14</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/website/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-11-14</lastmod>
     </url>
 </urlset>
