@@ -94,9 +94,13 @@ The intersection only exists if \(R<r_1 + r_2\) and \(R>|r_2-r_1|\) (with \(|\cd
 <details>
 First, \(a\) is obstained by subtracting the second to the first equation,
 
-$$(a+R/2)^2 - (a-R/2)^2 = r_1^2 - r_2^2\\
-a^2 + a R + (R/2)^2 - \left(a^2 - aR + (R/2)^2\right) = r_1^2-r_2^2\\
-a =\frac{r_1^2-r_2^2}{2R}$$
+$$
+\begin{aligned}
+(a+R/2)^2 - (a-R/2)^2 &= r_1^2 - r_2^2\\
+a^2 + a R + (R/2)^2 - \left(a^2 - aR + (R/2)^2\right) &= r_1^2-r_2^2\\
+a &=\frac{r_1^2-r_2^2}{2R}
+\end{aligned}
+$$
 
 Then \(b\) is obtained by adding the first and second equations,
 

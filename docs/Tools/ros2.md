@@ -64,3 +64,46 @@ ros2 bag record -o my_bag_name <topic_name1> <topic_name2>
 ros2 bag info <bag_file>
 ros2 bag play --clock --loop <bag_file>
 ```
+
+
+## ROS2 C++ package
+Structure
+```
+my_package/
+     config/             # yaml config files
+     rviz/               # rviz config files
+     doc/                # documentation
+     msg/                # custom msg definitions
+     launch/             # launch files
+     include/my_package  # headers .h and .hpp
+     src/                # C++ source code
+     urdf/
+     srv/
+     action/
+     test/
+     CMakeLists.txt      # instructions to build code
+     package.xml         # meta info
+     LICENSE
+     
+```
+Creation
+```
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 --node-name my_node my_package
+
+```
+
+
+## ROS2 Python package
+Structure
+```
+my_package/
+      package.xml         # meta info
+      resource/my_package # marker file
+      setup.cfg           # required for executables for ros2 run, must match with meta info
+      setup.py            # instructions to install pkg
+      my_package/         # required to find pkg, contains __init__.py
+```
+Creation
+```
+ros2 pkg create --build-type ament_python --license Apache-2.0 --node-name my_node my_package
+```

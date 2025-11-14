@@ -10,7 +10,7 @@ $$
 p(x) = \frac{1}{(2\pi)^{n/2}|\Sigma|^{1/2}}e^{-\frac{1}{2}(x-\mu)^\top \Sigma ^{-1}(x-\mu)}
 $$
 </details>
-It is fully described by two parameters, its **mean** \(\mu\) and **variance** \(\sigma\) (or \(\Sigma\)).  
+It is fully described by two parameters, its **mean** \(\mu\) and **variance** \(\sigma^2\) (or \(\Sigma\)).  
 We write \(X\sim \mathcal{N}(\mu,\sigma^2)\), or \(X\sim \mathcal{N}(\mu,\Sigma)\).  
 The **standard** normal distribution is \(\mathcal{N}(0,1)\).  
 The coefficent \(\frac{1}{\sqrt{2\pi\sigma^2}}\) is a normalizing factor so that \(\int p(x)dx = 1\).
@@ -19,11 +19,14 @@ The coefficent \(\frac{1}{\sqrt{2\pi\sigma^2}}\) is a normalizing factor so that
 $$
 \begin{aligned}
 \mu &= \mathbb{E}[X] = \int_\mathbb{R}xp(x)dx\\
-\sigma &= \mathbb{V}[X] = \mathbb{E}[(X-\mu)^2]
+\sigma^2 &= \mathbb{V}[X] = \mathbb{E}[(X-\mu)^2]
 \end{aligned}
 $$
 
 ![variance_1D_intuition](img/variance_1D_intuition.png){: style="display: block; margin: 0 auto; width: 300px"}
+/// caption
+Take the pdf, substract the mean, square it, variance is the mean!
+///
 
 <details open>
 <summary>dimension \(n\)</summary>

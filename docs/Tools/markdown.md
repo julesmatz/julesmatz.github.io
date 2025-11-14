@@ -64,7 +64,18 @@ alt="Machine Learning Fundamentals: Cross Validation" width="200" height="180" b
 
 Using the attr_list extension, we can use markdown synthax and parameterize html elements,
 `![two people](img/classmate.png){: style="display: block; margin: 0 auto; width: 300px"}` for a centered image with specific width (height is automatically adjusted to keep ratio)
+
 ![two people](img/classmate.png){: style="display: block; margin: 0 auto; width: 300px"}
+/// caption
+Caption
+///
+
+After a table or figure, add a caption with
+```markdown
+/// caption
+Caption
+///
+```
 
 
 ### Code
@@ -82,17 +93,18 @@ Unordered lists with either `-`, `*` or `+` at begining of line, and ordered lis
 Nested lists with a tab, so marker is below above item's text.
 ```
 - item a
-   1. item a1
-   2. item a2
+   1. item a
+   2. item b
 * item b
     * some item
     * some other item
         - with a sub-item
 + item c
 ```
+
 - item a
-   1. item a1
-   2. item a2
+    1. item a
+    2. item b
 * item b
     * some item
     * some other item
@@ -130,13 +142,22 @@ $$
 \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
 $$
 
-Using extension mdx_math, aligned environment can be used,
+aligned environment can be used, with a blank line before
+```markdown
 
 $$
-\begin{align}
+\begin{aligned}
 x &= y + z + j^{-1} \\
 a &= b + c
-\end{align}
+\end{aligned}
+$$
+```
+
+$$
+\begin{aligned}
+x &= y + z + j^{-1} \\
+a &= b + c
+\end{aligned}
 $$
 
 ### Footnotes

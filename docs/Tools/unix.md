@@ -4,7 +4,7 @@
 Use _tab_ for name completion. Current directory is
 indicated as (.), parent directory as (..) and home
 directory as (∼).
-```bash
+```sh
 ls                # print directory content
 ls -a             # also include hidden files
 ls my/sub/folder  # look into specified folder
@@ -15,7 +15,7 @@ pwd               # print working director
 ```
 
 ## Copy, move, remove, search
-```bash
+```sh
 cp file1 file2    # copy file1, create file2
 mv file1 file2    # move file1 to file2
 rm file1          # remove file
@@ -35,7 +35,7 @@ wc -w f1.txt      # count nb of words in file
 The standard output is the terminal screen, the standard input is the keyboard, and the standard error, where processes write error messages, is also the terminal screen. It is possible to change the default behavior and redirect input or outputs.  
 For example, if cat is used without arguments, it listens to the keyboard. Hence by typing cat, then a few words on the keyboard, then Ctrl-D to end the input, it displays these words on the standard output, which is the terminal.  
 For successive operations where every operation has to pass its output to be the input of the next operation, we can use pipes |.
-```bash
+```sh
 cat > f1      # store keyboard inputs in file
 cat » f2      # append standard input to file
 cat f1 f2 » f # join files
@@ -47,7 +47,7 @@ who | sort    # pass users to sort command
 
 ## Wildcard, help
 The wilcard * character matches against none or more characters in a file or directory name, while the character ? matches exactly one character.
-```bash
+```sh
 ls *.tex        # list all files with extension .tex
 f?.txt          # is a match for f1.txt, f2.txt, fs.txt
 man wc          # manual for command wc
@@ -59,7 +59,7 @@ apropos keyword # when unsure, returns all commands with keyword in their manual
 Command list -l returns more info, such as permissions associated with files. A d at the beginning indicates a directory, otherwise a - indicates a file. Then the 9 symbols are access rights.  
 First 3 characters are permission for the user, then for the group, then for all other users. r is read permisson, w is write permission, w is execution permission (or right to access files for a directory).  
 Processes are identified by unique PID (process identifiers). Processes may be in the foreground, background or suspended. Backgrounding a long process returns the terminal prompt immediatly, and the process continues executing in the background.  
-```bash
+```sh
 chmod go-rw f1 # For group (g) and other (o), remove (-) read (r), write (w) permissons.
 chmod a+rwx f1 # For all (a), add (+) read (r), write (w), execute (x) permissons.
 jobs           # list current jobs
@@ -74,7 +74,7 @@ kill -9 21872  # if above doesn’t work, use -9
 ```
 
 ## Compress, compare, history
-```bash
+```sh
 gzip f1.txt        # compress to f1.txt.gz
 gzip f1.txt.gz     # extract to f1.txt
 zcat f1.txt.gz     # read without extracting
