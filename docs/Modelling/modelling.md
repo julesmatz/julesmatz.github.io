@@ -1,6 +1,6 @@
 # Models
 
-A **mathematical model** uses equations to describes what can and cannot happen in a real system. It aims at representing how _manifest_ variables are linked (e.g. inputs-outputs). However, it is often necessary to introduce _latent_ variables (e.g. states, auxiliary variables) to build the model. These _latent_ variables are unobserable, or indirectly observable through the _manifest_ variables [^1].  
+A **mathematical model** uses equations to describe what can and cannot happen in a real system. It aims at representing how _manifest_ variables are linked (e.g. inputs-outputs). However, it is often necessary to introduce _latent_ variables (e.g. states, auxiliary variables) to build the model. These _latent_ variables are unobserable, or indirectly observable through the _manifest_ variables [^1].  
 
 ---
 
