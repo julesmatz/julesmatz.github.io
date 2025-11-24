@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Tools/markdown/">
+        <link rel="canonical" href="https://julesmatz.github.io/Algebra/inner_prod/">
       
       
-        <link rel="prev" href="../website/">
+        <link rel="prev" href="../vector_space/">
       
       
-        <link rel="next" href="../unix/">
+        <link rel="next" href="../linear_map/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Mardown - notes</title>
+        <title>Inner product, norm - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#markdown" class="md-skip">
+        <a href="#norm-and-inner-product" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mardown
+              Inner product, norm
             
           </span>
         </div>
@@ -215,18 +215,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -242,7 +244,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -256,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Algebra/vector_space/" class="md-nav__link">
+      <a href="../vector_space/" class="md-nav__link">
         
   
   
@@ -276,10 +278,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Algebra/inner_prod/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Inner product, norm
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -290,6 +314,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Norm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner product
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -302,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Algebra/linear_map/" class="md-nav__link">
+      <a href="../linear_map/" class="md-nav__link">
         
   
   
@@ -325,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
+      <a href="../matrix_inversion/" class="md-nav__link">
         
   
   
@@ -717,20 +797,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -746,7 +824,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -760,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../website/" class="md-nav__link">
+      <a href="../../Tools/website/" class="md-nav__link">
         
   
   
@@ -780,32 +858,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Mardown
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Tools/markdown/" class="md-nav__link">
         
   
   
@@ -816,161 +872,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#h3" class="md-nav__link">
-    <span class="md-ellipsis">
-      H3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="H3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h4" class="md-nav__link">
-    <span class="md-ellipsis">
-      H4
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="H4">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h5" class="md-nav__link">
-    <span class="md-ellipsis">
-      H5
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="H5">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h6" class="md-nav__link">
-    <span class="md-ellipsis">
-      H6
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#text-style" class="md-nav__link">
-    <span class="md-ellipsis">
-      Text style
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#internet-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Internet links
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#local-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Local links
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#equations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Equations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Footnotes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#collapsible-sections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collapsible sections
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -983,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unix/" class="md-nav__link">
+      <a href="../../Tools/unix/" class="md-nav__link">
         
   
   
@@ -1006,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../Tools/git/" class="md-nav__link">
         
   
   
@@ -1029,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python/" class="md-nav__link">
+      <a href="../../Tools/python/" class="md-nav__link">
         
   
   
@@ -1052,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../julia/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
@@ -1075,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros/" class="md-nav__link">
+      <a href="../../Tools/ros/" class="md-nav__link">
         
   
   
@@ -1098,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros2/" class="md-nav__link">
+      <a href="../../Tools/ros2/" class="md-nav__link">
         
   
   
@@ -1121,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../urdf/" class="md-nav__link">
+      <a href="../../Tools/urdf/" class="md-nav__link">
         
   
   
@@ -1171,135 +1072,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#h3" class="md-nav__link">
+  <a href="#norm" class="md-nav__link">
     <span class="md-ellipsis">
-      H3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="H3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h4" class="md-nav__link">
-    <span class="md-ellipsis">
-      H4
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="H4">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h5" class="md-nav__link">
-    <span class="md-ellipsis">
-      H5
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="H5">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h6" class="md-nav__link">
-    <span class="md-ellipsis">
-      H6
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#text-style" class="md-nav__link">
-    <span class="md-ellipsis">
-      Text style
+      Norm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#internet-links" class="md-nav__link">
+  <a href="#inner-product" class="md-nav__link">
     <span class="md-ellipsis">
-      Internet links
+      Inner product
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#local-links" class="md-nav__link">
+  <a href="#properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Local links
+      Properties
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#equations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Equations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Footnotes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#collapsible-sections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collapsible sections
+      Examples
     </span>
   </a>
   
@@ -1321,215 +1123,80 @@
 
 
 
-<h1 id="markdown">Markdown</h1>
-<p>Check out <a href="https://squidfunk.github.io/mkdocs-material/reference/">mkdocs-material</a> for many guides and plugins.
-highest title style has two possible synthax, <code># Title</code> or
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Titles
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>======
-</span></code></pre></div>
-Second-highest title style has two possible synthax, <code>## H2</code> or
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>H2
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>------
-</span></code></pre></div></p>
-<h3 id="h3">H3</h3>
-<p>Other titles are obtained as <code>### H3</code>, <code>#### H4</code>, <code>##### H5</code>, <code>###### H6</code>.</p>
-<h4 id="h4">H4</h4>
-<h5 id="h5">H5</h5>
-<h6 id="h6">H6</h6>
-<p>Use at least three <code>-</code>, <code>*</code> or <code>_</code>, e.g. <code>---</code> for a horizontal rule.</p>
-<hr />
-<h3 id="text-style">Text style</h3>
-<p>Comment markdown code as<br />
-<code>&lt;!-- This content will not appear in the rendered Markdown --&gt;</code></p>
-<!-- This content will not appear in the rendered Markdown -->
-<p>Leave a blank line for a new paragraph with space in-between.
-Leave two spaces at end of line for line break, or use <code>\</code>.</p>
-<p><code>**bold text**</code> for  <strong>bold text</strong><br />
-<code>_italicized text_</code>for <em>italicized text</em><br />
-<code>~~strikethrough text~~</code> for ~~strikethrough text~~<br />
-<code>_italic_</code> inside <code>**bold text**</code> for <strong>bold <em>italic</em> text</strong><br />
-<code>***bold italic text***</code> for <strong><em>bold italic text</em></strong><br />
-<code>&lt;sup&gt;superscript text&lt;/sup&gt;</code> for <sup>superscript text</sup>  <br />
-<code>&lt;ins&gt;underlined text&lt;/ins&gt;</code> for <ins>underlined text</ins><br />
-<code>&lt;span style="color:red"&gt;colored text&lt;/span&gt;</code> for <span style="color:red">colored text</span>  </p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>`code`
-</span></code></pre></div>
-for <code>code</code></p>
-<p><code>&gt; quote</code> for a </p>
-<blockquote>
-<p>quote<br />
-second line in quote</p>
-</blockquote>
-<h3 id="internet-links">Internet links</h3>
-<p><code>[GitHub link](https://github.com)</code> for <a href="https://github.com/">GitHub link</a></p>
-<p><a href="https://www.youtube.com/watch?v=fSytzGwwBVw" target="_blank"><img src="https://img.youtube.com/vi/fSytzGwwBVw/0.jpg" 
-alt="Machine Learning Fundamentals: Cross Validation" width="200" height="180" border="2" /></a></p>
-<h3 id="local-links">Local links</h3>
-<p><code>[Link to code section](#code)</code> for <a href="../website/">Link to code section in other file</a></p>
-<p><code>![reference to local file](img/classmate.png)</code> for a <a href="../img/classmate.png">reference to local file</a></p>
-<p><code>![two people](img/classmate.png)</code> for <img alt="two people" src="../img/classmate.png" /></p>
-<p>Using the attr_list extension, we can use markdown synthax and parameterize html elements,
-<code>![two people](img/classmate.png){: style="display: block; margin: 0 auto; width: 300px"}</code> for a centered image with specific width (height is automatically adjusted to keep ratio)</p>
-<figure>
-<p><img alt="two people" src="../img/classmate.png" style="display: block; margin: 0 auto; width: 300px" /></p>
-<figcaption>
-<p>Caption</p>
-</figcaption>
-</figure>
-<p>After a table or figure, add a caption with
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/// caption
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Caption
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>///
-</span></code></pre></div></p>
-<h3 id="code">Code</h3>
-<p>Blocks of code for specific languages are written by encompassing them with <code>```</code> and specifying the language on the first <code>```</code>, e.g. <code>```cpp</code>.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">{</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
-</span></code></pre></div></p>
-<h3 id="lists">Lists</h3>
-<p>Unordered lists with either <code>-</code>, <code>*</code> or <code>+</code> at begining of line, and ordered lists with <code>1.</code>, <code>2.</code>, etc.<br />
-Nested lists with a tab, so marker is below above item's text.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>- item a
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>   1. item a
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>   2. item b
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>* item b
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    * some item
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    * some other item
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        - with a sub-item
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>+ item c
-</span></code></pre></div></p>
+<h1 id="norm-and-inner-product">Norm and inner product</h1>
+<h4 id="norm">Norm</h4>
+<p>A <strong>norm</strong> for a vector space <span class="arithmatex">\(V\)</span> over a field <span class="arithmatex">\(F\)</span> is a real-valued function <span class="arithmatex">\(\lVert \cdot\rVert:V\rightarrow \mathbb{R}\)</span> generalizing the notion of distance with the properties,<br />
+<span class="arithmatex">\(\forall u,v\in V, \forall a \in F\)</span>,</p>
 <ul>
-<li>item a<ol>
-<li>item a</li>
-<li>item b</li>
-</ol>
-</li>
-<li>item b<ul>
-<li>some item</li>
-<li>some other item<ul>
-<li>with a sub-item</li>
+<li>triangle inequality <span class="arithmatex">\(\lVert u+v\rVert \leq \lVert u\rVert +\lVert v\rVert\)</span></li>
+<li>homogeneity <span class="arithmatex">\(\lVert av \rVert = | a | \lVert v \rVert\)</span></li>
+<li>positive-definiteness <span class="arithmatex">\(\lVert x\rVert =0\implies x=0\)</span></li>
 </ul>
+<h4 id="inner-product">Inner product</h4>
+<p>An <strong>inner product</strong> for a vector space <span class="arithmatex">\(V\)</span> over a <span class="arithmatex">\(F\)</span> is a map <span class="arithmatex">\(\langle\cdot,\cdot\rangle : V\times V \rightarrow F\)</span>. generalizing geometric notions such as <strong>angles</strong> and <strong>orthogonality</strong>.
+An inner product must satisfy the properties,<br />
+<span class="arithmatex">\(\forall u,v,w \in V, \forall a,b \in F\)</span>,</p>
+<ul>
+<li>conjugate symmetry <span class="arithmatex">\(\langle u,v\rangle = \overline{\langle u,v \rangle}\)</span><br />
+(where <span class="arithmatex">\(\overline{a}\)</span> denotes the complex conjugate of <span class="arithmatex">\(a\)</span>)</li>
+<li>linearity in the first argument<br />
+<span class="arithmatex">\(\langle au+bv,w\rangle = a\langle u,w \rangle + b\langle v,w \rangle\)</span></li>
+<li>positive-definiteness if <span class="arithmatex">\(v\neq 0\)</span>, <span class="arithmatex">\(\langle v,v\rangle&gt;0\)</span><br />
+(conjugate symmetry implies <span class="arithmatex">\(\langle v,v \rangle \in \mathbb{R}\)</span>)</li>
+</ul>
+<p>Note that an inner product induces a norm as 
+$$
+   \Vert v\Vert = \sqrt{\langle v,v \rangle}
+$$
+As such, Hilbert spaces (vector spaces with norm) are a subset of Banach spaces (vector spaces with inner product).</p>
+<h2 id="properties">Properties</h2>
+<p>In addition to the above properties of norms and inner products, the following also holds,</p>
+<ul>
+<li>angle <span class="arithmatex">\(u,v \in V\)</span> over <span class="arithmatex">\(\mathbb{R}\)</span>, <span class="arithmatex">\(\angle(u,v) = \arccos\frac{\langle u,v \rangle}{\lVert u\rVert \lVert v\rVert}\)</span></li>
+<li>orthogonality <span class="arithmatex">\(u\perp v \iff \langle u,v \rangle=0\)</span></li>
+<li>Polarization identity<br />
+<span class="arithmatex">\(\lVert u+v\rVert^2=\lVert u\rVert^2+\lVert y\rVert^2+2\mathfrak{Re} \langle u,v \rangle\)</span></li>
+<li>Pythagorean theorem <span class="arithmatex">\(u\perp v\)</span>, then<br />
+$$
+\lVert u+v\rVert^2=\lVert u\rVert^2+\lVert v\rVert^2
+$$</li>
+<li>Parseval's identity <span class="arithmatex">\(v_1,\ldots,v_n\)</span> pairwise orthogonal (<span class="arithmatex">\(v_i\perp v_j \forall i\neq j \in \lbrace 1,\ldots,n\rbrace\)</span>), then<br />
+$$
+\left\lVert \sum_{i=1}^n v_i \right\rVert^2=\sum_{i=1}^{n}\lVert v_i\rVert^2
+$$</li>
+<li>reverse triangle inequality <span class="arithmatex">\(\lVert u\pm v\rVert \geq \left| \lVert u\rVert -\lVert v\rVert \right|\)</span></li>
+<li>
+<p>parallelogram law<br />
+<span class="arithmatex">\(\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert u\rVert^2\)</span></p>
+</li>
+<li>
+<p>Cauchy-Schwarz inequality <span class="arithmatex">\(\left| \langle u,v \rangle \right| \leq \lVert u\rVert \lVert v\rVert\)</span></p>
 </li>
 </ul>
-</li>
-<li>item c</li>
-</ul>
-<h3 id="tables">Tables</h3>
-<p>Colons can be used to align columns.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>| Tables        | Are           | Cool  |
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>| ------------- |:-------------:| -----:|
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>| col 3 is      | right-aligned | $1600 |
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>| col 2 is      | centered      |   $12 |
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>| zebra stripes | are neat      |    $1 |
-</span></code></pre></div>
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.</p>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align: center;">Are</th>
-<th style="text-align: right;">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align: center;">right-aligned</td>
-<td style="text-align: right;">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align: center;">centered</td>
-<td style="text-align: right;">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align: center;">are neat</td>
-<td style="text-align: right;">$1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="equations">Equations</h3>
-<p>For inline math, use <code>\( a \)</code> for <span class="arithmatex">\(a\)</span></p>
-<p>For equations, use <code>$$ $$</code></p>
-<p>The Cauchy-Schwarz Inequality,</p>
-<div class="arithmatex">\[
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-\]</div>
-<p>aligned environment can be used, with a blank line before
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$$
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>\begin{aligned}
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>x &amp;= y + z + j^{-1} \\
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>a &amp;= b + c
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>\end{aligned}
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>$$
-</span></code></pre></div></p>
-<div class="arithmatex">\[
-\begin{aligned}
-x &amp;= y + z + j^{-1} \\
-a &amp;= b + c
-\end{aligned}
-\]</div>
-<h3 id="footnotes">Footnotes</h3>
-<p>use <code>[^1]</code> for a footnote <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, and another <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.
-Then add <code>[^1]: explanation</code> anywhere in the doc, it will be rendered at the bottom. For a paragraph, indent it with four spaces, e.g.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>[^2]:
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    massa, nec semper lorem quam in massa.
-</span></code></pre></div></p>
-<h3 id="collapsible-sections">Collapsible sections</h3>
-<details>
-
-<summary>Tips for collapsed sections</summary>
-You can add text within a collapsed section.  
-You can add an image or a code block, too.
-
-<div class="language-ruby highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">   </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span>
-</span></code></pre></div>
-
-</details>
-
-<details open>
-
-<summary>Collapsed sections</summary>
-
-This one is opened by default
-
-</details>
-
-<details>
-<summary>Section A</summary>
-<details>
-<summary>Section A.B</summary>
-<details>
-<summary>Section A.B.C</summary>
-<details>
-<summary>Section A.B.C.D</summary>
-  Done!
-</details>
-</details>
-</details>
-</details>
-
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>explanation&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-massa, nec semper lorem quam in massa.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h2 id="examples">Examples</h2>
+<p>The set of real numbers <span class="arithmatex">\(\mathbb{R}\)</span> is a vector space over <span class="arithmatex">\(\mathbb{R}\)</span> with the inner product <span class="arithmatex">\(\langle u,v \rangle = uv\)</span>.</p>
+<p>The Euclidean space <span class="arithmatex">\(\mathbb{R}^n\)</span> over the field <span class="arithmatex">\(\mathbb{R}\)</span> has its inner products of the form
+$$
+\langle u,v \rangle = u^\top M v
+$$
+with <span class="arithmatex">\(M\)</span> a symmetric positive-definite matrix. The dot product <span class="arithmatex">\(u^\top v\)</span> is one particular inner product.</p>
+<p>The space <span class="arithmatex">\(C([x_a,x_b])\)</span> of continuous complex valued functions on the interval <span class="arithmatex">\([x_a,x_b]\)</span>. Its inner product is
+$$
+\langle f,g \rangle = \int_{x_a}^{x_b} f(t) \overline{g(t)}dt
+$$</p>
+<p>space of <span class="arithmatex">\(T\)</span>-periodic square-integrable (<span class="arithmatex">\(L^2\)</span>) functions have the inner product
+$$
+\langle f,g\rangle = \frac{1}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}f(x)\overline{g(x)}dx.
+$$</p>
+<p>The set of random variables, in which the expected value of the product of two random variables <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> defines an inner product,
+$$
+\langle X,Y \rangle = \mathbb{E}[X,Y]
+$$</p>
+<p>The set <span class="arithmatex">\(\mathbb{C}^{n\times m}\)</span> of complex matrices of same size, in which the Frobenius inner product is 
+$$
+\langle A,B \rangle _F = \text{tr}(AB^*)
+$$
+with <span class="arithmatex">\(B^*\)</span> the conjugate transpose (also called <strong>adjoint matrix</strong>) of <span class="arithmatex">\(B\)</span>.</p>
 
 
 

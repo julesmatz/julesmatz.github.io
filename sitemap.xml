@@ -2,78 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://julesmatz.github.io/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
+    </url>
+    <url>
+         <loc>https://julesmatz.github.io/Algebra/inner_prod/</loc>
+         <lastmod>2025-11-24</lastmod>
+    </url>
+    <url>
+         <loc>https://julesmatz.github.io/Algebra/linear_map/</loc>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Algebra/matrix_inversion/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
+    </url>
+    <url>
+         <loc>https://julesmatz.github.io/Algebra/vector_space/</loc>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Algebra/Geometry2D/circle_circle_intersection/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Control/sliding_mode/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Estimation/Bayesian_inference/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Estimation/Bayesian_inference_gaussian/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Estimation/Kalman/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Estimation/gaussian/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Modelling/PCE/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Modelling/modelling/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/git/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/julia/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/markdown/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/python/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/ros/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/ros2/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/unix/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/urdf/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
     <url>
          <loc>https://julesmatz.github.io/Tools/website/</loc>
-         <lastmod>2025-11-14</lastmod>
+         <lastmod>2025-11-24</lastmod>
     </url>
 </urlset>

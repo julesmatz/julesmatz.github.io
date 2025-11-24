@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Tools/ros2/">
+        <link rel="canonical" href="https://julesmatz.github.io/Algebra/linear_map/">
       
       
-        <link rel="prev" href="../ros/">
+        <link rel="prev" href="../inner_prod/">
       
       
-        <link rel="next" href="../urdf/">
+        <link rel="next" href="../matrix_inversion/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>ROS2 - notes</title>
+        <title>Linear map - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ros2" class="md-skip">
+        <a href="#linear-maps" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ROS2
+              Linear map
             
           </span>
         </div>
@@ -215,18 +215,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -242,7 +244,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -256,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Algebra/vector_space/" class="md-nav__link">
+      <a href="../vector_space/" class="md-nav__link">
         
   
   
@@ -279,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Algebra/inner_prod/" class="md-nav__link">
+      <a href="../inner_prod/" class="md-nav__link">
         
   
   
@@ -299,10 +301,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Algebra/linear_map/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -313,6 +324,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -325,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
+      <a href="../matrix_inversion/" class="md-nav__link">
         
   
   
@@ -717,20 +729,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -746,7 +756,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -760,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../website/" class="md-nav__link">
+      <a href="../../Tools/website/" class="md-nav__link">
         
   
   
@@ -783,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown/" class="md-nav__link">
+      <a href="../../Tools/markdown/" class="md-nav__link">
         
   
   
@@ -806,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unix/" class="md-nav__link">
+      <a href="../../Tools/unix/" class="md-nav__link">
         
   
   
@@ -829,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../Tools/git/" class="md-nav__link">
         
   
   
@@ -852,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python/" class="md-nav__link">
+      <a href="../../Tools/python/" class="md-nav__link">
         
   
   
@@ -875,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../julia/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
@@ -898,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ros/" class="md-nav__link">
+      <a href="../../Tools/ros/" class="md-nav__link">
         
   
   
@@ -918,32 +928,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    ROS2
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Tools/ros2/" class="md-nav__link">
         
   
   
@@ -954,89 +942,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introspection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introspection
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bags
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ros2-c-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      ROS2 C++ package
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ros2-python-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      ROS2 Python package
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1049,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../urdf/" class="md-nav__link">
+      <a href="../../Tools/urdf/" class="md-nav__link">
         
   
   
@@ -1092,77 +997,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introspection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introspection
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bags
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ros2-c-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      ROS2 C++ package
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ros2-python-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      ROS2 Python package
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1177,92 +1011,23 @@
 
 
 
-<h1 id="ros2">ROS2</h1>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">source</span><span class="w"> </span>/opt/ros/jazzy/setup.bash
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>&lt;install_folder&gt;/local_setup.bash
-</span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rqt<span class="w"> </span><span class="c1"># gui to replace many command-line</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>colcon_cd<span class="w"> </span>&lt;pkg_name&gt;<span class="w"> </span><span class="c1"># cd to pkg folder</span>
-</span></code></pre></div>
-<h2 id="build">Build</h2>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># resolve dependencies</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>rosdep<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>--from-path<span class="w"> </span>src<span class="w"> </span>--rosdistro<span class="w"> </span>jazzy<span class="w"> </span>-y
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># build</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install<span class="w"> </span><span class="c1"># build (python modifications do not require rebuild)</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>&lt;pkg_name&gt;<span class="w"> </span><span class="c1"># rebuild only specific package</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>colcon<span class="w"> </span>build<span class="w"> </span>--event-handlers<span class="w"> </span>console_direct+<span class="w"> </span><span class="c1"># show console output to debug</span>
-</span></code></pre></div>
-To not build a specific package, place an empty file <code>COLCON_IGNORE</code> in its directory.</p>
-<h2 id="introspection">Introspection</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>rqt_graph<span class="w"> </span>rqt_graph
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ros2<span class="w"> </span>run<span class="w"> </span>rqt_console<span class="w"> </span>rqt_console<span class="w"> </span><span class="c1"># to inspect logs</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>ros2<span class="w"> </span>pkg<span class="w"> </span>executables<span class="w"> </span>&lt;pkg_name&gt;
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>ros2<span class="w"> </span>node<span class="w"> </span>list
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>ros2<span class="w"> </span>topic<span class="w"> </span>list<span class="w"> </span>-t<span class="w"> </span><span class="c1"># -t to show topic type</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>ros2<span class="w"> </span>service<span class="w"> </span>list
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>ros2<span class="w"> </span>action<span class="w"> </span>list
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>ros2<span class="w"> </span>node<span class="w"> </span>info<span class="w"> </span>&lt;node_name&gt;
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>ros2<span class="w"> </span>topic<span class="w"> </span>info<span class="w"> </span>&lt;topic_name&gt;<span class="w"> </span><span class="c1"># show type, publishers, subscribers</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>ros2<span class="w"> </span>interface<span class="w"> </span>show<span class="w"> </span>&lt;msg_name&gt;<span class="w"> </span><span class="c1"># show details of message structure</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>ros2<span class="w"> </span>topic<span class="w"> </span>hz<span class="w"> </span>&lt;topic_name&gt;
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>ros2<span class="w"> </span>topic<span class="w"> </span>bw<span class="w"> </span>&lt;topic_name&gt;<span class="w"> </span><span class="c1"># bandwith (data transfer rate in KB/s and msg size in KB)</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>&lt;topic_name&gt;
-</span></code></pre></div>
-<h2 id="operations">Operations</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>&lt;pkg_name&gt;<span class="w"> </span>&lt;launch_name&gt;<span class="w"> </span><span class="c1"># launch files have extension .launch.py</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;pkg_name&gt;<span class="w"> </span>&lt;exec_name&gt;
-</span></code></pre></div>
-<h2 id="parameters">Parameters</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ros2<span class="w"> </span>param<span class="w"> </span>get<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span>&lt;param_name&gt;
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ros2<span class="w"> </span>param<span class="w"> </span><span class="nb">set</span><span class="w"> </span>&lt;node_name&gt;<span class="w"> </span>&lt;param_name&gt;<span class="w"> </span>&lt;value&gt;
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>ros2<span class="w"> </span>param<span class="w"> </span>dump<span class="w"> </span>&lt;node<span class="w"> </span>name&gt;<span class="w"> </span><span class="c1"># print all param and values to stdout</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>ros2<span class="w"> </span>param<span class="w"> </span>dump<span class="w"> </span>/turtlesim<span class="w"> </span>&gt;<span class="w"> </span>cfg1.yaml<span class="w"> </span><span class="c1"># print to file</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>ros2<span class="w"> </span>param<span class="w"> </span>load<span class="w"> </span>/turtlesim<span class="w"> </span>cfg1.yaml<span class="w"> </span><span class="c1"># load parameters</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;pkg_name&gt;<span class="w"> </span>&lt;exec_name&gt;<span class="w"> </span>--ros-args<span class="w"> </span>--params-file<span class="w"> </span>cfg1.yaml<span class="w"> </span><span class="c1"># run with param</span>
-</span></code></pre></div>
-<h2 id="bags">Bags</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>/bag_files<span class="w"> </span><span class="c1"># move to where bag should be saved</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ros2<span class="w"> </span>bag<span class="w"> </span>record<span class="w"> </span>-o<span class="w"> </span>my_bag_name<span class="w"> </span>&lt;topic_name1&gt;<span class="w"> </span>&lt;topic_name2&gt;
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>ros2<span class="w"> </span>bag<span class="w"> </span>info<span class="w"> </span>&lt;bag_file&gt;
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>ros2<span class="w"> </span>bag<span class="w"> </span>play<span class="w"> </span>--clock<span class="w"> </span>--loop<span class="w"> </span>&lt;bag_file&gt;
-</span></code></pre></div>
-<h2 id="ros2-c-package">ROS2 C++ package</h2>
-<p>Structure
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>my_package/
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>     config/             # yaml config files
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>     rviz/               # rviz config files
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>     doc/                # documentation
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>     msg/                # custom msg definitions
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>     launch/             # launch files
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>     include/my_package  # headers .h and .hpp
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>     src/                # C++ source code
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>     urdf/
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>     srv/
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>     action/
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>     test/
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>     CMakeLists.txt      # instructions to build code
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>     package.xml         # meta info
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>     LICENSE
-</span></code></pre></div>
-Creation
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ros2 pkg create --build-type ament_cmake --license Apache-2.0 --node-name my_node my_package
-</span></code></pre></div></p>
-<h2 id="ros2-python-package">ROS2 Python package</h2>
-<p>Structure
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>my_package/
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>      package.xml         # meta info
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>      resource/my_package # marker file
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>      setup.cfg           # required for executables for ros2 run, must match with meta info
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>      setup.py            # instructions to install pkg
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>      my_package/         # required to find pkg, contains __init__.py
-</span></code></pre></div>
-Creation
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ros2 pkg create --build-type ament_python --license Apache-2.0 --node-name my_node my_package
-</span></code></pre></div></p>
+<h1 id="linear-maps">Linear maps</h1>
+<p>A <strong>linear map</strong> (fr: <em>application linéaire</em>) is a function <span class="arithmatex">\(f:V\mapsto W\)</span> preserving vector addition and scalar multiplication, that is,<br />
+<span class="arithmatex">\(\forall u,v\in V, \forall a \in F\)</span>,</p>
+<ul>
+<li>additivity <span class="arithmatex">\(f(u+v)=f(u)+f(v)\)</span></li>
+<li>homogeneity <span class="arithmatex">\(f(av)=af(v)\)</span></li>
+</ul>
+<p>Thus a linear map preserves linear combinations,
+$$
+f\left(\sum_{i=1}^{k}a_iv_i\right) = \sum_{i=1}^{k}a_if(v_i)
+$$
+A few special cases: <span class="arithmatex">\(f\)</span> is a</p>
+<ul>
+<li><strong>linear isomorphism</strong> if it is a <strong>bijection</strong> (one-to-one correspondance between elements in <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(W\)</span>)</li>
+<li><strong>linear endomorphism</strong> if it maps to itself</li>
+<li><strong>linear automorphism</strong> if it is both of the above</li>
+</ul>
 
 
 
