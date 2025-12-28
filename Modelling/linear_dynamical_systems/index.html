@@ -536,6 +536,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Linear dynamics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -547,6 +560,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-to-laplaace-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link to Laplaace transform
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1114,6 +1164,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-to-laplaace-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link to Laplaace transform
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1191,7 +1267,10 @@ $$
 x(t) = \sum_{i=1}^n c_i e^{\lambda_i t}v_i
 $$
 with the complex coefficients <span class="arithmatex">\(c_i\)</span> obtained from initial conditions and by restricting the solution to be real.</p>
+<h4 id="example">Example</h4>
 <p>This is applied to an example in the <a href="../example_mass_spring_damper/">mass-spring-damper note</a>.</p>
+<h4 id="link-to-laplaace-transform">Link to Laplaace transform</h4>
+<p>This note solves a differential equation in the time domain using eigenvectors and complex exponentials. However, another path is possible: Laplace transforms. The problem is cast as an algebraic equation in the <span class="arithmatex">\(s\)</span>-domain, resulting in a transfer function. Its poles (roots of the denominator) are exactly the eigenvalues of <span class="arithmatex">\(A\)</span>. The solution is computed as a sum of terms like <span class="arithmatex">\(\frac{1}{s-\lambda_i}\)</span>, whose time-domain equivalent is <span class="arithmatex">\(e^{\lambda_i t}\)</span>, resulting in the same time-domain solution.</p>
 
 
 
