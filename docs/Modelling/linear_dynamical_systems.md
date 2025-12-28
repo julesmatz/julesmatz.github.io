@@ -64,8 +64,13 @@ x(t) = \sum_{i=1}^n c_i e^{\lambda_i t}v_i
 $$
 with the complex coefficients \(c_i\) obtained from initial conditions and by restricting the solution to be real.
 
+
+#### Example
 This is applied to an example in the [mass-spring-damper note](example_mass_spring_damper.md).
 
+
+#### Link to Laplaace transform
+This note solves a differential equation in the time domain using eigenvectors and complex exponentials. However, another path is possible: Laplace transforms. The problem is cast as an algebraic equation in the \(s\)-domain, resulting in a transfer function. Its poles (roots of the denominator) are exactly the eigenvalues of \(A\). The solution is computed as a sum of terms like \(\frac{1}{s-\lambda_i}\), whose time-domain equivalent is \(e^{\lambda_i t}\), resulting in the same time-domain solution.
 
 
 
