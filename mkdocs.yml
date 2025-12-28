@@ -9,8 +9,12 @@ nav:
     - Linear map: Algebra/linear_map.md
     - Matrix inversion: Algebra/matrix_inversion.md
     - Geometry (2D):
-      - Circle-circle intersection: Geometry2D/circle_circle_intersection.md
+      - Circle-circle intersection: Algebra/Geometry2D/circle_circle_intersection.md
   - Modelling:
+    - Linear models:
+      - Complex exponential for dynamics: Modelling/complex_exponential.md
+      - Linear dynamics: Modelling/linear_dynamical_systems.md
+      - Mass-spring-damper: Modelling/example_mass_spring_damper.md
     - Modelling approaches: Modelling/modelling.md
     - PCE: Modelling/PCE.md
   - Estimation:

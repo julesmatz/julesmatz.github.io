@@ -56,7 +56,7 @@ for `code`
 alt="Machine Learning Fundamentals: Cross Validation" width="200" height="180" border="2" /></a>
 
 ### Local links
-`[Link to code section](#code)` for [Link to code section in other file](website.md)
+`[Link to code section in other file](website.md)` for [Link to code section in other file](website.md)
 
 `![reference to local file](img/classmate.png)` for a [reference to local file](img/classmate.png)
 
