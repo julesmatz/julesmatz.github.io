@@ -1197,9 +1197,9 @@ c_1 v_1 + c_2 v_2 &amp;= \begin{pmatrix} 1\\ 1\end{pmatrix} \\
 <div class="arithmatex">\[
 \begin{align}
 x(t)&amp;=e^{-0.1t}\left((a+ib)(\cos(0.99t)+i\sin(0.99t))v_1 + (a-ib)(\cos(0.99t)-i\sin(0.99t))v_1\right)\\
-&amp;= (v_1+v_2)\left( a\cos(0.99t)-b\sin(0.99t) \right) + i(v_1-v_2)\left(a\sin(0.99t)+b\cos(0.99t)\right)\\
-&amp;= \begin{pmatrix}2\\-0.2\end{pmatrix}\left( a\cos(0.99t)-b\sin(0.99t) \right) + i\begin{pmatrix}0\\1.98i\end{pmatrix}\left(a\sin(0.99t)+b\cos(0.99t)\right)\\
-&amp;= \begin{pmatrix}2\\-0.2\end{pmatrix}\left( 0.5\cos(0.99t)+0.555\sin(0.99t) \right) - \begin{pmatrix}0\\1.98\end{pmatrix}\left(0.5\sin(0.99t)-0.555\cos(0.99t)\right)
+&amp;= e^{-0.1t}\left((v_1+v_2)\left( a\cos(0.99t)-b\sin(0.99t) \right) + i(v_1-v_2)\left(a\sin(0.99t)+b\cos(0.99t)\right)\right)\\
+&amp;= e^{-0.1t}\left(\begin{pmatrix}2\\-0.2\end{pmatrix}\left( a\cos(0.99t)-b\sin(0.99t) \right) + i\begin{pmatrix}0\\1.98i\end{pmatrix}\left(a\sin(0.99t)+b\cos(0.99t)\right)\right)\\
+&amp;= e^{-0.1t}\left(\begin{pmatrix}2\\-0.2\end{pmatrix}\left( 0.5\cos(0.99t)+0.555\sin(0.99t) \right) - \begin{pmatrix}0\\1.98\end{pmatrix}\left(0.5\sin(0.99t)-0.555\cos(0.99t)\right)\right)
 \end{align}
 \]</div>
 <p><img alt="" src="../img/mass_spring_damper_in_time.png" style="display: block; margin: 0 auto; width: 400px" /></p>
