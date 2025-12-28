@@ -7,8 +7,8 @@ a = 0.5
 b = -0.555
 
 # elementwise operations for vectors
-x = 2 .* (a .* cos.(0.99 .* t) .- b .* sin.(0.99 .* t))
-v = -0.2 .* (a .* cos.(0.99 .* t) .- b .* sin.(0.99 .* t)) .- 1.98 .* (a .* sin.(0.99 .* t) .+ b .* cos.(0.99 .* t))
+x = exp.(-0.5*t).*(2 .* (a .* cos.(0.99 .* t) .- b .* sin.(0.99 .* t)))
+v = exp.(-0.5*t).*(-0.2 .* (a .* cos.(0.99 .* t) .- b .* sin.(0.99 .* t)) .- 1.98 .* (a .* sin.(0.99 .* t) .+ b .* cos.(0.99 .* t)))
 
 
 # create two vertically stacked subplots
