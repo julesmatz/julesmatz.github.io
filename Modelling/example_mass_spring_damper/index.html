@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Algebra/matrix_inversion/">
+        <link rel="canonical" href="https://julesmatz.github.io/Modelling/example_mass_spring_damper/">
       
       
-        <link rel="prev" href="../linear_map/">
+        <link rel="prev" href="../linear_dynamical_systems/">
       
       
-        <link rel="next" href="../Geometry2D/circle_circle_intersection/">
+        <link rel="next" href="../modelling/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Matrix inversion - notes</title>
+        <title>Mass-spring-damper - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#matrix-inversion" class="md-skip">
+        <a href="#linear-system-example-mass-spring-damper" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Matrix inversion
+              Mass-spring-damper
             
           </span>
         </div>
@@ -215,20 +215,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -258,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector_space/" class="md-nav__link">
+      <a href="../../Algebra/vector_space/" class="md-nav__link">
         
   
   
@@ -281,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inner_prod/" class="md-nav__link">
+      <a href="../../Algebra/inner_prod/" class="md-nav__link">
         
   
   
@@ -304,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear_map/" class="md-nav__link">
+      <a href="../../Algebra/linear_map/" class="md-nav__link">
         
   
   
@@ -324,32 +322,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Matrix inversion
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -360,53 +336,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adjugate-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjugate Method
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=2\)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=3\)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -457,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Geometry2D/circle_circle_intersection/" class="md-nav__link">
+      <a href="../../Algebra/Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -492,18 +421,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -519,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Modelling
@@ -530,18 +461,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -557,7 +490,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             Linear models
@@ -571,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/complex_exponential/" class="md-nav__link">
+      <a href="../complex_exponential/" class="md-nav__link">
         
   
   
@@ -594,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/linear_dynamical_systems/" class="md-nav__link">
+      <a href="../linear_dynamical_systems/" class="md-nav__link">
         
   
   
@@ -614,10 +547,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Modelling/example_mass_spring_damper/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -628,6 +570,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -648,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/modelling/" class="md-nav__link">
+      <a href="../modelling/" class="md-nav__link">
         
   
   
@@ -671,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/PCE/" class="md-nav__link">
+      <a href="../PCE/" class="md-nav__link">
         
   
   
@@ -1171,41 +1114,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adjugate-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjugate Method
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=2\)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=3\)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1220,21 +1128,81 @@
 
 
 
-<h1 id="matrix-inversion">Matrix Inversion</h1>
-<p>Inverse of matrix <span class="arithmatex">\( A \)</span> is <span class="arithmatex">\( A^{-1} \)</span> such that <span class="arithmatex">\( AA^{-1}=A^{-1}A=I \)</span>.</p>
-<h3 id="adjugate-method">Adjugate Method</h3>
-<p>Inverse of <span class="arithmatex">\( A \)</span> using the adjugate method:</p>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{\det(A)} \text{adj}(A) \]</div>
-<p><span class="arithmatex">\( \text{adj}(A) = C^T \)</span> with <span class="arithmatex">\( C \)</span> the cofactor matrix, whose element <span class="arithmatex">\(c_{i,j} \)</span> is <span class="arithmatex">\((-1)^{i+j}\)</span> times the determinant of <span class="arithmatex">\(A\)</span> without the <span class="arithmatex">\(i\)</span>-th line and <span class="arithmatex">\(j\)</span>-th column.</p>
-<h3 id="example-for-n2">Example for <span class="arithmatex">\(n=2\)</span></h3>
-<div class="arithmatex">\[ A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \]</div>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix} \]</div>
-<h3 id="example-for-n3">Example for <span class="arithmatex">\(n=3\)</span></h3>
-<div class="arithmatex">\[ A = \begin{pmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i \end{pmatrix} \]</div>
-<div class="arithmatex">\[ C = \begin{pmatrix} ei-fh &amp; -(di-fg) &amp; dh-eg \\
--(bi-ch) &amp; ai-cg &amp; -(ah-bg) \\
-bf-ce &amp; -(af-cd) &amp; ae-bd \end{pmatrix}\]</div>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{\det(A)} C^T \]</div>
+<h1 id="linear-system-example-mass-spring-damper">Linear system example: mass-spring-damper</h1>
+<p>This is an example for <a href="../linear_dynamical_systems/">linear dynamical systems note</a>.</p>
+<p>The classic mass-spring-damper linear system is
+$$
+m\ddot{z} = -c\dot{z}-kz
+$$</p>
+<p>and in state-space form,</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+\dot{z} \\
+\ddot{z}
+\end{pmatrix}
+=\begin{pmatrix}
+0 &amp; 1\\
+-\frac{k}{m} &amp; -\frac{c}{m}
+\end{pmatrix}
+\begin{pmatrix}
+z\\
+\dot{z}
+\end{pmatrix}
+\]</div>
+<p>Eigenvalues and eigenvectors are such that</p>
+<div class="arithmatex">\[
+\begin{align}
+Av &amp;= \lambda v\\
+(A-\lambda I)v &amp;= 0\\
+\begin{pmatrix}
+-\lambda &amp; 1\\
+-\frac{k}{m} &amp; -\frac{c}{m}-\lambda
+\end{pmatrix}
+v&amp;=0
+\end{align}
+\]</div>
+<p>From the first line of the equation, the eigenvectors have the form <span class="arithmatex">\(v = \begin{pmatrix}1\\ \lambda \end{pmatrix}\)</span>.<br />
+Furthermore, it must be that <span class="arithmatex">\(A-\lambda I\)</span> is singular so its determinant is null,</p>
+<div class="arithmatex">\[
+\begin{align}
+\det(A-\lambda I) &amp;= 0\\
+-\lambda(-\frac{c}{m}-\lambda) + \frac{k}{m} &amp;= 0\\
+\lambda^2 + \lambda \frac{c}{m} + \frac{k}{m} &amp;= 0\\
+(\lambda + \frac{1}{2}\frac{c}{m})^2 - \frac{1}{4}{c^2}{m^2} + \frac{k}{m} &amp;= 0\\
+\lambda + \frac{1}{2}\frac{c}{m} &amp;= \pm\sqrt{\frac{1}{4}\frac{c^2}{m^2}-\frac{k}{m}}\\
+\lambda &amp;= \frac{-c\pm\sqrt{c^2-4mk}}{2m}
+\end{align}
+\]</div>
+<p>which can result in complex eigenvalues if <span class="arithmatex">\(c^2 &lt; 4mk \)</span>.
+For example, if <span class="arithmatex">\(m=1\)</span>, <span class="arithmatex">\(k=1\)</span>, <span class="arithmatex">\(c=0.2\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align}
+\lambda_{1} &amp;= -0.1 + 0.99i \quad &amp; \lambda_{2} &amp;= -0.1 - 0.99i\\
+v_1 &amp;= \begin{pmatrix} 1\\ -0.1 + 0.99i\end{pmatrix} &amp; v_2 &amp;= \begin{pmatrix} 1\\ -0.1 - 0.99i\end{pmatrix}
+\end{align}
+\]</div>
+<p>The solution is of the form </p>
+<div class="arithmatex">\[
+x(t) = c_1e^{\lambda_1 t}v_1 + c_2e^{\lambda_2 t}v_2
+\]</div>
+<p>Choosing <span class="arithmatex">\(c_{1,2} = a \pm i b\)</span> leads to <span class="arithmatex">\(c_2\)</span>, <span class="arithmatex">\(e^{\lambda_2 t}\)</span> and <span class="arithmatex">\(v_2\)</span> being complex conjugates of <span class="arithmatex">\(c_1\)</span>, <span class="arithmatex">\(e^{\lambda_1 t}\)</span> and <span class="arithmatex">\(v_1\)</span>. As conjugation is distributive over multiplication, the product <span class="arithmatex">\(c_2e^{\lambda_2 t}v_2\)</span> is the complex conjugate of <span class="arithmatex">\(c_1e^{\lambda_1 t}v_1\)</span>, and since we then add these two complex conjugates, the imaginary parts cancel out.</p>
+<p>The two unknowns <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are identified from intial conditions <span class="arithmatex">\(z(0)=1\)</span> and <span class="arithmatex">\(\dot{z}(0) = 1\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align}
+c_1 v_1 + c_2 v_2 &amp;= \begin{pmatrix} 1\\ 1\end{pmatrix} \\
+(a+ib) \begin{pmatrix} 1 \\ -0.1+0.99i\end{pmatrix} + (a-ib) \begin{pmatrix} 1 \\ -0.1-0.99i\end{pmatrix} &amp;= \begin{pmatrix} 1\\ 1\end{pmatrix}
+\end{align}
+\]</div>
+<p>From the first line, <span class="arithmatex">\(a=\frac{1}{2}\)</span>. Injecting it in the second line gives <span class="arithmatex">\(b=-0.555\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align}
+x(t)&amp;=e^{-0.1t}\left((a+ib)(\cos(0.99t)+i\sin(0.99t))v_1 + (a-ib)(\cos(0.99t)-i\sin(0.99t))v_1\right)\\
+&amp;= (v_1+v_2)\left( a\cos(0.99t)-b\sin(0.99t) \right) + i(v_1-v_2)\left(a\sin(0.99t)+b\cos(0.99t)\right)\\
+&amp;= \begin{pmatrix}2\\-0.2\end{pmatrix}\left( a\cos(0.99t)-b\sin(0.99t) \right) + i\begin{pmatrix}0\\1.98i\end{pmatrix}\left(a\sin(0.99t)+b\cos(0.99t)\right)\\
+&amp;= \begin{pmatrix}2\\-0.2\end{pmatrix}\left( 0.5\cos(0.99t)+0.555\sin(0.99t) \right) - \begin{pmatrix}0\\1.98\end{pmatrix}\left(0.5\sin(0.99t)-0.555\cos(0.99t)\right)
+\end{align}
+\]</div>
+<p><img alt="" src="../img/mass_spring_damper_in_time.png" style="display: block; margin: 0 auto; width: 400px" /></p>
 
 
 

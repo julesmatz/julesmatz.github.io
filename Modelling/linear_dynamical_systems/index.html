@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Algebra/matrix_inversion/">
+        <link rel="canonical" href="https://julesmatz.github.io/Modelling/linear_dynamical_systems/">
       
       
-        <link rel="prev" href="../linear_map/">
+        <link rel="prev" href="../complex_exponential/">
       
       
-        <link rel="next" href="../Geometry2D/circle_circle_intersection/">
+        <link rel="next" href="../example_mass_spring_damper/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Matrix inversion - notes</title>
+        <title>Linear dynamics - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#matrix-inversion" class="md-skip">
+        <a href="#linear-dynamical-systems" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Matrix inversion
+              Linear dynamics
             
           </span>
         </div>
@@ -215,20 +215,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -258,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector_space/" class="md-nav__link">
+      <a href="../../Algebra/vector_space/" class="md-nav__link">
         
   
   
@@ -281,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inner_prod/" class="md-nav__link">
+      <a href="../../Algebra/inner_prod/" class="md-nav__link">
         
   
   
@@ -304,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear_map/" class="md-nav__link">
+      <a href="../../Algebra/linear_map/" class="md-nav__link">
         
   
   
@@ -324,32 +322,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Matrix inversion
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -360,53 +336,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adjugate-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjugate Method
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=2\)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=3\)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -457,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Geometry2D/circle_circle_intersection/" class="md-nav__link">
+      <a href="../../Algebra/Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -492,18 +421,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -519,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Modelling
@@ -530,18 +461,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -557,7 +490,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             Linear models
@@ -571,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/complex_exponential/" class="md-nav__link">
+      <a href="../complex_exponential/" class="md-nav__link">
         
   
   
@@ -591,10 +524,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Modelling/linear_dynamical_systems/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -605,6 +547,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -617,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/example_mass_spring_damper/" class="md-nav__link">
+      <a href="../example_mass_spring_damper/" class="md-nav__link">
         
   
   
@@ -648,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/modelling/" class="md-nav__link">
+      <a href="../modelling/" class="md-nav__link">
         
   
   
@@ -671,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/PCE/" class="md-nav__link">
+      <a href="../PCE/" class="md-nav__link">
         
   
   
@@ -1171,41 +1114,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adjugate-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjugate Method
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=2\)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=3\)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1220,21 +1128,70 @@
 
 
 
-<h1 id="matrix-inversion">Matrix Inversion</h1>
-<p>Inverse of matrix <span class="arithmatex">\( A \)</span> is <span class="arithmatex">\( A^{-1} \)</span> such that <span class="arithmatex">\( AA^{-1}=A^{-1}A=I \)</span>.</p>
-<h3 id="adjugate-method">Adjugate Method</h3>
-<p>Inverse of <span class="arithmatex">\( A \)</span> using the adjugate method:</p>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{\det(A)} \text{adj}(A) \]</div>
-<p><span class="arithmatex">\( \text{adj}(A) = C^T \)</span> with <span class="arithmatex">\( C \)</span> the cofactor matrix, whose element <span class="arithmatex">\(c_{i,j} \)</span> is <span class="arithmatex">\((-1)^{i+j}\)</span> times the determinant of <span class="arithmatex">\(A\)</span> without the <span class="arithmatex">\(i\)</span>-th line and <span class="arithmatex">\(j\)</span>-th column.</p>
-<h3 id="example-for-n2">Example for <span class="arithmatex">\(n=2\)</span></h3>
-<div class="arithmatex">\[ A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \]</div>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix} \]</div>
-<h3 id="example-for-n3">Example for <span class="arithmatex">\(n=3\)</span></h3>
-<div class="arithmatex">\[ A = \begin{pmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i \end{pmatrix} \]</div>
-<div class="arithmatex">\[ C = \begin{pmatrix} ei-fh &amp; -(di-fg) &amp; dh-eg \\
--(bi-ch) &amp; ai-cg &amp; -(ah-bg) \\
-bf-ce &amp; -(af-cd) &amp; ae-bd \end{pmatrix}\]</div>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{\det(A)} C^T \]</div>
+<h1 id="linear-dynamical-systems">Linear Dynamical Systems</h1>
+<p>In the case of <strong>linear dynamical systems</strong>, the differential operator <span class="arithmatex">\(\frac{d}{dt}\)</span> is actually a linear transformation <span class="arithmatex">\(A\)</span>,
+$$
+\frac{d}{dt} x(t) = A x(t)
+$$</p>
+<details>
+<summary>ex. First order ODE</summary>
+In the scalar case \(A=a\), we need a function \(x(t)\) whose derivative is proportionnal to itself.  
+This is the definition of the exponential function,
+$$
+\frac{d}{dt} e^{\lambda t} = \lambda e^{\lambda t}
+$$
+\(e^{\lambda t}\) is an eigenfunction of the differential operator, with eigenvalue \(\lambda\).
+
+$$
+\frac{dx}{dt} = ax
+$$
+A solution has the form \(x(t)=e^{\lambda t}\),
+$$
+\begin{align}
+\lambda e^{\lambda t} &= a e^{\lambda t} \\
+\lambda &= a
+\end{align}
+$$
+The final solution is scaled \(x(t) = ce^{at}\) with constant \(c\) to be determined from initial conditions.
+</details>
+
+<p>For <span class="arithmatex">\(x(t)\in\mathbb{R}^n\)</span>, the solution is a linear combination of the eigenmodes (superposition principle).<br />
+Eigenmodes are the solutions <span class="arithmatex">\(x(t)\)</span> such that 
+$$
+\frac{d}{dt}x(t) = Ax(t) = \lambda x(t)
+$$</p>
+<p>Let us first look separately at eigenvectors of matrix <span class="arithmatex">\(A\)</span>, and eigenfunctions of operator <span class="arithmatex">\(\frac{d}{dt}\)</span> on a single dimension.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(A\)</span> has <span class="arithmatex">\(n\)</span> eigenvectors <span class="arithmatex">\(v_i\)</span>,
+$$
+Av_i = \lambda_i v_i
+$$
+They are all the directions in which the application of <span class="arithmatex">\(A\)</span> is equivalent to a scaling. It describes a spatial behavior (in the state-space).</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{d}{dt}\)</span> has eigenfunctions <span class="arithmatex">\(e^{\lambda t}\)</span> (on a single dimension),
+$$
+\frac{d}{dt} e^{\lambda t} = \lambda e^{\lambda t}
+$$
+They are all the functions such that their derivative is proportionnal to their value (increasing for <span class="arithmatex">\(\lambda&gt;0\)</span>, decreasing for <span class="arithmatex">\(\lambda&lt;0\)</span>, oscillating for <span class="arithmatex">\(\mathfrak{Im}(\lambda)\neq 0\)</span>). It describes a temporal behavior.</p>
+</li>
+</ul>
+<p>To find the solution for the trajectory <span class="arithmatex">\(x(t)\)</span> in <span class="arithmatex">\(n\)</span> dimensions, the eigendecomposition of <span class="arithmatex">\(\frac{d}{dt}\)</span> is extended to multiple dimensions by applying it along each eigenvectors <span class="arithmatex">\(v_i\)</span> of <span class="arithmatex">\(A\)</span>. Eigenmodes are thus
+$$
+x(t) = e^{\lambda_i t}v_i
+$$
+and associated with eigenvalues <span class="arithmatex">\(\lambda_i\)</span> such that
+$$
+\frac{d}{dt} \left(e^{\lambda_i t}v_i\right) = \lambda_i e^{\lambda_i t} v_i = e^{\lambda_i t} A v_i = A \left( e^{\lambda_i t} v_i \right)
+$$</p>
+<p>Eigenvectors of <span class="arithmatex">\(A\)</span> provide the spatial structure of the solution, while eigenfunctions of <span class="arithmatex">\(\frac{d}{dt}\)</span> provide the temporal behavior.</p>
+<p>The final solution is a linear combination (superposition) of these <span class="arithmatex">\(n\)</span> eigenmodes, 
+$$
+x(t) = \sum_{i=1}^n c_i e^{\lambda_i t}v_i
+$$
+with the complex coefficients <span class="arithmatex">\(c_i\)</span> obtained from initial conditions and by restricting the solution to be real.</p>
+<p>This is applied to an example in the <a href="../example_mass_spring_damper/">mass-spring-damper note</a>.</p>
 
 
 

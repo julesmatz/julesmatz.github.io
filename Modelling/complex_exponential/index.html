@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Algebra/matrix_inversion/">
+        <link rel="canonical" href="https://julesmatz.github.io/Modelling/complex_exponential/">
       
       
-        <link rel="prev" href="../linear_map/">
+        <link rel="prev" href="../../Algebra/Geometry2D/circle_circle_intersection/">
       
       
-        <link rel="next" href="../Geometry2D/circle_circle_intersection/">
+        <link rel="next" href="../linear_dynamical_systems/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Matrix inversion - notes</title>
+        <title>Complex exponential for dynamics - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#matrix-inversion" class="md-skip">
+        <a href="#laplace-transform" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Matrix inversion
+              Complex exponential for dynamics
             
           </span>
         </div>
@@ -215,20 +215,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -258,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector_space/" class="md-nav__link">
+      <a href="../../Algebra/vector_space/" class="md-nav__link">
         
   
   
@@ -281,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inner_prod/" class="md-nav__link">
+      <a href="../../Algebra/inner_prod/" class="md-nav__link">
         
   
   
@@ -304,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear_map/" class="md-nav__link">
+      <a href="../../Algebra/linear_map/" class="md-nav__link">
         
   
   
@@ -324,32 +322,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Matrix inversion
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -360,53 +336,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adjugate-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjugate Method
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=2\)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-for-n3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example for \(n=3\)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -457,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Geometry2D/circle_circle_intersection/" class="md-nav__link">
+      <a href="../../Algebra/Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -492,18 +421,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -519,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Modelling
@@ -530,18 +461,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -557,7 +490,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             Linear models
@@ -568,10 +501,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Modelling/complex_exponential/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Complex exponential for dynamics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -582,6 +537,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#complex-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exponential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exponential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-exponential-for-dynamical-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex exponential for dynamical systems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -594,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/linear_dynamical_systems/" class="md-nav__link">
+      <a href="../linear_dynamical_systems/" class="md-nav__link">
         
   
   
@@ -617,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/example_mass_spring_damper/" class="md-nav__link">
+      <a href="../example_mass_spring_damper/" class="md-nav__link">
         
   
   
@@ -648,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/modelling/" class="md-nav__link">
+      <a href="../modelling/" class="md-nav__link">
         
   
   
@@ -671,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modelling/PCE/" class="md-nav__link">
+      <a href="../PCE/" class="md-nav__link">
         
   
   
@@ -1178,27 +1180,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adjugate-method" class="md-nav__link">
+  <a href="#complex-numbers" class="md-nav__link">
     <span class="md-ellipsis">
-      Adjugate Method
+      Complex numbers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-for-n2" class="md-nav__link">
+  <a href="#exponential" class="md-nav__link">
     <span class="md-ellipsis">
-      Example for \(n=2\)
+      Exponential
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-for-n3" class="md-nav__link">
+  <a href="#complex-exponential-for-dynamical-systems" class="md-nav__link">
     <span class="md-ellipsis">
-      Example for \(n=3\)
+      Complex exponential for dynamical systems
     </span>
   </a>
   
@@ -1220,21 +1222,44 @@
 
 
 
-<h1 id="matrix-inversion">Matrix Inversion</h1>
-<p>Inverse of matrix <span class="arithmatex">\( A \)</span> is <span class="arithmatex">\( A^{-1} \)</span> such that <span class="arithmatex">\( AA^{-1}=A^{-1}A=I \)</span>.</p>
-<h3 id="adjugate-method">Adjugate Method</h3>
-<p>Inverse of <span class="arithmatex">\( A \)</span> using the adjugate method:</p>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{\det(A)} \text{adj}(A) \]</div>
-<p><span class="arithmatex">\( \text{adj}(A) = C^T \)</span> with <span class="arithmatex">\( C \)</span> the cofactor matrix, whose element <span class="arithmatex">\(c_{i,j} \)</span> is <span class="arithmatex">\((-1)^{i+j}\)</span> times the determinant of <span class="arithmatex">\(A\)</span> without the <span class="arithmatex">\(i\)</span>-th line and <span class="arithmatex">\(j\)</span>-th column.</p>
-<h3 id="example-for-n2">Example for <span class="arithmatex">\(n=2\)</span></h3>
-<div class="arithmatex">\[ A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \]</div>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix} \]</div>
-<h3 id="example-for-n3">Example for <span class="arithmatex">\(n=3\)</span></h3>
-<div class="arithmatex">\[ A = \begin{pmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i \end{pmatrix} \]</div>
-<div class="arithmatex">\[ C = \begin{pmatrix} ei-fh &amp; -(di-fg) &amp; dh-eg \\
--(bi-ch) &amp; ai-cg &amp; -(ah-bg) \\
-bf-ce &amp; -(af-cd) &amp; ae-bd \end{pmatrix}\]</div>
-<div class="arithmatex">\[ A^{-1} = \frac{1}{\det(A)} C^T \]</div>
+<h1 id="laplace-transform">Laplace transform</h1>
+<p>Many of the stuff here is from <a href="https://www.youtube.com/watch?v=p_di4Zn4wz4&amp;list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6">3b1b videos</a>.</p>
+<h4 id="complex-numbers">Complex numbers</h4>
+<p>A complex number can be described either in cartesian or polar coordinates
+$$
+s = a+ib = r \cos(\theta) + i\sin(\theta)
+$$
+In the complex plane, multiplying by a real value scales up or down, and multiplying by an imaginary value rotates
+<img alt="Multiplying by i rotates 90deg" src="../img/multiplying_by_i_rotates_90deg.png" style="display: block; margin: 0 auto; width: 250px" /></p>
+<h4 id="exponential">Exponential</h4>
+<p>It is the unique function which has its derivative equal to its value, and maps 0 to 1.
+$$
+\frac{d}{dt}e^x = e^x
+$$
+It converts sums to products <span class="arithmatex">\(e^{x+y} = e^x e^y\)</span></p>
+<!-- It can also be defined as the sum
+$$
+e^x = 1 + x + \frac{x^2}{2!}+ \frac{x^3}{3!} + \ldots = \sum_{n=0}^\infty \frac{x^n}{n!}
+$$ -->
+
+<h4 id="complex-exponential-for-dynamical-systems">Complex exponential for dynamical systems</h4>
+<p>Consider the different systems evolving with position in time <span class="arithmatex">\(p=e^{st}\)</span>, with different <span class="arithmatex">\(s\)</span>:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(p=e^t\)</span>, the velocity at any instant is equal to the position, thus the position increases exponentially</p>
+</li>
+<li>
+<p><span class="arithmatex">\(p=e^{-0.5t}\)</span>, the velocity is half the position, with opposite sign, <span class="arithmatex">\(v=-0.5e^{-0.5t}\)</span>, thus the position decreases with an exponential decay</p>
+</li>
+<li>
+<p><span class="arithmatex">\(p=e^{it}\)</span>, the velocity is at 90 deg with the position, with unit length, <span class="arithmatex">\(v=ie^{it}\)</span>, thus the position rotates on the unit circle
+<img alt="" src="../img/exp_it_julia.png" style="display: block; margin: 0 auto; width: 400px" /></p>
+</li>
+<li>
+<p><span class="arithmatex">\(p=e^{(-0.5+i)t}\)</span>, the velocity is <span class="arithmatex">\(v=(-0.5+i)e^{(-0.5+i)t}=-0.5p + ip\)</span>, thus the position rotates and decays towards 0 (spiraling to 0).
+<img alt="" src="../img/exp_m05pit_julia.png" style="display: block; margin: 0 auto; width: 400px" /></p>
+</li>
+</ul>
 
 
 
