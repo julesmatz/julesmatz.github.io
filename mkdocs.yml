@@ -29,6 +29,7 @@ nav:
     - Mardown: Tools/markdown.md
     - Unix: Tools/unix.md
     - Git: Tools/git.md
+    - C++: Tools/cpp.md
     - Python: Tools/python.md
     - julia: Tools/julia.md
     - ROS: Tools/ros.md
