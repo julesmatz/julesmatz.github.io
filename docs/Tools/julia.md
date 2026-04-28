@@ -1,5 +1,94 @@
 # Julia
 
+## Program structure
+- **Include** read and evaluated a file (e.g. for splitting large scripts)
+  ```julia
+  include("my_file.jl")
+  ```
+
+- **Modules** are libraries, loaded once and cached (Changes require restarting julia session)
+  ```julia
+  module MyModule
+  export my_function, my_var
+
+  my_var = 2.5
+
+  function my_function()
+      println("Hello from MyModule")
+  end
+  end
+  ```
+  ```julia
+  using .MyModule
+  my_function()
+  a = my_var
+  ```
+
+- **Conditional** execution
+  ```julia
+  if condition
+    # ...
+  elseif other_condition
+    # ...
+  else
+    # ...
+  end
+  ```
+
+- **Ternary** operator
+  ```julia
+  result = condition ? value_if_true : value_if_false
+  ```
+
+
+---
+## Functions
+- **Typical function** with **positional arguments** separated by `,` and **default values** with `=`
+  ```julia
+  function my_function(arg1, arg2=1.0)
+      r1 = arg1 + arg2
+      r2 = r1 + arg2^2
+      return r1, r2
+  end
+  ```
+
+- **Suffix** `!` is a convention indicating a function that modifies its input
+  ```julia
+  sort!(arr) # Sorts `arr` in place
+  plot!(p, [4, 5, 6])  # Plots onto existing plot `p`
+  ```
+
+- Short **single-line** functions:
+  ```julia
+  my_function(arg1, arg2) = arg1 + arg2
+  ```
+
+  - **anonymous functions**
+  ```julia
+  square = x -> x^2
+  ```
+
+- **Keyword Arguments** separated by `;`
+  ```julia
+  function greet(name; greeting="Hello")
+      println("$greeting, $name!")
+  end
+  greet("Alice")              # "Hello, Alice!"
+  greet("Bob", greeting="Hi") # "Hi, Bob!"
+  ```
+
+- **Varargs**
+  ```julia
+  function sum_all(args...)
+      return sum(args)
+  end
+  sum_all(1, 2, 3) # 6
+  ```
+- **Broadcasting** applies the function to all elements of a container
+  ```julia
+  f.(X)
+  ```
+
 ---
 ## Containers
 Julia is **1-indexed** (unlike Python).
@@ -35,43 +124,75 @@ my_dict = Dict("name" => "design_01",
 my_dict["status"] = 1
 ```
 
-### Copying Containers
-**Assignment operator**, **shallow copy** and **deep copy** are
+**Copy** containers with assignment operator, shallow copy and deep copy
 ```julia
 b = a           # pointer to a (modifying b changes a)
-b = copy(a)     # separate copy of a (for arrays, sets, dicts)
-b = deepcopy(a) # separate copy for objects with nested structure
+b = copy(a)     # separate copy (does not copy nested objects)
+b = deepcopy(a) # separate copy including copy of nested objects
 ```
 
-### Loop Over Containers
-For **arrays**, **tuples**, **sets**,
+**Loop** over array, tuples, sets to get
 
-- get **items**
+- **items**
   ```julia
   for item in my_array
       println(item)
   end
   ```
 
-- get **indices** and **items**
+- **indices** and **items**
   ```julia
   for (index, value) in enumerate(my_array)
       println("Index $index: $value")
   end
   ```
 
-- get **items** from related **containers**
+- **items** from related **containers**
   ```julia
   for (name, length) in zip(names, lengths)
       println("Length of $name is $length m")
   end
   ```
 
-For **dictionaries**,
+Loop over dictionaries, to get **key**-**value** pairs
 ```julia
 for (key, value) in my_dict
     println("$key: $value")
 end
 ```
+
+---
+## Plot
+- Typical plot
+  ```julia
+  using Plots
+  plot(sin, 0, 2π)
+  scatter!(rand(10), rand(10))
+  ```
+
+- Labels, title
+  ```julia
+  plot(sin, 0, 2π, label="sin(x)", color=:blue, linewidth=2)
+  title!("My Plot")
+  xlabel!("x")
+  ylabel!("sin(x)")
+  ```
+
+- Multiple plots
+  ```julia
+  p1 = plot(sin, 0, 2π)
+  p2 = plot(cos, 0, 2π)
+  plot(p1, p2, layout=(2,1))
+  ```
+
+- 3D plot
+  ```julia
+  surface((x,y) -> x*y, -10:0.1:10, -10:0.1:10)
+  ```
+
+- Save
+  ```julia
+  savefig("my_plot.png")
+  ```
 
 
