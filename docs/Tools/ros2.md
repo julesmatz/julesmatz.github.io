@@ -22,23 +22,27 @@ To not build a specific package, place an empty file `COLCON_IGNORE` in its dire
 
 ## Introspection
 ```bash
-ros2 run rqt_graph rqt_graph
 ros2 run rqt_console rqt_console # to inspect logs
 
-ros2 pkg executables <pkg_name>
-
 ros2 node list
-ros2 topic list -t # -t to show topic type
-ros2 service list
-ros2 action list
+ros2 node info /myNode
 
-ros2 node info <node_name>
-ros2 topic info <topic_name> # show type, publishers, subscribers
-ros2 interface show <msg_name> # show details of message structure
+ros2 topic list
+ros2 topic echo /cmd_vel
+ros2 topic echo /odom --field twist.twist.linear.x
+ros2 topic hz /camera/color/image_raw # may return erroneous values
 
-ros2 topic hz <topic_name>
-ros2 topic bw <topic_name> # bandwith (data transfer rate in KB/s and msg size in KB)
-ros2 topic echo <topic_name>
+ros2 run rviz2 rviz2
+
+rqt # GUI from where various tools (see below) can be launched
+ros2 run rqt_image_view rqt_image_view
+ros2 run rqt_graph rqt_graph # (or launch directly using alias rqt_graph)
+ros2 run rqt_tf_tree rqt_tf_tree
+
+ros2 run tf2_ros tf2_echo map base_link
+ros2 run tf2_tools view_frames # generates a pdf with tf
+
+ros2 run rqt_plot rqt_plot /odom/twist/twist/linear/x
 ```
 
 ## Operations
@@ -65,45 +69,92 @@ ros2 bag info <bag_file>
 ros2 bag play --clock --loop <bag_file>
 ```
 
+## Node
+### Callback groups
+Types of callback groups:
 
-## ROS2 C++ package
-Structure
-```
-my_package/
-     config/             # yaml config files
-     rviz/               # rviz config files
-     doc/                # documentation
-     msg/                # custom msg definitions
-     launch/             # launch files
-     include/my_package  # headers .h and .hpp
-     src/                # C++ source code
-     urdf/
-     srv/
-     action/
-     test/
-     CMakeLists.txt      # instructions to build code
-     package.xml         # meta info
-     LICENSE
-     
-```
-Creation
-```
-ros2 pkg create --build-type ament_cmake --license Apache-2.0 --node-name my_node my_package
+- Reentrant: allow parallel execution (even a same callback can be executed multiple times in parallel)
+- Mutually Exclusive: prevents parallel execution
 
+Callbacks belonging to different groups can always be executed in parallel.  
+By default all callbacks are assigned to a same Mutually Exclusive callback group.
+```cpp
+my_callback_group = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+rclcpp::SubscriptionOptions options;
+options.callback_group = my_callback_group;
 ```
 
+### Timer callback
+```cpp
+// hpp, private member
+rclcpp::TimerBase::SharedPtr compute_timer_;
 
-## ROS2 Python package
-Structure
+// cpp, in node constructor
+timer_ = this->create_timer(
+  std::chrono::milliseconds(10),
+  std::bind(&myNode::myCallback, this),
+  my_callback_group);
+
+// cpp, method definition
+void myNode::myCallback()
+{...}
 ```
-my_package/
-      package.xml         # meta info
-      resource/my_package # marker file
-      setup.cfg           # required for executables for ros2 run, must match with meta info
-      setup.py            # instructions to install pkg
-      my_package/         # required to find pkg, contains __init__.py
+`create_timer` was introduced as node class method in jazzy, in humble use it from `#include <rclcpp/timer.hpp>` with slightly different arguments.
+
+### QoS
+Quality of Service profiles have parameters
+
+- History: _KeepLast_ with a queue size (depth)
+- Reliability:
+    - _Best effort_: lower bandwidth use at the cost of loosing some messages
+    - _Reliable_: guarantees delivery (uses retry) at the cost of high bandwidth  
+    A suscriber cannot be _Reliable_ if the publisher is _Best effort_
+- Durability:
+    - _Volatile_: not storing messages for late-joiners
+    - _Transient local_: stores messages for late-joiners nodes  
+    A suscriber cannot be _Transient local_ if the publisher is _Volatile_
+
 ```
-Creation
+auto my_qos = rclcpp::QoS(rclcpp::KeepLast(1)).best_effort().durability_volatile();
 ```
-ros2 pkg create --build-type ament_python --license Apache-2.0 --node-name my_node my_package
+
+### Subscription callback
+A subscriber with specific QoS and callback group:
+```cpp
+// hpp, private methods and members
+void myCallback(const std_msgs::msg::Int32& msg);
+rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr my_sub_;
+
+// cpp, in node constructor
+rclcpp::SubscriptionOptions my_options;
+my_options.callback_group = my_callback_group;
+my_sub_ = this->create_subscription<Int32>(
+    "/my_topic",
+    my_qos,
+    std::bind(&myNode::myCallback, this, std::placeholders::_1),
+    my_options);
+
+// cpp, method definition
+void myNode::myCallback(const std_msgs::msg::Int32& msg)
+{...}
+```
+
+
+### RLCPP messages
+ROS Client Library for C++ enables printing messages of different severity (DEBUG, INFO, WARN, ERROR, FATAL).
+It uses printf-style formatting,
+```cpp
+double rate = 2.899;
+int count = 54;
+std::string frame = "base_link";
+bool enabled = true;
+
+RCLCPP_INFO(
+  this->get_logger(),
+  "ID= %5d | Hz= %6.2f | frame %s | %s", // 6.2f -> "  2.90" (6 characters total)
+  count, rate, frame.c_str(), enabled ? "yes" : "no");
+  
+RCLCPP_INFO_THROTTLE(
+  this->get_logger(), *this->get_clock(), 2000, // milliseconds
+  "running node");
 ```
