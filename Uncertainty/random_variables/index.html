@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Algebra/inner_prod/">
+        <link rel="canonical" href="https://julesmatz.github.io/Uncertainty/random_variables/">
       
       
-        <link rel="prev" href="../vector_space/">
+        <link rel="prev" href="../bayes_rule/">
       
       
-        <link rel="next" href="../linear_map/">
+        <link rel="next" href="../../Modelling/complex_exponential/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Inner product, norm - notes</title>
+        <title>Random variables - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#norm-and-inner-product" class="md-skip">
+        <a href="#random-variables" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inner product, norm
+              Random variables
             
           </span>
         </div>
@@ -215,20 +215,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -258,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector_space/" class="md-nav__link">
+      <a href="../../Algebra/vector_space/" class="md-nav__link">
         
   
   
@@ -278,32 +276,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Inner product, norm
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algebra/inner_prod/" class="md-nav__link">
         
   
   
@@ -314,62 +290,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#norm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Norm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inner-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inner product
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -382,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear_map/" class="md-nav__link">
+      <a href="../../Algebra/linear_map/" class="md-nav__link">
         
   
   
@@ -405,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../matrix_inversion/" class="md-nav__link">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -466,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Geometry2D/circle_circle_intersection/" class="md-nav__link">
+      <a href="../../Algebra/Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -501,18 +421,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -528,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Uncertainty
@@ -542,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Uncertainty/probability/" class="md-nav__link">
+      <a href="../probability/" class="md-nav__link">
         
   
   
@@ -565,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Uncertainty/bayes_rule/" class="md-nav__link">
+      <a href="../bayes_rule/" class="md-nav__link">
         
   
   
@@ -585,10 +507,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Uncertainty/random_variables/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Random variables
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -599,6 +543,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#random-variable-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random variable definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability distributions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1324,36 +1324,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#norm" class="md-nav__link">
+  <a href="#random-variable-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Norm
+      Random variable definition
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#inner-product" class="md-nav__link">
+  <a href="#event" class="md-nav__link">
     <span class="md-ellipsis">
-      Inner product
+      Event
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
+  <a href="#probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Properties
+      Probability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#probability-distributions" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Probability distributions
     </span>
   </a>
   
@@ -1375,80 +1375,52 @@
 
 
 
-<h1 id="norm-and-inner-product">Norm and inner product</h1>
-<h4 id="norm">Norm</h4>
-<p>A <strong>norm</strong> for a vector space <span class="arithmatex">\(V\)</span> over a field <span class="arithmatex">\(F\)</span> is a real-valued function <span class="arithmatex">\(\lVert \cdot\rVert:V\rightarrow \mathbb{R}\)</span> generalizing the notion of distance with the properties,<br />
-<span class="arithmatex">\(\forall u,v\in V, \forall a \in F\)</span>,</p>
+<h1 id="random-variables">Random variables</h1>
+<h2 id="random-variable-definition">Random variable definition</h2>
+<p>A random variable <span class="arithmatex">\(X\)</span> is a function that maps the <em>sample space</em> (set of possible outcomes) of a random experiment to a measurable space <span class="arithmatex">\(E\)</span> (usually <span class="arithmatex">\(\left\lbrace 0,1\right\rbrace\)</span>, <span class="arithmatex">\(\mathbb{R}\)</span> or <span class="arithmatex">\(\mathbb{R}^n\)</span>).</p>
+<div class="arithmatex">\[
+X:\Omega\mapsto E
+\]</div>
+<p><strong>Examples</strong></p>
 <ul>
-<li>triangle inequality <span class="arithmatex">\(\lVert u+v\rVert \leq \lVert u\rVert +\lVert v\rVert\)</span></li>
-<li>homogeneity <span class="arithmatex">\(\lVert av \rVert = | a | \lVert v \rVert\)</span></li>
-<li>positive-definiteness <span class="arithmatex">\(\lVert x\rVert =0\implies x=0\)</span></li>
+<li>number of heads for two throws <span class="arithmatex">\(X:\left\lbrace HH,HT,TH,TT\right\rbrace\mapsto \left\lbrace 0,1,1,2 \right\rbrace\)</span></li>
+<li>height <span class="arithmatex">\(h\)</span> of a person <span class="arithmatex">\(X:\mathbb{R}^+\mapsto \mathbb{R}^+\)</span> (identity mapping)</li>
+<li>word2vec <span class="arithmatex">\(X:\left\lbrace\text{archive},\text{by},\text{cat},\ldots,\text{zebra}\right\rbrace\mapsto \mathbb{R}^n\)</span></li>
 </ul>
-<h4 id="inner-product">Inner product</h4>
-<p>An <strong>inner product</strong> for a vector space <span class="arithmatex">\(V\)</span> over a <span class="arithmatex">\(F\)</span> is a map <span class="arithmatex">\(\langle\cdot,\cdot\rangle : V\times V \rightarrow F\)</span>. generalizing geometric notions such as <strong>angles</strong> and <strong>orthogonality</strong>.
-An inner product must satisfy the properties,<br />
-<span class="arithmatex">\(\forall u,v,w \in V, \forall a,b \in F\)</span>,</p>
+<p>The introduction of a measurable space allows for computations such as <span class="arithmatex">\(E\left[X\right]=0.5\)</span> for <span class="arithmatex">\(\left\lbrace H,T \right\rbrace\mapsto \left\lbrace 0,1 \right\rbrace\)</span>.</p>
+<h2 id="event">Event</h2>
+<p>An event <span class="arithmatex">\(A\)</span> is a subset of <span class="arithmatex">\(\Omega\)</span>, to which a probability may be assigned.</p>
+<p><strong>Examples</strong></p>
 <ul>
-<li>conjugate symmetry <span class="arithmatex">\(\langle u,v\rangle = \overline{\langle u,v \rangle}\)</span><br />
-(where <span class="arithmatex">\(\overline{a}\)</span> denotes the complex conjugate of <span class="arithmatex">\(a\)</span>)</li>
-<li>linearity in the first argument<br />
-<span class="arithmatex">\(\langle au+bv,w\rangle = a\langle u,w \rangle + b\langle v,w \rangle\)</span></li>
-<li>positive-definiteness if <span class="arithmatex">\(v\neq 0\)</span>, <span class="arithmatex">\(\langle v,v\rangle&gt;0\)</span><br />
-(conjugate symmetry implies <span class="arithmatex">\(\langle v,v \rangle \in \mathbb{R}\)</span>)</li>
+<li>number of heads for two throws, event of two heads is <span class="arithmatex">\(A=\left\lbrace TT\right\rbrace\)</span></li>
+<li>height <span class="arithmatex">\(h\)</span> of a person, event of small person is <span class="arithmatex">\(A=\left[0,1.60\text{m}\right]\)</span></li>
+<li>word2vec, event of adjective is <span class="arithmatex">\(A=\left\lbrace\text{accurate},\text{calm},\text{decisive},\ldots,\text{lucky}\right\rbrace\)</span></li>
 </ul>
-<p>Note that an inner product induces a norm as 
-$$
-   \Vert v\Vert = \sqrt{\langle v,v \rangle}
-$$
-As such, Hilbert spaces (vector spaces with norm) are a subset of Banach spaces (vector spaces with inner product).</p>
-<h2 id="properties">Properties</h2>
-<p>In addition to the above properties of norms and inner products, the following also holds,</p>
+<h2 id="probability">Probability</h2>
+<p>Probability quantifies  the uncertainty of an event <span class="arithmatex">\(A\)</span> (event=subset of <span class="arithmatex">\(\Omega\)</span>) by assigning it a numerical value ranging from 0 (impossible) to 1 (certain).</p>
+<p>It satisfies the (Kolmogorov) axioms:</p>
 <ul>
-<li>angle <span class="arithmatex">\(u,v \in V\)</span> over <span class="arithmatex">\(\mathbb{R}\)</span>, <span class="arithmatex">\(\angle(u,v) = \arccos\frac{\langle u,v \rangle}{\lVert u\rVert \lVert v\rVert}\)</span></li>
-<li>orthogonality <span class="arithmatex">\(u\perp v \iff \langle u,v \rangle=0\)</span></li>
-<li>Polarization identity<br />
-<span class="arithmatex">\(\lVert u+v\rVert^2=\lVert u\rVert^2+\lVert y\rVert^2+2\mathfrak{Re} \langle u,v \rangle\)</span></li>
-<li>Pythagorean theorem <span class="arithmatex">\(u\perp v\)</span>, then<br />
-$$
-\lVert u+v\rVert^2=\lVert u\rVert^2+\lVert v\rVert^2
-$$</li>
-<li>Parseval's identity <span class="arithmatex">\(v_1,\ldots,v_n\)</span> pairwise orthogonal (<span class="arithmatex">\(v_i\perp v_j \forall i\neq j \in \lbrace 1,\ldots,n\rbrace\)</span>), then<br />
-$$
-\left\lVert \sum_{i=1}^n v_i \right\rVert^2=\sum_{i=1}^{n}\lVert v_i\rVert^2
-$$</li>
-<li>reverse triangle inequality <span class="arithmatex">\(\lVert u\pm v\rVert \geq \left| \lVert u\rVert -\lVert v\rVert \right|\)</span></li>
-<li>
-<p>parallelogram law<br />
-<span class="arithmatex">\(\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert u\rVert^2\)</span></p>
-</li>
-<li>
-<p>Cauchy-Schwarz inequality <span class="arithmatex">\(\left| \langle u,v \rangle \right| \leq \lVert u\rVert \lVert v\rVert\)</span></p>
-</li>
+<li>non-negativity, <span class="arithmatex">\(P(A) \geq 0\)</span> for all <span class="arithmatex">\(A \in \Omega\)</span></li>
+<li>normalization, <span class="arithmatex">\(P(\Omega\)</span>=1)</li>
+<li>for mutually exclusive events, <span class="arithmatex">\(P(A_1 \cup \ldots \cup A_n)= P(A_1) + \ldots + P(A_n)\)</span> </li>
 </ul>
-<h2 id="examples">Examples</h2>
-<p>The set of real numbers <span class="arithmatex">\(\mathbb{R}\)</span> is a vector space over <span class="arithmatex">\(\mathbb{R}\)</span> with the inner product <span class="arithmatex">\(\langle u,v \rangle = uv\)</span>.</p>
-<p>The Euclidean space <span class="arithmatex">\(\mathbb{R}^n\)</span> over the field <span class="arithmatex">\(\mathbb{R}\)</span> has its inner products of the form
-$$
-\langle u,v \rangle = u^\top M v
-$$
-with <span class="arithmatex">\(M\)</span> a symmetric positive-definite matrix. The dot product <span class="arithmatex">\(u^\top v\)</span> is one particular inner product.</p>
-<p>The space <span class="arithmatex">\(C([x_a,x_b])\)</span> of continuous complex valued functions on the interval <span class="arithmatex">\([x_a,x_b]\)</span>. Its inner product is
-$$
-\langle f,g \rangle = \int_{x_a}^{x_b} f(t) \overline{g(t)}dt
-$$</p>
-<p>space of <span class="arithmatex">\(T\)</span>-periodic square-integrable (<span class="arithmatex">\(L^2\)</span>) functions have the inner product
-$$
-\langle f,g\rangle = \frac{1}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}f(x)\overline{g(x)}dx.
-$$</p>
-<p>The set of random variables, in which the expected value of the product of two random variables <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> defines an inner product,
-$$
-\langle X,Y \rangle = \mathbb{E}[X,Y]
-$$</p>
-<p>The set <span class="arithmatex">\(\mathbb{C}^{n\times m}\)</span> of complex matrices of same size, in which the Frobenius inner product is 
-$$
-\langle A,B \rangle _F = \text{tr}(AB^*)
-$$
-with <span class="arithmatex">\(B^*\)</span> the conjugate transpose (also called <strong>adjoint matrix</strong>) of <span class="arithmatex">\(B\)</span>.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li><span class="arithmatex">\(P(TT) = 1/4=0.25\)</span></li>
+<li><span class="arithmatex">\(P(h\geq 1.80\text{m})=0.21\)</span></li>
+<li><span class="arithmatex">\(P(\text{cat})=0.07\)</span></li>
+</ul>
+<h2 id="probability-distributions">Probability distributions</h2>
+<p>A probability distribution of a RV is the recording of probabilities associated with all outcomes, it fully describe it. It refers to either a</p>
+<ul>
+<li><strong>Probability mass function</strong> (PMF, for discrete RV),<br />
+the collection of probabilities for every element in <span class="arithmatex">\(\Omega\)</span></li>
+<li><strong>Probability density function</strong> (PDF, for continuous RV),<br />
+a function <span class="arithmatex">\(f_X(x)\)</span> such that <span class="arithmatex">\(P(a\leq X \leq b) = \int_a^b f_X(x) dx\)</span></li>
+<li><strong>Cumulative distribution function</strong> (CMF, for both discrete and continuous RV),<br />
+a function <span class="arithmatex">\(F_X(x)\)</span> such that <span class="arithmatex">\(F_X(x) = P(X\leq x)\)</span></li>
+</ul>
+<p>see <a href="https://faculty.nps.edu/rbassett/_book/discrete-random-variables.html">lien</a></p>
 
 
 

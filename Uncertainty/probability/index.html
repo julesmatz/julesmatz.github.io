@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Algebra/inner_prod/">
+        <link rel="canonical" href="https://julesmatz.github.io/Uncertainty/probability/">
       
       
-        <link rel="prev" href="../vector_space/">
+        <link rel="prev" href="../../Algebra/Geometry2D/circle_circle_intersection/">
       
       
-        <link rel="next" href="../linear_map/">
+        <link rel="next" href="../bayes_rule/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Inner product, norm - notes</title>
+        <title>Probability - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#norm-and-inner-product" class="md-skip">
+        <a href="#probability" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inner product, norm
+              Probability
             
           </span>
         </div>
@@ -215,20 +215,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -258,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector_space/" class="md-nav__link">
+      <a href="../../Algebra/vector_space/" class="md-nav__link">
         
   
   
@@ -278,32 +276,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Inner product, norm
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algebra/inner_prod/" class="md-nav__link">
         
   
   
@@ -314,62 +290,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#norm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Norm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inner-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inner product
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -382,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear_map/" class="md-nav__link">
+      <a href="../../Algebra/linear_map/" class="md-nav__link">
         
   
   
@@ -405,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../matrix_inversion/" class="md-nav__link">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -466,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Geometry2D/circle_circle_intersection/" class="md-nav__link">
+      <a href="../../Algebra/Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -501,18 +421,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -528,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Uncertainty
@@ -539,10 +461,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Uncertainty/probability/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Probability
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -553,6 +497,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-space-outcomes-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample space, outcomes, events
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Probability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frequentist-and-bayesian-interpretations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequentist and Bayesian interpretations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional probability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#law-of-total-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Law of total probability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Odds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Odds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log-odds
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -565,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Uncertainty/bayes_rule/" class="md-nav__link">
+      <a href="../bayes_rule/" class="md-nav__link">
         
   
   
@@ -588,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Uncertainty/random_variables/" class="md-nav__link">
+      <a href="../random_variables/" class="md-nav__link">
         
   
   
@@ -1324,38 +1363,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#norm" class="md-nav__link">
+  <a href="#sample-space-outcomes-events" class="md-nav__link">
     <span class="md-ellipsis">
-      Norm
+      Sample space, outcomes, events
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#inner-product" class="md-nav__link">
+  <a href="#probability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Inner product
+      Probability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Probability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frequentist-and-bayesian-interpretations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequentist and Bayesian interpretations
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#conditional-probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Properties
+      Conditional probability
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#law-of-total-probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Law of total probability
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Odds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Odds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log-odds
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1375,80 +1453,80 @@
 
 
 
-<h1 id="norm-and-inner-product">Norm and inner product</h1>
-<h4 id="norm">Norm</h4>
-<p>A <strong>norm</strong> for a vector space <span class="arithmatex">\(V\)</span> over a field <span class="arithmatex">\(F\)</span> is a real-valued function <span class="arithmatex">\(\lVert \cdot\rVert:V\rightarrow \mathbb{R}\)</span> generalizing the notion of distance with the properties,<br />
-<span class="arithmatex">\(\forall u,v\in V, \forall a \in F\)</span>,</p>
+<h1 id="probability">Probability</h1>
+<blockquote>
+<p>Probability is a mathematical language for quantifying uncertainty. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+</blockquote>
+<h2 id="sample-space-outcomes-events">Sample space, outcomes, events</h2>
+<p>The sample space <span class="arithmatex">\(\Omega\)</span> is the set of all possible outcomes of random experiment.<br />
+An event <span class="arithmatex">\(A\)</span> is a subset of <span class="arithmatex">\(\Omega\)</span>. If the outcome of an experiment is included in <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(A\)</span> has occurred.</p>
+<p><strong>Examples</strong></p>
 <ul>
-<li>triangle inequality <span class="arithmatex">\(\lVert u+v\rVert \leq \lVert u\rVert +\lVert v\rVert\)</span></li>
-<li>homogeneity <span class="arithmatex">\(\lVert av \rVert = | a | \lVert v \rVert\)</span></li>
-<li>positive-definiteness <span class="arithmatex">\(\lVert x\rVert =0\implies x=0\)</span></li>
+<li>Two successive coin flips, <span class="arithmatex">\(\Omega=\left\lbrace HH,HT,TH,TT\right\rbrace\)</span><br />
+Event "at least one head" is <span class="arithmatex">\(A=\left\lbrace HH,HT,TH\right\rbrace\)</span></li>
+<li>Height of a person, <span class="arithmatex">\(\Omega = \left[0, +\infty\right)=\mathbb{R}^+\)</span><br />
+Event "small person" is <span class="arithmatex">\(A=\left[0, 1.60\text{m}\right[\)</span></li>
+<li>word2vec, <span class="arithmatex">\(\Omega=\left\lbrace \text{ace}, \text{cat}, \ldots, \text{zebra}\right\rbrace\)</span><br />
+Event "adjective" is <span class="arithmatex">\(A=\left\lbrace\text{accurate},\text{calm},\ldots,\text{zealous}\right\rbrace\)</span></li>
 </ul>
-<h4 id="inner-product">Inner product</h4>
-<p>An <strong>inner product</strong> for a vector space <span class="arithmatex">\(V\)</span> over a <span class="arithmatex">\(F\)</span> is a map <span class="arithmatex">\(\langle\cdot,\cdot\rangle : V\times V \rightarrow F\)</span>. generalizing geometric notions such as <strong>angles</strong> and <strong>orthogonality</strong>.
-An inner product must satisfy the properties,<br />
-<span class="arithmatex">\(\forall u,v,w \in V, \forall a,b \in F\)</span>,</p>
+<h2 id="probability_1">Probability</h2>
+<p>The probability <span class="arithmatex">\(P(A)\)</span> asssigns a numerical value to event <span class="arithmatex">\(A\)</span> so as to quantify its uncertainty.</p>
+<p>A probability measure <span class="arithmatex">\(P\)</span> must satisfies the axioms:</p>
 <ul>
-<li>conjugate symmetry <span class="arithmatex">\(\langle u,v\rangle = \overline{\langle u,v \rangle}\)</span><br />
-(where <span class="arithmatex">\(\overline{a}\)</span> denotes the complex conjugate of <span class="arithmatex">\(a\)</span>)</li>
-<li>linearity in the first argument<br />
-<span class="arithmatex">\(\langle au+bv,w\rangle = a\langle u,w \rangle + b\langle v,w \rangle\)</span></li>
-<li>positive-definiteness if <span class="arithmatex">\(v\neq 0\)</span>, <span class="arithmatex">\(\langle v,v\rangle&gt;0\)</span><br />
-(conjugate symmetry implies <span class="arithmatex">\(\langle v,v \rangle \in \mathbb{R}\)</span>)</li>
+<li><span class="arithmatex">\(P(A) \geq 0\)</span> for all <span class="arithmatex">\(A \in \Omega\)</span></li>
+<li><span class="arithmatex">\(P(\Omega\)</span>=1)</li>
+<li>for disjoint events, <span class="arithmatex">\(P(A_1 \cup \ldots \cup A_n)= P(A_1) + \ldots + P(A_n)\)</span> </li>
 </ul>
-<p>Note that an inner product induces a norm as 
-$$
-   \Vert v\Vert = \sqrt{\langle v,v \rangle}
-$$
-As such, Hilbert spaces (vector spaces with norm) are a subset of Banach spaces (vector spaces with inner product).</p>
-<h2 id="properties">Properties</h2>
-<p>In addition to the above properties of norms and inner products, the following also holds,</p>
+<h4 id="frequentist-and-bayesian-interpretations">Frequentist and Bayesian interpretations</h4>
 <ul>
-<li>angle <span class="arithmatex">\(u,v \in V\)</span> over <span class="arithmatex">\(\mathbb{R}\)</span>, <span class="arithmatex">\(\angle(u,v) = \arccos\frac{\langle u,v \rangle}{\lVert u\rVert \lVert v\rVert}\)</span></li>
-<li>orthogonality <span class="arithmatex">\(u\perp v \iff \langle u,v \rangle=0\)</span></li>
-<li>Polarization identity<br />
-<span class="arithmatex">\(\lVert u+v\rVert^2=\lVert u\rVert^2+\lVert y\rVert^2+2\mathfrak{Re} \langle u,v \rangle\)</span></li>
-<li>Pythagorean theorem <span class="arithmatex">\(u\perp v\)</span>, then<br />
-$$
-\lVert u+v\rVert^2=\lVert u\rVert^2+\lVert v\rVert^2
-$$</li>
-<li>Parseval's identity <span class="arithmatex">\(v_1,\ldots,v_n\)</span> pairwise orthogonal (<span class="arithmatex">\(v_i\perp v_j \forall i\neq j \in \lbrace 1,\ldots,n\rbrace\)</span>), then<br />
-$$
-\left\lVert \sum_{i=1}^n v_i \right\rVert^2=\sum_{i=1}^{n}\lVert v_i\rVert^2
-$$</li>
-<li>reverse triangle inequality <span class="arithmatex">\(\lVert u\pm v\rVert \geq \left| \lVert u\rVert -\lVert v\rVert \right|\)</span></li>
-<li>
-<p>parallelogram law<br />
-<span class="arithmatex">\(\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert u\rVert^2\)</span></p>
+<li>Frequentist: <span class="arithmatex">\(P(A)\)</span> is the proportion of <span class="arithmatex">\(A\)</span> occuring for infinite repetitions</li>
+<li>Bayesian: <span class="arithmatex">\(P(A)\)</span> quantifies our subjective degree of belief about the realization of <span class="arithmatex">\(A\)</span></li>
+</ul>
+<h4 id="conditional-probability">Conditional probability</h4>
+<p><em>Conditional probability</em> of <span class="arithmatex">\(A\)</span> given <span class="arithmatex">\(B\)</span> is </p>
+<div class="arithmatex">\[
+P(A|B) = \frac{P(A,B)}{P(B)}
+\]</div>
+<p>which can be rearranged as</p>
+<div class="arithmatex">\[
+P(A,B) = P(A|B)P(B) = P(B|A)P(A)
+\]</div>
+<p><span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are <em>independent</em> iff</p>
+<div class="arithmatex">\[
+P(A|B)=P(A)
+\]</div>
+<h4 id="law-of-total-probability">Law of total probability</h4>
+<p>If <span class="arithmatex">\(A_1,\ldots,A_n\)</span> is a partition (disjoint subsets that form <span class="arithmatex">\(\Omega\)</span>), then for any event <span class="arithmatex">\(B\)</span>,</p>
+<div class="arithmatex">\[
+P(B) = \sum_{i=1}^n P(B|A_i)P(A_i)
+\]</div>
+<p>For an event conditioned on a continuous random variable <span class="arithmatex">\(X\)</span> with PDF <span class="arithmatex">\(f_X\)</span>,</p>
+<div class="arithmatex">\[
+P(B) = \int_\mathbb{R} P(B|X=x)f_Xdx
+\]</div>
+<h2 id="odds">Odds</h2>
+<p>Odds express relative likelihood between events. For a single event, odds relate to probability as</p>
+<div class="arithmatex">\[
+O(A) = \frac{P(A)}{1-P(A)} \iff P(A) = \frac{O(A)}{1+O(A)}
+\]</div>
+<p>The relative likelihood between multiple disjoints events <span class="arithmatex">\((A_1, A_2 \ldots, A_n)=\mathbf{A}\)</span> is expressed as a list (up to a scaling factor)</p>
+<div class="arithmatex">\[
+\begin{aligned}
+O(\mathbf{A})&amp;=\left(a_1 : a_2 \ldots : a_n\right) \\
+&amp;=\left(P(A_1) : P(A_2) : \ldots : P(A_n)\right)
+\end{aligned}
+\]</div>
+<h4 id="log-odds">Log-odds</h4>
+<p>Log-odds are <span class="arithmatex">\(\log\left(O(A)\right)\)</span>, it is very useful in Bayesian update, as it turns multiplications into additions.<br />
+Using the natural logarithm, the value is expressed in <em>nats</em> (natural units of information), while using the base-2 logarithm it is expressed in <em>bits</em>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>L. Wasserman, 2004, <em>All of Statistics: A Concise Course in Statistical Inference</em>, Springer texts in statistics.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li>
-<p>Cauchy-Schwarz inequality <span class="arithmatex">\(\left| \langle u,v \rangle \right| \leq \lVert u\rVert \lVert v\rVert\)</span></p>
-</li>
-</ul>
-<h2 id="examples">Examples</h2>
-<p>The set of real numbers <span class="arithmatex">\(\mathbb{R}\)</span> is a vector space over <span class="arithmatex">\(\mathbb{R}\)</span> with the inner product <span class="arithmatex">\(\langle u,v \rangle = uv\)</span>.</p>
-<p>The Euclidean space <span class="arithmatex">\(\mathbb{R}^n\)</span> over the field <span class="arithmatex">\(\mathbb{R}\)</span> has its inner products of the form
-$$
-\langle u,v \rangle = u^\top M v
-$$
-with <span class="arithmatex">\(M\)</span> a symmetric positive-definite matrix. The dot product <span class="arithmatex">\(u^\top v\)</span> is one particular inner product.</p>
-<p>The space <span class="arithmatex">\(C([x_a,x_b])\)</span> of continuous complex valued functions on the interval <span class="arithmatex">\([x_a,x_b]\)</span>. Its inner product is
-$$
-\langle f,g \rangle = \int_{x_a}^{x_b} f(t) \overline{g(t)}dt
-$$</p>
-<p>space of <span class="arithmatex">\(T\)</span>-periodic square-integrable (<span class="arithmatex">\(L^2\)</span>) functions have the inner product
-$$
-\langle f,g\rangle = \frac{1}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}f(x)\overline{g(x)}dx.
-$$</p>
-<p>The set of random variables, in which the expected value of the product of two random variables <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> defines an inner product,
-$$
-\langle X,Y \rangle = \mathbb{E}[X,Y]
-$$</p>
-<p>The set <span class="arithmatex">\(\mathbb{C}^{n\times m}\)</span> of complex matrices of same size, in which the Frobenius inner product is 
-$$
-\langle A,B \rangle _F = \text{tr}(AB^*)
-$$
-with <span class="arithmatex">\(B^*\)</span> the conjugate transpose (also called <strong>adjoint matrix</strong>) of <span class="arithmatex">\(B\)</span>.</p>
+</ol>
+</div>
 
 
 
