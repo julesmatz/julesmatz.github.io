@@ -1503,13 +1503,13 @@
 <p>A beta RV <span class="arithmatex">\(X\sim \text{Beta}(\alpha,\beta)\)</span> has continuous outputs in interval <span class="arithmatex">\([0, 1]\)</span>.<br />
 One of its use is in modelling the uncertainty in the probability <span class="arithmatex">\(p\)</span> of success in <a href="../bernoulli/">Bernoulli</a> or <a href="../binomial/">binomial</a> RV.<br />
 So a yes/no uncertainty can be modelled as a Bernoulli RV with outcome in <span class="arithmatex">\(\left\lbrace 0, 1\right\rbrace\)</span> and parameterized by <span class="arithmatex">\(p\)</span>, which can itself be considered uncertain and modelled as a beta random variable, <span class="arithmatex">\(p\sim\text{Beta}(\alpha, \beta)\)</span> with PDF</p>
-<p>$$
+<div class="arithmatex">\[
 \begin{align}
-f(p) &amp;= \frac{1}{\text{B}(\alpha,\beta)} p^{\alpha-1} (1-p)^{\beta-1} \
+f(p) &amp;= \frac{1}{\text{B}(\alpha,\beta)} p^{\alpha-1} (1-p)^{\beta-1} \\
 &amp;\propto p^{\alpha-1} (1-p)^{\beta-1}
 \end{align}
-$$
-where <span class="arithmatex">\(\text{B}(\alpha,\beta)\)</span> is a normalization constant.</p>
+\]</div>
+<p>where <span class="arithmatex">\(\text{B}(\alpha,\beta)\)</span> is a normalization constant.</p>
 <h4 id="expectation">Expectation</h4>
 <div class="arithmatex">\[
 \mathbb{E}[X] = \frac{\alpha}{\alpha + \beta}

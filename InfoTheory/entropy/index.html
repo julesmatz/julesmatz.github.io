@@ -1484,13 +1484,13 @@
 <h1 id="entropy">Entropy</h1>
 <p><em>Entropy</em> measures the uncertainty of a RV.<br />
 For a discrete RV <span class="arithmatex">\(X\)</span> with alphabet <span class="arithmatex">\(\mathcal{X}\)</span> and PMF <span class="arithmatex">\(p(x)\)</span>, its entropy is </p>
-<p>$$
+<div class="arithmatex">\[
 \begin{align}
 H(X) &amp;= \mathbb{E}\left[\log_2\frac{1}{p(X)}\right]
 &amp;= -\sum_{x\in\mathcal{X}} p(x) \log_2 p(x)
 \end{align}
-$$
-measured in <em>bits</em> (can also be measured in <em>nats</em> using natural log instead of log base 2).<br />
+\]</div>
+<p>measured in <em>bits</em> (can also be measured in <em>nats</em> using natural log instead of log base 2).<br />
 It is the expected number of (optimal) yes/no questions to identify the outcome.<br />
 Similarly, in communication, it is the minimum average number of bits to encode the outcome.<br />
 It is the expected value (over all outcomes) of <span class="arithmatex">\(-\log_2 p(x)\)</span>, which is the information (or "suprisal") of getting that outcome.</p>
