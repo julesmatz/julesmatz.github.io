@@ -24,6 +24,6 @@ P(p|x) &\propto p^x (1-p)^{1-x} p^{\alpha-1} (1-p)^{\beta-1} \\
 $$
 
 which has the same form as the prior, $p\sim\text{Beta}(\alpha+x,\beta+(1-x))$.  
-Success ($x=1$) leads to a posterior $\text{Beta}(\alpha+1,\beta)$.  
-Failure ($x=0$) leads to a posterior $\text{Beta}(\alpha,\beta+1)$.  
+Success ($x=1$) gives a posterior $\text{Beta}(\alpha+1,\beta)$.  
+Failure ($x=0$) gives a posterior $\text{Beta}(\alpha,\beta+1)$.  
 Hence $\alpha$ and $\beta$ act as pseudo-counts for the number of successes and failures.

@@ -9,6 +9,7 @@ f(p) &= \frac{1}{\text{B}(\alpha,\beta)} p^{\alpha-1} (1-p)^{\beta-1} \\
 &\propto p^{\alpha-1} (1-p)^{\beta-1}
 \end{align}
 $$
+
 where $\text{B}(\alpha,\beta)$ is a normalization constant.
 
 #### Expectation

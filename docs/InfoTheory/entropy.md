@@ -9,6 +9,7 @@ H(X) &= \mathbb{E}\left[\log_2\frac{1}{p(X)}\right]
 &= -\sum_{x\in\mathcal{X}} p(x) \log_2 p(x)
 \end{align}
 $$
+
 measured in _bits_ (can also be measured in _nats_ using natural log instead of log base 2).  
 It is the expected number of (optimal) yes/no questions to identify the outcome.  
 Similarly, in communication, it is the minimum average number of bits to encode the outcome.  
