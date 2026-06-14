@@ -10,6 +10,19 @@ nav:
     - Matrix inversion: Algebra/matrix_inversion.md
     - Geometry (2D):
       - Circle-circle intersection: Algebra/Geometry2D/circle_circle_intersection.md
+  - Probability:
+    - Probability: Probability/probability.md
+    - Random variables: Probability/random_variables.md
+    - Bernoulli: Probability/bernoulli.md
+    - Binomial: Probability/binomial.md
+    - Beta: Probability/beta.md
+    - Normal: Probability/normal.md
+    - Bayes' rule: Probability/bayes_rule.md
+    - Bayesian inference: Probability/bayesian_inference.md
+    - Bayesian inference (Normal): Probability/bayesian_inference_normal.md
+    - Bayesian inference (Bernoulli): Probability/bayesian_inference_bernoulli.md
+  - Information Theory:
+    - Entropy: InfoTheory/entropy.md
   - Modelling:
     - Linear models:
       - Complex exponential for dynamics: Modelling/complex_exponential.md
@@ -17,11 +30,8 @@ nav:
       - Mass-spring-damper: Modelling/example_mass_spring_damper.md
     - Modelling approaches: Modelling/modelling.md
     - PCE: Modelling/PCE.md
-  - Estimation:
-    - Gaussian: Estimation/gaussian.md
-    - Bayesian inference: Estimation/Bayesian_inference.md
-    - Bayesian inference for Gaussians: Estimation/Bayesian_inference_gaussian.md
-    - Kalman filter: Estimation/Kalman.md
+  - Applied Estimation:
+    - Kalman filter: AppliedEstimation/kalman.md
   - Control:
     - Sliding Mode: Control/sliding_mode.md
   - Tools:

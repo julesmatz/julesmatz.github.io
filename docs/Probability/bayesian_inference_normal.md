@@ -1,12 +1,12 @@
-# Bayesian inference for Gaussians
+# Bayesian inference for normal random variables
 Considering
 $$
 p(\theta|y) = \frac{p(y|\theta)p(\theta)}{p(y)}
 $$
-with model \(p(y|\theta)\) and prior \(p(\theta)\) being Gaussian random variables.  
+with model \(p(y|\theta)\) and prior \(p(\theta)\) being normal random variables.  
 <details>
-<summary> The posterior \(p(\theta|y)\) is also Gaussian if... </summary>
-\(p(\theta|y)\) is Gaussian if the product \(p(y|\theta)p(\theta)\) is proportionnal to
+<summary> The posterior \(p(\theta|y)\) is also normal if... </summary>
+\(p(\theta|y)\) is normal if the product \(p(y|\theta)p(\theta)\) is proportionnal to
 $$
 e^{-\frac{1}{2}\left(\theta^\top\Sigma^{-1}\theta - 2\theta^\top\Sigma^{-1}\mu + ...\right)}
 $$
@@ -19,7 +19,7 @@ and partly used to scale (since \(e^{x+c}=e^xe^c\)) the result so the final post
 
 <details open>
 <summary>Example \(y=\theta + \epsilon\)</summary>
-with measurement noise \(\epsilon=\mathcal{N}(0,\sigma_y^2)\) and a priori \(\theta\sim\mathcal{N}(\mu_0,\sigma_0^2)\), the posterior is proportional to a product of gaussians, itself proportional to another gaussian,
+with measurement noise \(\epsilon=\mathcal{N}(0,\sigma_y^2)\) and a priori \(\theta\sim\mathcal{N}(\mu_0,\sigma_0^2)\), the posterior is proportional to a product of normals, itself proportional to another normal,
 $$
 \begin{aligned}
 p(\theta|y) &\propto p(y|\theta)p(\theta) \\

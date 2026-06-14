@@ -1,6 +1,6 @@
-# Gaussian random variables
+# Normal random variables
 ## Definition
-A Gaussian (or **normal**) **random variable** \(X\) has the probability density function (PDF)
+A normal (or Gaussian) RV \(X\) has the probability density function (PDF)
 $$
 p(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}}
 $$
@@ -88,9 +88,9 @@ dist = MvNormal(μ, Σ)
 ```
 
 ## Confidence region
-The minimal volume which contains \(X\) with a given probability (ellipsoid for a Gaussian variable). It is more straightforward to compute the probability given a volume, computations are below for dimensions 1, 2, 3, and here[^1] for dimension \(n\).
+The minimal volume which contains \(X\) with a given probability (ellipsoid for a normal RV). It is more straightforward to compute the probability given a volume, computations are below for dimensions 1, 2, 3, and here[^1] for dimension \(n\).
 
-![Gaussian 2D plot](img/gaussian2Dplot.png){: style="display: block; margin: 0 auto; width: 400px"}
+![Normal 2D plot](img/normal2Dplot.png){: style="display: block; margin: 0 auto; width: 400px"}
 
 It is easier to compute it for a standard normal distribution (a centered segment/circle/sphere), then transform it into an ellipsoid using the linear transform for going from \(\mathcal{N}(0,I)\) to \(\mathcal{N}(\mu,\Sigma)\).
 

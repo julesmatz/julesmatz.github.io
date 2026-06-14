@@ -73,3 +73,15 @@ $$
 $$
 p(\theta|y) \propto p(y|\theta) p(\theta)
 $$
+
+
+## Conjugate prior
+A conjugate prior is a distribution that keeps its form after multiplication by the likelihood.  
+Hence, considering a specific likelihood function, the posterior is in the same distribution family as the prior.
+This allows for closed-form expressions of the posterior (specifically of the parameters if its distribution).
+
+### Examples
+| Likelihood function | Conjougate prior |
+| :--- | :---: |
+| [Bernoulli](bernoulli.md) $X \sim \mathcal{B}(p)$ with parameter $p$, outcome in $\left\lbrace0,1\right\rbrace$ | $p\sim\text{Beta}(\alpha,\beta)$ |
+| [multivariate normal](normal.md) $X \sim \mathcal{N}(\mu,\Sigma)$ with parameter $\mu\in\mathbb{R}^n$ | $\mu \sim \mathcal{N}(\mu_0, \Sigma_0)$ |

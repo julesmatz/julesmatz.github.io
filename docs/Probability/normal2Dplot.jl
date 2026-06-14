@@ -27,5 +27,5 @@ yticks!([-μ[2],-sqrt(2),0,sqrt(2)].+μ[2],["0","2-√2","2","2+√2"])
 xlabel!("X_1")
 ylabel!("X_2")
 # save image
-path_save = dirname(@__FILE__()) * "/img/gaussian2Dplot.png"
+path_save = dirname(@__FILE__()) * "/img/normal2Dplot.png"
 savefig(path_save)

@@ -11,4 +11,4 @@
     - Not chasing perfection, as long as there is improvement...
 * Storing knowledge, not information
     - No thorough proofs but concise and intuitive explanations
-* No fancy language and correct synthax, writing to myself as simple notes
+* No fancy language and correct synthax, writing simple notes to myself
