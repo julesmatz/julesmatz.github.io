@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Uncertainty/random_variables/">
+        <link rel="canonical" href="https://julesmatz.github.io/Probability/binomial/">
       
       
-        <link rel="prev" href="../bayes_rule/">
+        <link rel="prev" href="../bernoulli/">
       
       
-        <link rel="next" href="../../Modelling/complex_exponential/">
+        <link rel="next" href="../beta/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Random variables - notes</title>
+        <title>Binomial - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#random-variables" class="md-skip">
+        <a href="#binomial-random-variable" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Random variables
+              Binomial
             
           </span>
         </div>
@@ -442,7 +442,7 @@
   
   
   <span class="md-ellipsis">
-    Uncertainty
+    Probability
     
   </span>
   
@@ -453,7 +453,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Uncertainty
+            Probability
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -470,6 +470,199 @@
   
   <span class="md-ellipsis">
     Probability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Random variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bernoulli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bernoulli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Binomial
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binomial
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limit-as-ntoinfty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit as \(n\to\infty\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expectation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variance
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Beta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Normal
     
   </span>
   
@@ -507,98 +700,66 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Random variables
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bayesian_inference/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Random variables
+    Bayesian inference
     
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../bayesian_inference_normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bayesian inference (Normal)
     
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#random-variable-definition" class="md-nav__link">
-    <span class="md-ellipsis">
-      Random variable definition
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Event
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#probability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Probability
-    </span>
-  </a>
+    <li class="md-nav__item">
+      <a href="../bayesian_inference_bernoulli/" class="md-nav__link">
+        
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#probability-distributions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Probability distributions
-    </span>
-  </a>
   
-</li>
-      
-    </ul>
+  <span class="md-ellipsis">
+    Bayesian inference (Bernoulli)
+    
+  </span>
   
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -634,7 +795,7 @@
   
   
   <span class="md-ellipsis">
-    Modelling
+    Information Theory
     
   </span>
   
@@ -644,6 +805,74 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Information Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoTheory/entropy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entropy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modelling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Modelling
           </label>
@@ -664,10 +893,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
   
@@ -680,8 +909,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Linear models
           </label>
@@ -832,15 +1061,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Estimation
+    Applied Estimation
     
   </span>
   
@@ -848,10 +1077,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Estimation
+            Applied Estimation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -862,76 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Estimation/gaussian/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Gaussian
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Estimation/Bayesian_inference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bayesian inference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bayesian inference for Gaussians
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Estimation/Kalman/" class="md-nav__link">
+      <a href="../../AppliedEstimation/kalman/" class="md-nav__link">
         
   
   
@@ -969,10 +1129,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -985,8 +1145,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Control
           </label>
@@ -1037,10 +1197,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1053,8 +1213,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -1324,36 +1484,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#random-variable-definition" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Random variable definition
+      Example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#event" class="md-nav__link">
+  <a href="#limit-as-ntoinfty" class="md-nav__link">
     <span class="md-ellipsis">
-      Event
+      Limit as \(n\to\infty\)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#probability" class="md-nav__link">
+  <a href="#expectation" class="md-nav__link">
     <span class="md-ellipsis">
-      Probability
+      Expectation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#probability-distributions" class="md-nav__link">
+  <a href="#variance" class="md-nav__link">
     <span class="md-ellipsis">
-      Probability distributions
+      Variance
     </span>
   </a>
   
@@ -1375,52 +1535,35 @@
 
 
 
-<h1 id="random-variables">Random variables</h1>
-<h2 id="random-variable-definition">Random variable definition</h2>
-<p>A random variable <span class="arithmatex">\(X\)</span> is a function that maps the <em>sample space</em> (set of possible outcomes) of a random experiment to a measurable space <span class="arithmatex">\(E\)</span> (usually <span class="arithmatex">\(\left\lbrace 0,1\right\rbrace\)</span>, <span class="arithmatex">\(\mathbb{R}\)</span> or <span class="arithmatex">\(\mathbb{R}^n\)</span>).</p>
+<h1 id="binomial-random-variable">Binomial random variable</h1>
+<p>A binomial RV <span class="arithmatex">\(X\sim\mathcal{B}(n,p)\)</span> is the number of successes for <span class="arithmatex">\(n\)</span> <a href="../bernoulli/">Bernoulli</a> trials.
+Its PMF can be expressed as</p>
 <div class="arithmatex">\[
-X:\Omega\mapsto E
+P(X=x) = \begin{pmatrix} n\\ x\end{pmatrix} p^x (1-p)^{1-x}
 \]</div>
-<p><strong>Examples</strong></p>
-<ul>
-<li>number of heads for two throws <span class="arithmatex">\(X:\left\lbrace HH,HT,TH,TT\right\rbrace\mapsto \left\lbrace 0,1,1,2 \right\rbrace\)</span></li>
-<li>height <span class="arithmatex">\(h\)</span> of a person <span class="arithmatex">\(X:\mathbb{R}^+\mapsto \mathbb{R}^+\)</span> (identity mapping)</li>
-<li>word2vec <span class="arithmatex">\(X:\left\lbrace\text{archive},\text{by},\text{cat},\ldots,\text{zebra}\right\rbrace\mapsto \mathbb{R}^n\)</span></li>
-</ul>
-<p>The introduction of a measurable space allows for computations such as <span class="arithmatex">\(E\left[X\right]=0.5\)</span> for <span class="arithmatex">\(\left\lbrace H,T \right\rbrace\mapsto \left\lbrace 0,1 \right\rbrace\)</span>.</p>
-<h2 id="event">Event</h2>
-<p>An event <span class="arithmatex">\(A\)</span> is a subset of <span class="arithmatex">\(\Omega\)</span>, to which a probability may be assigned.</p>
-<p><strong>Examples</strong></p>
-<ul>
-<li>number of heads for two throws, event of two heads is <span class="arithmatex">\(A=\left\lbrace TT\right\rbrace\)</span></li>
-<li>height <span class="arithmatex">\(h\)</span> of a person, event of small person is <span class="arithmatex">\(A=\left[0,1.60\text{m}\right]\)</span></li>
-<li>word2vec, event of adjective is <span class="arithmatex">\(A=\left\lbrace\text{accurate},\text{calm},\text{decisive},\ldots,\text{lucky}\right\rbrace\)</span></li>
-</ul>
-<h2 id="probability">Probability</h2>
-<p>Probability quantifies  the uncertainty of an event <span class="arithmatex">\(A\)</span> (event=subset of <span class="arithmatex">\(\Omega\)</span>) by assigning it a numerical value ranging from 0 (impossible) to 1 (certain).</p>
-<p>It satisfies the (Kolmogorov) axioms:</p>
-<ul>
-<li>non-negativity, <span class="arithmatex">\(P(A) \geq 0\)</span> for all <span class="arithmatex">\(A \in \Omega\)</span></li>
-<li>normalization, <span class="arithmatex">\(P(\Omega\)</span>=1)</li>
-<li>for mutually exclusive events, <span class="arithmatex">\(P(A_1 \cup \ldots \cup A_n)= P(A_1) + \ldots + P(A_n)\)</span> </li>
-</ul>
-<p><strong>Examples</strong></p>
-<ul>
-<li><span class="arithmatex">\(P(TT) = 1/4=0.25\)</span></li>
-<li><span class="arithmatex">\(P(h\geq 1.80\text{m})=0.21\)</span></li>
-<li><span class="arithmatex">\(P(\text{cat})=0.07\)</span></li>
-</ul>
-<h2 id="probability-distributions">Probability distributions</h2>
-<p>A probability distribution of a RV is the recording of probabilities associated with all outcomes, it fully describe it. It refers to either a</p>
-<ul>
-<li><strong>Probability mass function</strong> (PMF, for discrete RV),<br />
-the collection of probabilities for every element in <span class="arithmatex">\(\Omega\)</span></li>
-<li><strong>Probability density function</strong> (PDF, for continuous RV),<br />
-a function <span class="arithmatex">\(f_X(x)\)</span> such that <span class="arithmatex">\(P(a\leq X \leq b) = \int_a^b f_X(x) dx\)</span></li>
-<li><strong>Cumulative distribution function</strong> (CMF, for both discrete and continuous RV),<br />
-a function <span class="arithmatex">\(F_X(x)\)</span> such that <span class="arithmatex">\(F_X(x) = P(X\leq x)\)</span></li>
-</ul>
-<p>see <a href="https://faculty.nps.edu/rbassett/_book/discrete-random-variables.html">lien</a></p>
+<p>with <span class="arithmatex">\(\begin{pmatrix} n\\ x\end{pmatrix}\)</span> the number of different arrangements for <span class="arithmatex">\(x\)</span> successes in <span class="arithmatex">\(n\)</span> trials ("<span class="arithmatex">\(n\)</span> choose <span class="arithmatex">\(x\)</span>", "<span class="arithmatex">\(x\)</span> <em>parmi</em> <span class="arithmatex">\(n\)</span>").</p>
+<h4 id="example">Example</h4>
+<p>Take 3 trials, the probability of getting sequence 0-1-0 is <span class="arithmatex">\((1-p)\cdot p\cdot (1-p) = p^1(1-p)^{2}\)</span><br />
+Other arrangements lead to only 1 success: 0-0-1 and 1-0-0.<br />
+The number of arrangements leading to only 1 success is indeed <span class="arithmatex">\(\begin{pmatrix} n\\ 1\end{pmatrix} = 3\)</span>.<br />
+The probability of only 1 success is thus <span class="arithmatex">\(\begin{pmatrix} n\\ 1\end{pmatrix} p^1(1-p)^{2}\)</span>.</p>
+<h4 id="limit-as-ntoinfty">Limit as <span class="arithmatex">\(n\to\infty\)</span></h4>
+<p>When <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span> are not too small, it tends to a normal distribution (it is one example of the central limit theorem),</p>
+<div class="arithmatex">\[
+\lim\limits_{n\to\infty} \mathcal{B}(n,p) = \mathcal{N}\left(\mu=np, \sigma^2=np(1-p)\right)
+\]</div>
+<p>if <span class="arithmatex">\(p\)</span> or <span class="arithmatex">\(q\)</span> is small, it tends to a Poisson distribution</p>
+<div class="arithmatex">\[
+\lim\limits_{n\to\infty} \mathcal{B}(n,p) = \frac{\lambda^k}{k!}e^{-\lambda} \quad \text{where } \lambda=np
+\]</div>
+<h4 id="expectation">Expectation</h4>
+<div class="arithmatex">\[
+\mathbb{E}[X] = np
+\]</div>
+<h4 id="variance">Variance</h4>
+<div class="arithmatex">\[
+\mathbb{V}[X] = np(1-p)
+\]</div>
 
 
 

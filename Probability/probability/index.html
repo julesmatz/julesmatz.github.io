@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Algebra/Geometry2D/circle_circle_intersection/">
+        <link rel="canonical" href="https://julesmatz.github.io/Probability/probability/">
       
       
-        <link rel="prev" href="../../matrix_inversion/">
+        <link rel="prev" href="../../Algebra/Geometry2D/circle_circle_intersection/">
       
       
-        <link rel="next" href="../../../Probability/probability/">
+        <link rel="next" href="../random_variables/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Circle-circle intersection - notes</title>
+        <title>Probability - notes</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#circle-circle-intersection" class="md-skip">
+        <a href="#probability" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Circle-circle intersection
+              Probability
             
           </span>
         </div>
@@ -178,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -196,7 +196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -215,20 +215,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -258,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vector_space/" class="md-nav__link">
+      <a href="../../Algebra/vector_space/" class="md-nav__link">
         
   
   
@@ -281,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../inner_prod/" class="md-nav__link">
+      <a href="../../Algebra/inner_prod/" class="md-nav__link">
         
   
   
@@ -304,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linear_map/" class="md-nav__link">
+      <a href="../../Algebra/linear_map/" class="md-nav__link">
         
   
   
@@ -327,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../matrix_inversion/" class="md-nav__link">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -347,20 +345,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -376,10 +372,88 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Geometry (2D)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algebra/Geometry2D/circle_circle_intersection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Circle-circle intersection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Probability
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Probability
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -404,7 +478,7 @@
   
   
   <span class="md-ellipsis">
-    Circle-circle intersection
+    Probability
     
   </span>
   
@@ -417,7 +491,7 @@
   
   
   <span class="md-ellipsis">
-    Circle-circle intersection
+    Probability
     
   </span>
   
@@ -440,46 +514,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
+  <a href="#sample-space-outcomes-events" class="md-nav__link">
     <span class="md-ellipsis">
-      Solution
+      Sample space, outcomes, events
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#derivation" class="md-nav__link">
+  <a href="#probability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Derivation
+      Probability
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Derivation">
+    <nav class="md-nav" aria-label="Probability">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-to-an-easier-frame-for-solving" class="md-nav__link">
+  <a href="#frequentist-and-bayesian-interpretations" class="md-nav__link">
     <span class="md-ellipsis">
-      Get to an easier frame for solving
+      Frequentist and Bayesian interpretations
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#equation-of-circles-in-new-coordinate-frame" class="md-nav__link">
+  <a href="#conditional-probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Equation of circles in new coordinate frame
+      Conditional probability
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#check-for-existence" class="md-nav__link">
+  <a href="#law-of-total-probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Check for existence
+      Law of total probability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Odds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Odds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log-odds
     </span>
   </a>
   
@@ -499,59 +597,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Probability
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Probability
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -559,30 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/probability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Probability
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Probability/random_variables/" class="md-nav__link">
+      <a href="../random_variables/" class="md-nav__link">
         
   
   
@@ -605,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bernoulli/" class="md-nav__link">
+      <a href="../bernoulli/" class="md-nav__link">
         
   
   
@@ -628,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/binomial/" class="md-nav__link">
+      <a href="../binomial/" class="md-nav__link">
         
   
   
@@ -651,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/beta/" class="md-nav__link">
+      <a href="../beta/" class="md-nav__link">
         
   
   
@@ -674,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/normal/" class="md-nav__link">
+      <a href="../normal/" class="md-nav__link">
         
   
   
@@ -697,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bayes_rule/" class="md-nav__link">
+      <a href="../bayes_rule/" class="md-nav__link">
         
   
   
@@ -720,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bayesian_inference/" class="md-nav__link">
+      <a href="../bayesian_inference/" class="md-nav__link">
         
   
   
@@ -743,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bayesian_inference_normal/" class="md-nav__link">
+      <a href="../bayesian_inference_normal/" class="md-nav__link">
         
   
   
@@ -766,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bayesian_inference_bernoulli/" class="md-nav__link">
+      <a href="../bayesian_inference_bernoulli/" class="md-nav__link">
         
   
   
@@ -834,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../InfoTheory/entropy/" class="md-nav__link">
+      <a href="../../InfoTheory/entropy/" class="md-nav__link">
         
   
   
@@ -940,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/complex_exponential/" class="md-nav__link">
+      <a href="../../Modelling/complex_exponential/" class="md-nav__link">
         
   
   
@@ -963,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/linear_dynamical_systems/" class="md-nav__link">
+      <a href="../../Modelling/linear_dynamical_systems/" class="md-nav__link">
         
   
   
@@ -986,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/example_mass_spring_damper/" class="md-nav__link">
+      <a href="../../Modelling/example_mass_spring_damper/" class="md-nav__link">
         
   
   
@@ -1017,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/modelling/" class="md-nav__link">
+      <a href="../../Modelling/modelling/" class="md-nav__link">
         
   
   
@@ -1040,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/PCE/" class="md-nav__link">
+      <a href="../../Modelling/PCE/" class="md-nav__link">
         
   
   
@@ -1108,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AppliedEstimation/kalman/" class="md-nav__link">
+      <a href="../../AppliedEstimation/kalman/" class="md-nav__link">
         
   
   
@@ -1176,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Control/sliding_mode/" class="md-nav__link">
+      <a href="../../Control/sliding_mode/" class="md-nav__link">
         
   
   
@@ -1244,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/website/" class="md-nav__link">
+      <a href="../../Tools/website/" class="md-nav__link">
         
   
   
@@ -1267,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/markdown/" class="md-nav__link">
+      <a href="../../Tools/markdown/" class="md-nav__link">
         
   
   
@@ -1290,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/unix/" class="md-nav__link">
+      <a href="../../Tools/unix/" class="md-nav__link">
         
   
   
@@ -1313,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/git/" class="md-nav__link">
+      <a href="../../Tools/git/" class="md-nav__link">
         
   
   
@@ -1336,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/cpp/" class="md-nav__link">
+      <a href="../../Tools/cpp/" class="md-nav__link">
         
   
   
@@ -1359,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/python/" class="md-nav__link">
+      <a href="../../Tools/python/" class="md-nav__link">
         
   
   
@@ -1382,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/julia/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
@@ -1405,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/ros/" class="md-nav__link">
+      <a href="../../Tools/ros/" class="md-nav__link">
         
   
   
@@ -1428,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/ros2/" class="md-nav__link">
+      <a href="../../Tools/ros2/" class="md-nav__link">
         
   
   
@@ -1451,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/urdf/" class="md-nav__link">
+      <a href="../../Tools/urdf/" class="md-nav__link">
         
   
   
@@ -1501,46 +1523,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
+  <a href="#sample-space-outcomes-events" class="md-nav__link">
     <span class="md-ellipsis">
-      Solution
+      Sample space, outcomes, events
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#derivation" class="md-nav__link">
+  <a href="#probability_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Derivation
+      Probability
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Derivation">
+    <nav class="md-nav" aria-label="Probability">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-to-an-easier-frame-for-solving" class="md-nav__link">
+  <a href="#frequentist-and-bayesian-interpretations" class="md-nav__link">
     <span class="md-ellipsis">
-      Get to an easier frame for solving
+      Frequentist and Bayesian interpretations
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#equation-of-circles-in-new-coordinate-frame" class="md-nav__link">
+  <a href="#conditional-probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Equation of circles in new coordinate frame
+      Conditional probability
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#check-for-existence" class="md-nav__link">
+  <a href="#law-of-total-probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Check for existence
+      Law of total probability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Odds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Odds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log-odds
     </span>
   </a>
   
@@ -1567,106 +1613,80 @@
 
 
 
-<h1 id="circle-circle-intersection">Circle-circle intersection</h1>
-<p>Obtained from <a href="https://math.stackexchange.com/questions/256100/how-can-i-find-the-points-at-which-two-circles-intersect">math.stackexchange.com/questions/256100/</a>.</p>
-<h2 id="solution">Solution</h2>
-<p>Intersection points of a circle of radius <span class="arithmatex">\(r_1\)</span> centered on <span class="arithmatex">\((x_1,y_1)\)</span> with another circle of radius <span class="arithmatex">\(r_2\)</span> centered on <span class="arithmatex">\((x_2,y_2)\)</span>.</p>
-<p>The two intersection points are</p>
+<h1 id="probability">Probability</h1>
+<blockquote>
+<p>Probability is a mathematical language for quantifying uncertainty. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+</blockquote>
+<h2 id="sample-space-outcomes-events">Sample space, outcomes, events</h2>
+<p>The sample space <span class="arithmatex">\(\Omega\)</span> is the set of all possible outcomes of random experiment.<br />
+An event <span class="arithmatex">\(A\)</span> is a subset of <span class="arithmatex">\(\Omega\)</span>. If the outcome of an experiment is included in <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(A\)</span> has occurred.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li>Two successive coin flips, <span class="arithmatex">\(\Omega=\left\lbrace HH,HT,TH,TT\right\rbrace\)</span><br />
+Event "at least one head" is <span class="arithmatex">\(A=\left\lbrace HH,HT,TH\right\rbrace\)</span></li>
+<li>Height of a person, <span class="arithmatex">\(\Omega = \left[0, +\infty\right)=\mathbb{R}^+\)</span><br />
+Event "small person" is <span class="arithmatex">\(A=\left[0, 1.60\text{m}\right[\)</span></li>
+<li>word2vec, <span class="arithmatex">\(\Omega=\left\lbrace \text{ace}, \text{cat}, \ldots, \text{zebra}\right\rbrace\)</span><br />
+Event "adjective" is <span class="arithmatex">\(A=\left\lbrace\text{accurate},\text{calm},\ldots,\text{zealous}\right\rbrace\)</span></li>
+</ul>
+<h2 id="probability_1">Probability</h2>
+<p>The probability <span class="arithmatex">\(P(A)\)</span> asssigns a numerical value to event <span class="arithmatex">\(A\)</span> so as to quantify its uncertainty.</p>
+<p>A probability measure <span class="arithmatex">\(P\)</span> must satisfies the axioms:</p>
+<ul>
+<li><span class="arithmatex">\(P(A) \geq 0\)</span> for all <span class="arithmatex">\(A \in \Omega\)</span></li>
+<li><span class="arithmatex">\(P(\Omega\)</span>=1)</li>
+<li>for disjoint events, <span class="arithmatex">\(P(A_1 \cup \ldots \cup A_n)= P(A_1) + \ldots + P(A_n)\)</span> </li>
+</ul>
+<h4 id="frequentist-and-bayesian-interpretations">Frequentist and Bayesian interpretations</h4>
+<ul>
+<li>Frequentist: <span class="arithmatex">\(P(A)\)</span> is the proportion of <span class="arithmatex">\(A\)</span> occuring for infinite repetitions</li>
+<li>Bayesian: <span class="arithmatex">\(P(A)\)</span> quantifies our subjective degree of belief about the realization of <span class="arithmatex">\(A\)</span></li>
+</ul>
+<h4 id="conditional-probability">Conditional probability</h4>
+<p><em>Conditional probability</em> of <span class="arithmatex">\(A\)</span> given <span class="arithmatex">\(B\)</span> is </p>
 <div class="arithmatex">\[
-P_i = \begin{pmatrix}
-\frac{x_1+x_2}{2}\\
-\frac{y_1+y_2}{2}
-\end{pmatrix}
-+\frac{r_1^2-r_2^2}{2R} \begin{pmatrix}
-\frac{x_1+x_2}{R}\\
-\frac{y_1+y_2}{R}
-\end{pmatrix}
-\pm \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}} \begin{pmatrix}
-\frac{y_2+y_1}{R}\\
-\frac{x_1+x_1}{R}
-\end{pmatrix}
+P(A|B) = \frac{P(A,B)}{P(B)}
 \]</div>
-<h2 id="derivation">Derivation</h2>
-<h3 id="get-to-an-easier-frame-for-solving">Get to an easier frame for solving</h3>
-<p>Compute the middle point</p>
-<div class="arithmatex">\[C_m = \begin{pmatrix}
-\frac{x_1+x_2}{2}\\
-\frac{y_1+y_2}{2}
-\end{pmatrix}\]</div>
-<p>and the distance between the two centers
-$$ R = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} $$
-Now consider the coordinate frame with origin at <span class="arithmatex">\(C_m\)</span> and unit axes <span class="arithmatex">\(\vec{a} = \begin{pmatrix}
-\frac{x_1+x_2}{R}\\
-\frac{y_1+y_2}{R}
-\end{pmatrix}\)</span>
-and
-<span class="arithmatex">\(\vec{b} = \begin{pmatrix}
-\frac{y_2+y_1}{R}\\
-\frac{x_1+x_1}{R}
-\end{pmatrix}\)</span></p>
-<p><img alt="two-circles-intersection" src="../img/geometry2D_circle_circle_intersection.png" /></p>
-<h3 id="equation-of-circles-in-new-coordinate-frame">Equation of circles in new coordinate frame</h3>
-<p>Usual equation of a circle is <span class="arithmatex">\((x-x_1)^2 + (y-y_1)^2 = r_1^2\)</span>, which is obtain from the Pythagorean theorem with <span class="arithmatex">\(r_1\)</span> the hypothenuse and <span class="arithmatex">\((x-x_1)\)</span> and <span class="arithmatex">\((y-y_1)\)</span> its projection on <span class="arithmatex">\(\vec{x}\)</span> and <span class="arithmatex">\(\vec{y}\)</span> axes.</p>
-<p>Now in our case, the circles are centered along the dashed line so their centers have no <span class="arithmatex">\(\vec{b}\)</span> component. Equations are
-<span class="arithmatex">\(<span class="arithmatex">\((a+R/2)^2 + b^2 = r_1^2\\
-(a-R/2)^2 + b^2 = r_2^2\)</span>\)</span>
-Equating the two circles equation, the intersection points are obtained in the <span class="arithmatex">\((\vec{a},\vec{b})\)</span> frame,</p>
-<div class="arithmatex">\[ a =\frac{r_1^2-r_2^2}{2R}\\
-b = \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}}\]</div>
-<p>The two intersection points are thus</p>
+<p>which can be rearranged as</p>
+<div class="arithmatex">\[
+P(A,B) = P(A|B)P(B) = P(B|A)P(A)
+\]</div>
+<p><span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are <em>independent</em> iff</p>
+<div class="arithmatex">\[
+P(A|B)=P(A)
+\]</div>
+<h4 id="law-of-total-probability">Law of total probability</h4>
+<p>If <span class="arithmatex">\(A_1,\ldots,A_n\)</span> is a partition (disjoint subsets that form <span class="arithmatex">\(\Omega\)</span>), then for any event <span class="arithmatex">\(B\)</span>,</p>
+<div class="arithmatex">\[
+P(B) = \sum_{i=1}^n P(B|A_i)P(A_i)
+\]</div>
+<p>For an event conditioned on a continuous random variable <span class="arithmatex">\(X\)</span> with PDF <span class="arithmatex">\(f_X\)</span>,</p>
+<div class="arithmatex">\[
+P(B) = \int_\mathbb{R} P(B|X=x)f_Xdx
+\]</div>
+<h2 id="odds">Odds</h2>
+<p>Odds express relative likelihood between events. For a single event, odds relate to probability as</p>
+<div class="arithmatex">\[
+O(A) = \frac{P(A)}{1-P(A)} \iff P(A) = \frac{O(A)}{1+O(A)}
+\]</div>
+<p>The relative likelihood between multiple disjoints events <span class="arithmatex">\((A_1, A_2 \ldots, A_n)=\mathbf{A}\)</span> is expressed as a list (up to a scaling factor)</p>
 <div class="arithmatex">\[
 \begin{aligned}
-P_i &amp;= C_m + a \vec{a} \pm b \vec{b}\\
-P_i &amp;=\begin{pmatrix}
-\frac{x_1+x_2}{2}\\
-\frac{y_1+y_2}{2}
-\end{pmatrix}
-+a \begin{pmatrix}
-\frac{x_1+x_2}{R}\\
-\frac{y_1+y_2}{R}
-\end{pmatrix}
-\pm b \begin{pmatrix}
-\frac{y_2+y_1}{R}\\
-\frac{x_1+x_1}{R}
-\end{pmatrix}\\
-P_i &amp;= \begin{pmatrix}
-\frac{x_1+x_2}{2}\\
-\frac{y_1+y_2}{2}
-\end{pmatrix}
-+\frac{r_1^2-r_2^2}{2R} \begin{pmatrix}
-\frac{x_1+x_2}{R}\\
-\frac{y_1+y_2}{R}
-\end{pmatrix}
-\pm \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}} \begin{pmatrix}
-\frac{y_2+y_1}{R}\\
-\frac{x_1+x_1}{R}
-\end{pmatrix}
+O(\mathbf{A})&amp;=\left(a_1 : a_2 \ldots : a_n\right) \\
+&amp;=\left(P(A_1) : P(A_2) : \ldots : P(A_n)\right)
 \end{aligned}
 \]</div>
-<h3 id="check-for-existence">Check for existence</h3>
-<p>The intersection only exists if <span class="arithmatex">\(R&lt;r_1 + r_2\)</span> and <span class="arithmatex">\(R&gt;|r_2-r_1|\)</span> (with <span class="arithmatex">\(|\cdot |\)</span> the notation for absolute value).</p>
-<details>
-First, \(a\) is obstained by subtracting the second to the first equation,
-
-$$
-\begin{aligned}
-(a+R/2)^2 - (a-R/2)^2 &= r_1^2 - r_2^2\\
-a^2 + a R + (R/2)^2 - \left(a^2 - aR + (R/2)^2\right) &= r_1^2-r_2^2\\
-a &=\frac{r_1^2-r_2^2}{2R}
-\end{aligned}
-$$
-
-Then \(b\) is obtained by adding the first and second equations,
-
-$$
-\begin{aligned}
-2b^2 &= r_1^2+r_2^2 - (a+R/2)^2 - (a-R/2)^2\\
-2b^2 &= r_1^2+r_2^2 -\left(\frac{r_1^2-r_2^2}{2R}\right)^2-\frac{r_1^2-r_2^2}{2} - R^2/4\\
-&\quad - \left(\frac{r_1^2-r_2^2}{2R}\right)^2+\frac{r_1^2-r_2^2}{2} - R^2/4\\
-2b^2 &= r_1^2+r_2^2 -2\left(\frac{r_1^2-r_2^2}{2R}\right)^2 - 2R^2/4\\
-b &= \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}}
-\end{aligned}
-$$
+<h4 id="log-odds">Log-odds</h4>
+<p>Log-odds are <span class="arithmatex">\(\log\left(O(A)\right)\)</span>, it is very useful in Bayesian update, as it turns multiplications into additions.<br />
+Using the natural logarithm, the value is expressed in <em>nats</em> (natural units of information), while using the base-2 logarithm it is expressed in <em>bits</em>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>L. Wasserman, 2004, <em>All of Statistics: A Concise Course in Statistical Inference</em>, Springer texts in statistics.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1715,10 +1735,10 @@ $$
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

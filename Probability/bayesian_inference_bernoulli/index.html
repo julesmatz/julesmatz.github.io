@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Uncertainty/bayes_rule/">
+        <link rel="canonical" href="https://julesmatz.github.io/Probability/bayesian_inference_bernoulli/">
       
       
-        <link rel="prev" href="../probability/">
+        <link rel="prev" href="../bayesian_inference_normal/">
       
       
-        <link rel="next" href="../random_variables/">
+        <link rel="next" href="../../InfoTheory/entropy/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Bayes' rule - notes</title>
+        <title>Bayesian inference (Bernoulli) - notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bayes-rule" class="md-skip">
+        <a href="#bayesian-inference-for-bernoulli-random-variables" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bayes' rule
+              Bayesian inference (Bernoulli)
             
           </span>
         </div>
@@ -442,7 +442,7 @@
   
   
   <span class="md-ellipsis">
-    Uncertainty
+    Probability
     
   </span>
   
@@ -453,7 +453,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Uncertainty
+            Probability
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -484,98 +484,6 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Bayes' rule
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bayes' rule
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Probability
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#odds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Odds
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#log-odds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Log-odds
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -590,6 +498,200 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bernoulli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bernoulli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../binomial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binomial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Beta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Normal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bayes_rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bayes' rule
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bayesian_inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bayesian inference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bayesian_inference_normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bayesian inference (Normal)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bayesian inference (Bernoulli)
+    
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -625,7 +727,7 @@
   
   
   <span class="md-ellipsis">
-    Modelling
+    Information Theory
     
   </span>
   
@@ -635,6 +737,74 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Information Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoTheory/entropy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entropy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modelling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Modelling
           </label>
@@ -655,10 +825,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
   
@@ -671,8 +841,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Linear models
           </label>
@@ -823,15 +993,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Estimation
+    Applied Estimation
     
   </span>
   
@@ -839,10 +1009,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Estimation
+            Applied Estimation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -853,76 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Estimation/gaussian/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Gaussian
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Estimation/Bayesian_inference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bayesian inference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Estimation/Bayesian_inference_gaussian/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bayesian inference for Gaussians
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Estimation/Kalman/" class="md-nav__link">
+      <a href="../../AppliedEstimation/kalman/" class="md-nav__link">
         
   
   
@@ -960,10 +1061,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -976,8 +1077,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Control
           </label>
@@ -1028,10 +1129,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1044,8 +1145,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -1308,41 +1409,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#probability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Probability
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#odds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Odds
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#log-odds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Log-odds
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1357,103 +1423,28 @@
 
 
 
-<h1 id="bayes-rule">Bayes' rule</h1>
-<p>Bayes' rule is a law of probability for updating uncertainty about a hypothesis based on some new data (evidence).</p>
-<p>Let us consider throughout this note the example of email classification.<br />
-Out of the last 100 emails, 50 are business, 30 are personal, and 20 are spam.<br />
-The word "meeting" is present in 25 business, 8 personal and 2 spam emails.<br />
-The word "deal" is present in 12 business, 1 personal and 9 spam emails.</p>
-<h3 id="probability">Probability</h3>
-<p>From the definition of <a href="../probability/#conditional-probability">conditional probability</a></p>
+<h1 id="bayesian-inference-for-bernoulli-random-variables">Bayesian inference for Bernoulli random variables</h1>
+<p>Beta distribution is the <em>prior conjugate</em> for a Bernoulli RV.<br />
+Here the likelihood <span class="arithmatex">\(P(e|H)\)</span> corresponds to <span class="arithmatex">\(P(x|p)\)</span> (<span class="arithmatex">\(p\)</span> is the model parameter, <span class="arithmatex">\(x\)</span> the experimental outcome).<br />
+For <span class="arithmatex">\(x\in\left\lbrace 0; 1\right\rbrace\)</span> (either success or fail, yes or no, etc.).</p>
 <div class="arithmatex">\[
-P(H|e) = \frac{P(e|H)P(H)}{P(e)}
+P(X=x) = p^x (1-p)^{1-x}
 \]</div>
-<p>The denominator can be expanded or integrated out using  and the <a href="../probability/#law-of-total-probability">law of total probability</a>,</p>
+<p>The simplest and most useful conjugate prior is <span class="arithmatex">\(p\sim\text{Beta}(\alpha,\beta)\)</span> with PDF</p>
 <div class="arithmatex">\[
-\begin{aligned}
-P(H_i|e) &amp;= \frac{P(e|H_i)P(H_i)}{P(e)} \\
-&amp;= \frac{P(e|H_i)P(H_i)}{\sum_j P(e|H_j)P(H_j)}
-\end{aligned}
+P(p) = p^{\alpha-1}(1-p)^{\beta-1}
 \]</div>
-<p>for a partition <span class="arithmatex">\(\left\lbrace H_1,\ldots,H_n\right\rbrace\)</span> (partition=disjoint subsets that form <span class="arithmatex">\(\Omega\)</span>).</p>
-<details closed>
-<summary>Example</summary>
-An email is received, it contains the words "meeting" and "deal", let us update our probabilities with one then the other,
-$$
-P(\text{business}) = 0.5
-$$
-
-$$
-\begin{aligned}
-P(\text{business}|\text{"meeting"}) &= \frac{P(\text{"meeting"}|\text{business})P(\text{business})}{P(\text{"meeting"})} \\
-&= \frac{\frac{25}{50}\frac{50}{100}}{\frac{25}{50}\frac{50}{100} + \frac{8}{30}\frac{30}{100} + \frac{2}{20}\frac{20}{100}} \\
-&= \frac{\frac{25}{100}}{\frac{25+8+2}{100}} \left(=\frac{P(\text{"meeting"},\text{business})}{P(\text{"meeting"})}\right) \\
-&= \frac{25}{34} = 0.71
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-P(\text{personal}|\text{"meeting"}) &= \frac{P(\text{"meeting"}|\text{personal})P(\text{personal})}{P(\text{"meeting"})} \\
-&= \frac{\frac{8}{30}\frac{30}{100}}{\frac{25}{50}\frac{50}{100} + \frac{8}{30}\frac{30}{100} + \frac{2}{20}\frac{20}{100}} \\
-&= \frac{\frac{8}{100}}{\frac{25+8+2}{100}} \left(=\frac{P(\text{"meeting"},\text{personal})}{P(\text{"meeting"})}\right) \\
-&= \frac{8}{34} = 0.23
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-P(\text{spam}|\text{"meeting"}) &= \frac{P(\text{"meeting"}|\text{spam})P(\text{spam})}{P(\text{"meeting"})} \\
-&= \frac{\frac{2}{20}\frac{20}{100}}{\frac{25}{50}\frac{50}{100} + \frac{8}{30}\frac{30}{100} + \frac{2}{20}\frac{20}{100}} \\
-&= \frac{\frac{1}{100}}{\frac{25+8+2}{100}} \left(=\frac{P(\text{"meeting"},\text{spam})}{P(\text{"meeting"})}\right) \\
-&= \frac{1}{34} = 0.06
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-P(\text{business}|\text{"deal"}, \text{"meeting"}) &= \frac{P(\text{"deal"}|\text{business})P(\text{business}|\text{"meeting"})}{P(\text{"deal"})} \\
-&= \frac{\frac{12}{50} 0.73}{\frac{12}{50}\frac{50}{100} + \frac{1}{30}\frac{30}{100} + \frac{9}{20}\frac{20}{100}} \\
-&= 0.78
-\end{aligned}
-$$
-$$
-\begin{aligned}
-P(\text{personal}|\text{"deal"}, \text{"meeting"}) &= \frac{P(\text{"deal"}|\text{personal})P(\text{personal}|\text{"meeting"})}{P(\text{"deal"})} \\
-&= \frac{\frac{1}{30} 0.23}{\frac{12}{50}\frac{50}{100} + \frac{1}{30}\frac{30}{100} + \frac{9}{20}\frac{20}{100}} \\
-&= 0.03
-\end{aligned}
-$$
-$$
-\begin{aligned}
-P(\text{spam}|\text{"deal"}, \text{"meeting"}) &= \frac{P(\text{"deal"}|\text{spam})P(\text{spam}|\text{"meeting"})}{P(\text{"deal"})} \\
-&= \frac{\frac{9}{20} 0.03}{\frac{12}{50}\frac{50}{100} + \frac{1}{30}\frac{30}{100} + \frac{9}{20}\frac{20}{100}} \\
-&= 0.12
-\end{aligned}
-$$
-</details>
-
-<h3 id="odds">Odds</h3>
-<p>The odds version does not require a normalization,
-$$
-O(H|e) = \frac{P(e|H)}{P(e|\neg H)}O(H)
-$$</p>
-<details closed>
-<summary>Proof</summary>
-$$
-\begin{aligned}
-O(H|e) = \frac{P(H|e)}{P(\neg H|e)} &= \frac{\frac{P(H|e)P(H)}{P(e)}}{\frac{P(e|\neg H)P(\neg H)}{P(e)}} \\
-&= \frac{P(e|H)}{P(e|\neg H)}\frac{P(H)}{P(\neg H)} \\
-&= \frac{P(e|H)}{P(e|\neg H)}O(H)
-\end{aligned}
-$$
-</details>
-
-<h3 id="log-odds">Log-odds</h3>
-<p>The log-odds version uses addition,</p>
+<p>because after multiplication we get</p>
 <div class="arithmatex">\[
-\log(O(H|e)) = \log\left(\frac{P(e|H)}{P(e|\neg H)}\right)+ \log(O(H))
+\begin{align}
+P(p|x) &amp;\propto p^x (1-p)^{1-x} p^{\alpha-1} (1-p)^{\beta-1} \\
+&amp;= p^{\alpha+x-1} (1-p)^{\beta+(1-x)-1}
+\end{align}
 \]</div>
+<p>which has the same form as the prior, <span class="arithmatex">\(p\sim\text{Beta}(\alpha+x,\beta+(1-x))\)</span>.<br />
+Success (<span class="arithmatex">\(x=1\)</span>) leads to a posterior <span class="arithmatex">\(\text{Beta}(\alpha+1,\beta)\)</span>.<br />
+Failure (<span class="arithmatex">\(x=0\)</span>) leads to a posterior <span class="arithmatex">\(\text{Beta}(\alpha,\beta+1)\)</span>.<br />
+Hence <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> act as pseudo-counts for the number of successes and failures.</p>
 
 
 

@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://julesmatz.github.io/Algebra/Geometry2D/circle_circle_intersection/">
+        <link rel="canonical" href="https://julesmatz.github.io/Probability/bayesian_inference/">
       
       
-        <link rel="prev" href="../../matrix_inversion/">
+        <link rel="prev" href="../bayes_rule/">
       
       
-        <link rel="next" href="../../../Probability/probability/">
+        <link rel="next" href="../bayesian_inference_normal/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Circle-circle intersection - notes</title>
+        <title>Bayesian inference - notes</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#circle-circle-intersection" class="md-skip">
+        <a href="#bayesian-inference" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-header__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Circle-circle intersection
+              Bayesian inference
             
           </span>
         </div>
@@ -178,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
+    <a href="../.." title="notes" class="md-nav__button md-logo" aria-label="notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -196,7 +196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -215,20 +215,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algebra
@@ -258,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vector_space/" class="md-nav__link">
+      <a href="../../Algebra/vector_space/" class="md-nav__link">
         
   
   
@@ -281,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../inner_prod/" class="md-nav__link">
+      <a href="../../Algebra/inner_prod/" class="md-nav__link">
         
   
   
@@ -304,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linear_map/" class="md-nav__link">
+      <a href="../../Algebra/linear_map/" class="md-nav__link">
         
   
   
@@ -327,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../matrix_inversion/" class="md-nav__link">
+      <a href="../../Algebra/matrix_inversion/" class="md-nav__link">
         
   
   
@@ -347,20 +345,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -376,7 +372,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Geometry (2D)
@@ -387,32 +383,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Circle-circle intersection
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algebra/Geometry2D/circle_circle_intersection/" class="md-nav__link">
         
   
   
@@ -423,77 +397,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#derivation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Derivation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Derivation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-to-an-easier-frame-for-solving" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get to an easier frame for solving
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#equation-of-circles-in-new-coordinate-frame" class="md-nav__link">
-    <span class="md-ellipsis">
-      Equation of circles in new coordinate frame
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check-for-existence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check for existence
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -518,18 +421,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -545,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Probability
@@ -559,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/probability/" class="md-nav__link">
+      <a href="../probability/" class="md-nav__link">
         
   
   
@@ -582,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/random_variables/" class="md-nav__link">
+      <a href="../random_variables/" class="md-nav__link">
         
   
   
@@ -605,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bernoulli/" class="md-nav__link">
+      <a href="../bernoulli/" class="md-nav__link">
         
   
   
@@ -628,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/binomial/" class="md-nav__link">
+      <a href="../binomial/" class="md-nav__link">
         
   
   
@@ -651,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/beta/" class="md-nav__link">
+      <a href="../beta/" class="md-nav__link">
         
   
   
@@ -674,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/normal/" class="md-nav__link">
+      <a href="../normal/" class="md-nav__link">
         
   
   
@@ -697,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bayes_rule/" class="md-nav__link">
+      <a href="../bayes_rule/" class="md-nav__link">
         
   
   
@@ -717,10 +622,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Probability/bayesian_inference/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Bayesian inference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -731,6 +658,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bayes-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayes' theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-bayesian-inference-for-parameter-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursive Bayesian inference for parameter estimation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conjugate-prior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conjugate prior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conjugate prior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -743,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bayesian_inference_normal/" class="md-nav__link">
+      <a href="../bayesian_inference_normal/" class="md-nav__link">
         
   
   
@@ -766,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Probability/bayesian_inference_bernoulli/" class="md-nav__link">
+      <a href="../bayesian_inference_bernoulli/" class="md-nav__link">
         
   
   
@@ -834,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../InfoTheory/entropy/" class="md-nav__link">
+      <a href="../../InfoTheory/entropy/" class="md-nav__link">
         
   
   
@@ -940,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/complex_exponential/" class="md-nav__link">
+      <a href="../../Modelling/complex_exponential/" class="md-nav__link">
         
   
   
@@ -963,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/linear_dynamical_systems/" class="md-nav__link">
+      <a href="../../Modelling/linear_dynamical_systems/" class="md-nav__link">
         
   
   
@@ -986,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/example_mass_spring_damper/" class="md-nav__link">
+      <a href="../../Modelling/example_mass_spring_damper/" class="md-nav__link">
         
   
   
@@ -1017,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/modelling/" class="md-nav__link">
+      <a href="../../Modelling/modelling/" class="md-nav__link">
         
   
   
@@ -1040,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modelling/PCE/" class="md-nav__link">
+      <a href="../../Modelling/PCE/" class="md-nav__link">
         
   
   
@@ -1108,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AppliedEstimation/kalman/" class="md-nav__link">
+      <a href="../../AppliedEstimation/kalman/" class="md-nav__link">
         
   
   
@@ -1176,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Control/sliding_mode/" class="md-nav__link">
+      <a href="../../Control/sliding_mode/" class="md-nav__link">
         
   
   
@@ -1244,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/website/" class="md-nav__link">
+      <a href="../../Tools/website/" class="md-nav__link">
         
   
   
@@ -1267,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/markdown/" class="md-nav__link">
+      <a href="../../Tools/markdown/" class="md-nav__link">
         
   
   
@@ -1290,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/unix/" class="md-nav__link">
+      <a href="../../Tools/unix/" class="md-nav__link">
         
   
   
@@ -1313,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/git/" class="md-nav__link">
+      <a href="../../Tools/git/" class="md-nav__link">
         
   
   
@@ -1336,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/cpp/" class="md-nav__link">
+      <a href="../../Tools/cpp/" class="md-nav__link">
         
   
   
@@ -1359,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/python/" class="md-nav__link">
+      <a href="../../Tools/python/" class="md-nav__link">
         
   
   
@@ -1382,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/julia/" class="md-nav__link">
+      <a href="../../Tools/julia/" class="md-nav__link">
         
   
   
@@ -1405,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/ros/" class="md-nav__link">
+      <a href="../../Tools/ros/" class="md-nav__link">
         
   
   
@@ -1428,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/ros2/" class="md-nav__link">
+      <a href="../../Tools/ros2/" class="md-nav__link">
         
   
   
@@ -1451,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/urdf/" class="md-nav__link">
+      <a href="../../Tools/urdf/" class="md-nav__link">
         
   
   
@@ -1501,46 +1490,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
+  <a href="#bayes-theorem" class="md-nav__link">
     <span class="md-ellipsis">
-      Solution
+      Bayes' theorem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#derivation" class="md-nav__link">
+  <a href="#recursive-bayesian-inference-for-parameter-estimation" class="md-nav__link">
     <span class="md-ellipsis">
-      Derivation
+      Recursive Bayesian inference for parameter estimation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Derivation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conjugate-prior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conjugate prior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conjugate prior">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-to-an-easier-frame-for-solving" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Get to an easier frame for solving
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#equation-of-circles-in-new-coordinate-frame" class="md-nav__link">
-    <span class="md-ellipsis">
-      Equation of circles in new coordinate frame
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check-for-existence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check for existence
+      Examples
     </span>
   </a>
   
@@ -1567,106 +1547,100 @@
 
 
 
-<h1 id="circle-circle-intersection">Circle-circle intersection</h1>
-<p>Obtained from <a href="https://math.stackexchange.com/questions/256100/how-can-i-find-the-points-at-which-two-circles-intersect">math.stackexchange.com/questions/256100/</a>.</p>
-<h2 id="solution">Solution</h2>
-<p>Intersection points of a circle of radius <span class="arithmatex">\(r_1\)</span> centered on <span class="arithmatex">\((x_1,y_1)\)</span> with another circle of radius <span class="arithmatex">\(r_2\)</span> centered on <span class="arithmatex">\((x_2,y_2)\)</span>.</p>
-<p>The two intersection points are</p>
-<div class="arithmatex">\[
-P_i = \begin{pmatrix}
-\frac{x_1+x_2}{2}\\
-\frac{y_1+y_2}{2}
-\end{pmatrix}
-+\frac{r_1^2-r_2^2}{2R} \begin{pmatrix}
-\frac{x_1+x_2}{R}\\
-\frac{y_1+y_2}{R}
-\end{pmatrix}
-\pm \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}} \begin{pmatrix}
-\frac{y_2+y_1}{R}\\
-\frac{x_1+x_1}{R}
-\end{pmatrix}
-\]</div>
-<h2 id="derivation">Derivation</h2>
-<h3 id="get-to-an-easier-frame-for-solving">Get to an easier frame for solving</h3>
-<p>Compute the middle point</p>
-<div class="arithmatex">\[C_m = \begin{pmatrix}
-\frac{x_1+x_2}{2}\\
-\frac{y_1+y_2}{2}
-\end{pmatrix}\]</div>
-<p>and the distance between the two centers
-$$ R = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} $$
-Now consider the coordinate frame with origin at <span class="arithmatex">\(C_m\)</span> and unit axes <span class="arithmatex">\(\vec{a} = \begin{pmatrix}
-\frac{x_1+x_2}{R}\\
-\frac{y_1+y_2}{R}
-\end{pmatrix}\)</span>
-and
-<span class="arithmatex">\(\vec{b} = \begin{pmatrix}
-\frac{y_2+y_1}{R}\\
-\frac{x_1+x_1}{R}
-\end{pmatrix}\)</span></p>
-<p><img alt="two-circles-intersection" src="../img/geometry2D_circle_circle_intersection.png" /></p>
-<h3 id="equation-of-circles-in-new-coordinate-frame">Equation of circles in new coordinate frame</h3>
-<p>Usual equation of a circle is <span class="arithmatex">\((x-x_1)^2 + (y-y_1)^2 = r_1^2\)</span>, which is obtain from the Pythagorean theorem with <span class="arithmatex">\(r_1\)</span> the hypothenuse and <span class="arithmatex">\((x-x_1)\)</span> and <span class="arithmatex">\((y-y_1)\)</span> its projection on <span class="arithmatex">\(\vec{x}\)</span> and <span class="arithmatex">\(\vec{y}\)</span> axes.</p>
-<p>Now in our case, the circles are centered along the dashed line so their centers have no <span class="arithmatex">\(\vec{b}\)</span> component. Equations are
-<span class="arithmatex">\(<span class="arithmatex">\((a+R/2)^2 + b^2 = r_1^2\\
-(a-R/2)^2 + b^2 = r_2^2\)</span>\)</span>
-Equating the two circles equation, the intersection points are obtained in the <span class="arithmatex">\((\vec{a},\vec{b})\)</span> frame,</p>
-<div class="arithmatex">\[ a =\frac{r_1^2-r_2^2}{2R}\\
-b = \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}}\]</div>
-<p>The two intersection points are thus</p>
-<div class="arithmatex">\[
-\begin{aligned}
-P_i &amp;= C_m + a \vec{a} \pm b \vec{b}\\
-P_i &amp;=\begin{pmatrix}
-\frac{x_1+x_2}{2}\\
-\frac{y_1+y_2}{2}
-\end{pmatrix}
-+a \begin{pmatrix}
-\frac{x_1+x_2}{R}\\
-\frac{y_1+y_2}{R}
-\end{pmatrix}
-\pm b \begin{pmatrix}
-\frac{y_2+y_1}{R}\\
-\frac{x_1+x_1}{R}
-\end{pmatrix}\\
-P_i &amp;= \begin{pmatrix}
-\frac{x_1+x_2}{2}\\
-\frac{y_1+y_2}{2}
-\end{pmatrix}
-+\frac{r_1^2-r_2^2}{2R} \begin{pmatrix}
-\frac{x_1+x_2}{R}\\
-\frac{y_1+y_2}{R}
-\end{pmatrix}
-\pm \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}} \begin{pmatrix}
-\frac{y_2+y_1}{R}\\
-\frac{x_1+x_1}{R}
-\end{pmatrix}
-\end{aligned}
-\]</div>
-<h3 id="check-for-existence">Check for existence</h3>
-<p>The intersection only exists if <span class="arithmatex">\(R&lt;r_1 + r_2\)</span> and <span class="arithmatex">\(R&gt;|r_2-r_1|\)</span> (with <span class="arithmatex">\(|\cdot |\)</span> the notation for absolute value).</p>
+<h1 id="bayesian-inference">Bayesian inference</h1>
+<h2 id="bayes-theorem">Bayes' theorem</h2>
+<p>Obtained from the relation between conditional and joint probabilites.</p>
 <details>
-First, \(a\) is obstained by subtracting the second to the first equation,
-
+<summary>Events \(A\) and \(B\)</summary>
 $$
+\mathbb{P}(A|B) \mathbb{P}(B) = \mathbb{P}(A,B) = \mathbb{P}(B|A) \mathbb{P}(A)
+$$
+$$
+\mathbb{P}(A|B) = \frac{\mathbb{P}(B|A)\mathbb{P}(A)}{\mathbb{P}(A)}
+$$
+</details>
+
+<details>
+<summary>Discrete random variables \(X\) and \(Y\)</summary>
+$$
+p(X=x|Y=y) p(Y=y) = p(\lbrace X=x\rbrace ,\lbrace Y=y\rbrace) = p(Y=y|X=x) p(X=x)
+$$
+$$
+p(X=x|Y=y) = \frac{p(Y=y|X=x) p(X=x)}{p(Y=y)}
+$$
+</details>
+
+<details open>
+<summary>Continuous random variables \(X\) and \(Y\)</summary>
+$$
+p_{X|Y}(x|y) p_Y(y) = p_{X,Y}(x,y) = p_{Y|X}(y|x) p_X(x)
+$$
+Omitting the subscript notation for the random variable,
+$$
+p(x|y) p(y) = p(x,y) = p(y|x) p(x)
+$$
+Bayes' theorem is
+$$
+p(x|y) = \frac{p(y|x) p(x)}{p(y)}
+$$
+</details>
+<p>The rest of this note only deals with continuous random variables. </p>
+<h2 id="recursive-bayesian-inference-for-parameter-estimation">Recursive Bayesian inference for parameter estimation</h2>
+<p>With prior distribution <span class="arithmatex">\(p(\theta)\)</span>, measurement model <span class="arithmatex">\(p(y|\theta)\)</span> and measurements <span class="arithmatex">\(y_{1:N}\)</span>, the estimation for model parameter <span class="arithmatex">\(\theta\)</span> is
+$$
+p(\theta|y_{1:N}) = \frac{p(y_{1:N}|\theta) p(\theta)}{p(y_{1:N})}
+$$
+As measurements are typically received successively, the posterior of one instant becomes the prior of the next.</p>
+<div class="arithmatex">\[
 \begin{aligned}
-(a+R/2)^2 - (a-R/2)^2 &= r_1^2 - r_2^2\\
-a^2 + a R + (R/2)^2 - \left(a^2 - aR + (R/2)^2\right) &= r_1^2-r_2^2\\
-a &=\frac{r_1^2-r_2^2}{2R}
+p(\theta|y_1) &amp;= \frac{p(y_1|\theta)p(\theta)}{p(y_1)} \\
+p(\theta|y_{1:2}) &amp;= \frac{p(y_2|\theta)p(\theta|y_1)}{p(y_2)} \\
+&amp;\ldots
 \end{aligned}
+\]</div>
+<p>Thus we are interested in 
 $$
-
-Then \(b\) is obtained by adding the first and second equations,
-
+p(\theta|y) = \frac{p(y|\theta)p(\theta)}{p(y)}
 $$
-\begin{aligned}
-2b^2 &= r_1^2+r_2^2 - (a+R/2)^2 - (a-R/2)^2\\
-2b^2 &= r_1^2+r_2^2 -\left(\frac{r_1^2-r_2^2}{2R}\right)^2-\frac{r_1^2-r_2^2}{2} - R^2/4\\
-&\quad - \left(\frac{r_1^2-r_2^2}{2R}\right)^2+\frac{r_1^2-r_2^2}{2} - R^2/4\\
-2b^2 &= r_1^2+r_2^2 -2\left(\frac{r_1^2-r_2^2}{2R}\right)^2 - 2R^2/4\\
-b &= \sqrt{\frac{r_1^2+r_2^2}{2} -\left(\frac{r_1^2-r_2^2}{4R}\right)^2-\frac{R^2}{4}}
-\end{aligned}
+The denominator is only a normalizing constant so the PDF integrates to 1.</p>
+<p>We can either</p>
+<ul>
+<li>
+<p>compute the denominator, by <em>integrating out</em> over <span class="arithmatex">\(\theta\)</span>,
 $$
+p(y) = \int p(y|\theta)p(\theta)d\theta
+$$</p>
+</li>
+<li>
+<p>discard the denominator, if working with a quantity only proportionnal to <span class="arithmatex">\(p(\theta|y)\)</span> is enough,
+$$
+p(\theta|y) \propto p(y|\theta) p(\theta)
+$$</p>
+</li>
+</ul>
+<h2 id="conjugate-prior">Conjugate prior</h2>
+<p>A conjugate prior is a distribution that keeps its form after multiplication by the likelihood.<br />
+Hence, considering a specific likelihood function, the posterior is in the same distribution family as the prior.
+This allows for closed-form expressions of the posterior (specifically of the parameters if its distribution).</p>
+<h3 id="examples">Examples</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Likelihood function</th>
+<th style="text-align: center;">Conjougate prior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="../bernoulli/">Bernoulli</a> <span class="arithmatex">\(X \sim \mathcal{B}(p)\)</span> with parameter <span class="arithmatex">\(p\)</span>, outcome in <span class="arithmatex">\(\left\lbrace0,1\right\rbrace\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(p\sim\text{Beta}(\alpha,\beta)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../normal/">multivariate normal</a> <span class="arithmatex">\(X \sim \mathcal{N}(\mu,\Sigma)\)</span> with parameter <span class="arithmatex">\(\mu\in\mathbb{R}^n\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mu \sim \mathcal{N}(\mu_0, \Sigma_0)\)</span></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1715,10 +1689,10 @@ $$
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
