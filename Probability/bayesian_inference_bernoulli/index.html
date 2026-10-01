@@ -1366,6 +1366,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Tools/ros2node/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS2node
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Tools/urdf/" class="md-nav__link">
         
   
@@ -1445,6 +1468,39 @@ P(p|x) &amp;\propto p^x (1-p)^{1-x} p^{\alpha-1} (1-p)^{\beta-1} \\
 Success (<span class="arithmatex">\(x=1\)</span>) gives a posterior <span class="arithmatex">\(\text{Beta}(\alpha+1,\beta)\)</span>.<br />
 Failure (<span class="arithmatex">\(x=0\)</span>) gives a posterior <span class="arithmatex">\(\text{Beta}(\alpha,\beta+1)\)</span>.<br />
 Hence <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> act as pseudo-counts for the number of successes and failures.</p>
+<p>Jeffreys prior is <span class="arithmatex">\(\text{Beta}\left(\frac{1}{2},\frac{1}{2}\right)\)</span>.<br />
+Here is an idea of successive PDF:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(\alpha\)</span></th>
+<th><span class="arithmatex">\(\beta\)</span></th>
+<th>PDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5</td>
+<td>0.5</td>
+<td><img alt="beta_a" src="../img/beta_alpha0dot5beta0dot5.png" style="display: block; margin: 0 auto; width: 100px" /></td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>0.5</td>
+<td><img alt="beta_b" src="../img/beta_alpha1dot5beta0dot5.png" style="display: block; margin: 0 auto; width: 100px" /></td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>1.5</td>
+<td><img alt="beta_c" src="../img/beta_alpha1dot5beta1dot5.png" style="display: block; margin: 0 auto; width: 100px" /></td>
+</tr>
+<tr>
+<td>10.5</td>
+<td>1.5</td>
+<td><img alt="beta_d" src="../img/beta_alpha10dot5beta1dot5.png" style="display: block; margin: 0 auto; width: 100px" /></td>
+</tr>
+</tbody>
+</table>
 
 
 
