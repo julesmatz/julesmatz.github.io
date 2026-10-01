@@ -44,6 +44,7 @@ nav:
     - julia: Tools/julia.md
     - ROS: Tools/ros.md
     - ROS2: Tools/ros2.md
+    - ROS2node: Tools/ros2node.md
     - URDF: Tools/urdf.md
 
 theme:

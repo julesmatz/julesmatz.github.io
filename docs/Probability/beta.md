@@ -12,6 +12,8 @@ $$
 
 where $\text{B}(\alpha,\beta)$ is a normalization constant.
 
+
+
 #### Expectation
 
 $$

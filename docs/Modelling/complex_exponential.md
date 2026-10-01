@@ -1,5 +1,5 @@
 # Laplace transform
-Many of the stuff here is from [3b1b videos](https://www.youtube.com/watch?v=p_di4Zn4wz4&list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6).
+A lot here from [3b1b videos](https://www.youtube.com/watch?v=p_di4Zn4wz4&list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6).
 #### Complex numbers
 A complex number can be described either in cartesian or polar coordinates
 $$

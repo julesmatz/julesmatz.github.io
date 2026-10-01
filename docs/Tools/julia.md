@@ -1,18 +1,22 @@
 # Julia
 
-## Program structure
+## Install packages
+launch julia, press `]` to enter package management, then
+```bash
+add PackageName
+```
+
+## Files and modules
 - **Include** read and evaluated a file (e.g. for splitting large scripts)
   ```julia
   include("my_file.jl")
   ```
 
-- **Modules** are libraries, loaded once and cached (Changes require restarting julia session)
+- **Modules** are libraries. Module changes requires julia session restart, as modules are loaded once at start and cached.
   ```julia
   module MyModule
   export my_function, my_var
-
   my_var = 2.5
-
   function my_function()
       println("Hello from MyModule")
   end
@@ -24,86 +28,22 @@
   a = my_var
   ```
 
-- **Conditional** execution
-  ```julia
-  if condition
-    # ...
-  elseif other_condition
-    # ...
-  else
-    # ...
-  end
-  ```
-
-- **Ternary** operator
-  ```julia
-  result = condition ? value_if_true : value_if_false
-  ```
-
-
----
-## Functions
-- **Typical function** with **positional arguments** separated by `,` and **default values** with `=`
-  ```julia
-  function my_function(arg1, arg2=1.0)
-      r1 = arg1 + arg2
-      r2 = r1 + arg2^2
-      return r1, r2
-  end
-  ```
-
-- **Suffix** `!` is a convention indicating a function that modifies its input
-  ```julia
-  sort!(arr) # Sorts `arr` in place
-  plot!(p, [4, 5, 6])  # Plots onto existing plot `p`
-  ```
-
-- Short **single-line** functions:
-  ```julia
-  my_function(arg1, arg2) = arg1 + arg2
-  ```
-
-  - **anonymous functions**
-  ```julia
-  square = x -> x^2
-  ```
-
-- **Keyword Arguments** separated by `;`
-  ```julia
-  function greet(name; greeting="Hello")
-      println("$greeting, $name!")
-  end
-  greet("Alice")              # "Hello, Alice!"
-  greet("Bob", greeting="Hi") # "Hi, Bob!"
-  ```
-
-- **Varargs**
-  ```julia
-  function sum_all(args...)
-      return sum(args)
-  end
-  sum_all(1, 2, 3) # 6
-  ```
-- **Broadcasting** applies the function to all elements of a container
-  ```julia
-  f.(X)
-  ```
-
----
 ## Containers
-Julia is **1-indexed** (unlike Python).
+Julia is **1-indexed** (like Matlab, unlike Python or C++).
 
-- **Arrays**: *ordered*, *mutable*, and possibly multidimensional.  
+- **Arrays**: *ordered*, *mutable*, possibly multidimensional.  
 Rows are separated by `;` and items in a row are separated by a space ` ` or `,`.
   ```julia
   my_array = [1, 2, 2, "a", "word"] # Heterogeneous array
   my_matrix = [1 2 3; 4 5 6]        # 2x3 matrix
   my_3d_array = zeros(Int, 2, 3, 4) # 3D array of zeros
   ```
-  For numerical work, prefer **type-stable arrays** (e.g., `Int[...]`, `Float64[...]`) for performance. Array type is automatically detected.
+  For numerical work, prefer **type-stable arrays** (e.g., `Int[...]`, `Float64[...]`) for performance. Array type is automatically detected or can be specified,
   ```julia
   my_int64_array = [1, 2, 3]
-  my_float64_array = [1.0 2 3]
+  my_array::Vector{Float64} = [1.0, 2.0, 3.0]
+  my_tuple::Tuple{Int64, String} = (1, "hello")
+
   ```
 
 - **Tuples**:  *ordered*, *immutable* items.
@@ -161,7 +101,128 @@ for (key, value) in my_dict
 end
 ```
 
----
+**Comprehensions**
+```julia
+squares = [x^2 for x in 1:5]  # array [1, 4, 9, 16, 25]
+square_dict = Dict(i => i^2 for i in 1:3)  # Dict(1=>1, 2=>4, 3=>9)
+```
+
+## Conditional execution
+```julia
+if condition
+  # ...
+elseif other_condition
+  # ...
+else
+  # ...
+end
+```
+
+```julia
+result = condition ? value_if_true : value_if_false
+```
+
+## Data types
+Julia is a strongly typed language. It has **primitive types**, **abstract types** (`Number`, `Integer`, `AbstractFloat`, `AbstractArray`, etc.) that are used to conceptually organize types, and **composite types** (structures)
+```julia
+# primitive types
+i::Int64 = 10 # Int8, UInt8 (for 8, 16, 32, 64, 128)
+x::Float64 = 3.14 # Float16 (for 16, 32, 34)
+b::Bool = true
+c::Char = 'A' # (Unicode)
+
+# Abstract types
+abstract type Unsigned <: Integer end # example, alreadt defined in julia
+
+# Composite types
+mutable struct Point # without immutable, values cannot change
+    x::Float64
+    y::Float64
+    const idx::UInt16 # for mutable struct, use const so idx cannot change
+    metadata # no type specification means Any
+end
+
+# Parametric composite type
+struct Point{T1 <: Real, T2 <: Integer}
+    x::T1 # x and y can be any primitive type that is a child of Real
+    y::T1
+    idx::T2
+    metadata
+end
+
+p1 = Point(1.0, 2.0) # Point{Float64}(1.0, 2.0)
+p2 = Point(1, 2)     # Point{Int64}(1, 2)
+
+# A function whose input can be any of the parametric type Point
+function norm(p::Point{<:Real, <:Integer})
+    sqrt(p.x^2 + p.y^2)
+end
+
+# Checking types
+typeof(1)        # Int64
+isa(1, Number)   # true
+supertype(Int64) # Signed
+subtypes(Number) # [Complex, Real, ...]
+```
+
+
+## Functions
+There are no classes with methods, only structures and functions. Many functions with the same name can coexist and **multiple dispatch** ensure that the right one is called depending on the input types.
+
+
+
+- **Typical function** with **positional arguments** separated by `,` and **default values** with `=`
+  ```julia
+  function my_function(arg1, arg2=1.0)
+      r1 = arg1 + arg2
+      r2 = r1 + arg2^2
+      return r1, r2
+  end
+  ```
+
+- **Suffix** `!` is a convention indicating a function that modifies its input
+  ```julia
+  sort!(arr) # Sorts `arr` in place
+  plot!(p, [4, 5, 6])  # Plots onto existing plot `p`
+  ```
+
+- Short **single-line** functions:
+  ```julia
+  my_function(arg1, arg2) = arg1 + arg2
+  ```
+
+  - **anonymous functions**
+  ```julia
+  square = x -> x^2
+  ```
+
+- **Keyword Arguments** separated by `;`
+  ```julia
+  function greet(name; greeting="Hello")
+      println("$greeting, $name!")
+  end
+  greet("Alice")              # "Hello, Alice!"
+  greet("Bob", greeting="Hi") # "Hi, Bob!"
+  ```
+
+- **Varargs**
+  ```julia
+  function sum_all(args...)
+      return sum(args)
+  end
+  sum_all(1, 2, 3) # 6
+  ```
+- **Broadcasting** applies the function to all elements of a container
+  ```julia
+  f.(X)
+  ```
+
+
+
+
+
+
+
 ## Plot
 - Typical plot
   ```julia

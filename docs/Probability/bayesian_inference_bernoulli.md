@@ -27,3 +27,13 @@ which has the same form as the prior, $p\sim\text{Beta}(\alpha+x,\beta+(1-x))$.
 Success ($x=1$) gives a posterior $\text{Beta}(\alpha+1,\beta)$.  
 Failure ($x=0$) gives a posterior $\text{Beta}(\alpha,\beta+1)$.  
 Hence $\alpha$ and $\beta$ act as pseudo-counts for the number of successes and failures.
+
+Jeffreys prior is \(\text{Beta}\left(\frac{1}{2},\frac{1}{2}\right)\).  
+Here is an idea of successive PDF:
+
+| \(\alpha\) | \(\beta\) | PDF |
+|---|---|---|
+| 0.5 | 0.5 | ![beta_a](img/beta_alpha0dot5beta0dot5.png){: style="display: block; margin: 0 auto; width: 100px"} |
+| 1.5 | 0.5 | ![beta_b](img/beta_alpha1dot5beta0dot5.png){: style="display: block; margin: 0 auto; width: 100px"} |
+| 1.5 | 1.5 | ![beta_c](img/beta_alpha1dot5beta1dot5.png){: style="display: block; margin: 0 auto; width: 100px"} |
+| 10.5 | 1.5 | ![beta_d](img/beta_alpha10dot5beta1dot5.png){: style="display: block; margin: 0 auto; width: 100px"} |

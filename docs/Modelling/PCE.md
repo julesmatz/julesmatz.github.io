@@ -11,7 +11,7 @@ An approximate distribution of \(y\) is obtained and expressed in the basis form
 Truncating the polynomials at degree \(p\), we get \(M\) coefficients and basis polynomials, with
 
 $$
-M+1 = \frac{(n+p)!}{n!p!}
+M+1 = \begin{pmatrix}n + p\\ p\end{pmatrix} = \frac{(n+p)!}{n!p!}
 $$
 
 For example, \((n=3, p=4) \implies M=34\), and \((n=10, p=4) \implies M=1000\) 
